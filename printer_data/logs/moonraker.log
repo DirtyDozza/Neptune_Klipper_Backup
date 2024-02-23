@@ -548,3 +548,10 @@ Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryWo87GjIMNajpPQ
 2024-02-24 04:13:10,532 [klippy_connection.py:_check_ready()] - Klippy ready
 2024-02-24 04:13:11,015 [data_store.py:_init_sensors()] - Configuring available sensors: ['heater_bed', 'heater_generic heater_bed1', 'extruder']
 2024-02-24 04:16:05,697 [websockets.py:on_close()] - Websocket Closed: ID: 281473084162456 Close Code: 1001, Close Reason: None, Pong Time Elapsed: 3.53
+2024-02-24 04:36:07,440 [authorization.py:_prune_conn_handler()] - Trusted Connection Expired, IP: 192.168.0.190
+2024-02-24 04:41:07,441 [authorization.py:_prune_conn_handler()] - Trusted Connection Expired, IP: 192.168.0.234
+2024-02-24 05:16:07,450 [authorization.py:_prune_conn_handler()] - Trusted Connection Expired, IP: 192.168.0.69
+2024-02-24 05:53:36,878 [authorization.py:_check_trusted_connection()] - Trusted Connection Detected, IP: 192.168.0.69
+2024-02-24 05:56:34,258 [file_manager.py:get_file_list()] - Updating File List <docs>...
+2024-02-24 05:57:45,001 [file_manager.py:get_file_list()] - Updating File List <config>...
+2024-02-24 05:58:49,977 [common.py:build_error()] - JSON-RPC Request Error - Requested Method: server.files.post_directory, Code: 400, Message: [Errno 2] No such file or directory: '/home/mks/klipper_config/home/mks/klipper'
