@@ -555,3 +555,78 @@ Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryWo87GjIMNajpPQ
 2024-02-24 05:56:34,258 [file_manager.py:get_file_list()] - Updating File List <docs>...
 2024-02-24 05:57:45,001 [file_manager.py:get_file_list()] - Updating File List <config>...
 2024-02-24 05:58:49,977 [common.py:build_error()] - JSON-RPC Request Error - Requested Method: server.files.post_directory, Code: 400, Message: [Errno 2] No such file or directory: '/home/mks/klipper_config/home/mks/klipper'
+2024-02-24 06:27:00,574 [authorization.py:_check_trusted_connection()] - Trusted Connection Detected, IP: 192.168.0.234
+2024-02-24 06:27:00,620 [application.py:log_request()] - 101 GET /websocket?token=IMU7UYMDNCOEDXTTULRM376T5MN7L4YM (192.168.0.234) [_TRUSTED_USER_] 4.11ms
+2024-02-24 06:27:00,621 [websockets.py:open()] - Websocket Opened: ID: 281473048742712, Proxied: True, User Agent: Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Mobile Safari/537.36, Host Name: 192.168.0.88
+2024-02-24 06:27:00,634 [websockets.py:_handle_identify()] - Websocket 281473048742712 Client Identified - Name: fluidd, Version: 1.28.1-d1ef3a4, Type: web
+2024-02-24 06:27:00,635 [file_manager.py:get_file_list()] - Updating File List <config>...
+2024-02-24 06:30:10,170 [authorization.py:_check_trusted_connection()] - Trusted Connection Detected, IP: 127.0.0.1
+2024-02-24 06:30:10,194 [application.py:log_request()] - 400 GET /server/files/directory?path= (127.0.0.1) [_TRUSTED_USER_] 27.17ms
+2024-02-24 06:30:12,015 [application.py:log_request()] - 400 GET /server/files/directory?path= (127.0.0.1) [_TRUSTED_USER_] 4.43ms
+2024-02-24 06:30:14,009 [application.py:log_request()] - 400 GET /server/files/directory?path=gcodes/sda1/ (127.0.0.1) [_TRUSTED_USER_] 4.94ms
+2024-02-24 06:30:45,458 [websockets.py:on_close()] - Websocket Closed: ID: 281473084137656 Close Code: None, Close Reason: None, Pong Time Elapsed: 2.19
+2024-02-24 06:30:45,629 [klippy_connection.py:_on_connection_closed()] - Klippy Connection Removed
+2024-02-24 06:30:45,827 [server.py:_handle_term_signal()] - Exiting with signal SIGTERM
+2024-02-24 06:30:45,845 [common.py:build_error()] - JSON-RPC Request Error - Requested Method: printer.info, Code: 503, Message: Klippy Host not connected
+2024-02-24 06:30:45,893 [common.py:build_error()] - JSON-RPC Request Error - Requested Method: printer.info, Code: 503, Message: Klippy Host not connected
+2024-02-24 06:30:45,951 [websockets.py:on_close()] - Websocket Closed: ID: 281473048742712 Close Code: 1001, Close Reason: Server Shutdown, Pong Time Elapsed: 5.32
+2024-02-24 06:30:46,027 [websockets.py:on_close()] - Websocket Closed: ID: 281473084454616 Close Code: 1001, Close Reason: Server Shutdown, Pong Time Elapsed: 4.71
+2024-02-24 06:30:46,047 [database.py:close()] - Database statistics:
+
+announcements:
+psize: 4096
+depth: 0
+branch_pages: 0
+leaf_pages: 0
+overflow_pages: 0
+entries: 0
+authorized_users:
+psize: 4096
+depth: 1
+branch_pages: 0
+leaf_pages: 1
+overflow_pages: 0
+entries: 1
+fluidd:
+psize: 4096
+depth: 1
+branch_pages: 0
+leaf_pages: 1
+overflow_pages: 2
+entries: 6
+gcode_metadata:
+psize: 4096
+depth: 2
+branch_pages: 1
+leaf_pages: 3
+overflow_pages: 0
+entries: 15
+history:
+psize: 4096
+depth: 1
+branch_pages: 0
+leaf_pages: 1
+overflow_pages: 0
+entries: 1
+moonraker:
+psize: 4096
+depth: 1
+branch_pages: 0
+leaf_pages: 1
+overflow_pages: 0
+entries: 7
+update_manager:
+psize: 4096
+depth: 1
+branch_pages: 0
+leaf_pages: 1
+overflow_pages: 1
+entries: 4
+webcams:
+psize: 4096
+depth: 1
+branch_pages: 0
+leaf_pages: 1
+overflow_pages: 0
+entries: 1
+2024-02-24 06:30:46,161 [server.py:main()] - Server Shutdown
