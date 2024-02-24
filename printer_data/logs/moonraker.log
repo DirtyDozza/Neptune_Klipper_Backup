@@ -1502,3 +1502,96 @@ Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryKC0keG8YDQ24QV
 2024-02-24 19:57:50,863 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 60.00 seconds
 2024-02-24 19:57:50,904 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 60.00 seconds
 2024-02-24 19:57:50,905 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 60.00 seconds
+2024-02-24 20:03:18,441 [application.py:prepare()] - Upload Request Received from 192.168.0.190
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryIly65YyYOkb8P4FX
+2024-02-24 20:03:18,493 [application.py:post()] - Processing Uploaded File: rhinomax_shark_parts_v17_slanted_tray.gcode
+2024-02-24 20:03:19,214 [shell_command.py:pipe_data_received()] - INFO:metadata:Object Processing is disabled
+
+2024-02-24 20:03:19,387 [shell_command.py:_check_proc_success()] - Command (/home/mks/moonraker-env/bin/python /home/mks/moonraker/moonraker/components/file_manager/metadata.py -p /home/mks/gcode_files -f "rhinomax_shark_parts_v17_slanted_tray.gcode") successfully finished
+2024-02-24 20:03:19,401 [application.py:log_request()] - 201 POST /server/files/upload (192.168.0.190) [_TRUSTED_USER_] 963.70ms
+2024-02-24 20:03:21,219 [job_state.py:_status_update()] - Job Started: rhinomax_shark_parts_v17_slanted_tray.gcode
+2024-02-24 20:09:49,600 [authorization.py:_check_trusted_connection()] - Trusted Connection Detected, IP: 192.168.0.69
+2024-02-24 20:09:49,896 [application.py:log_request()] - 101 GET /websocket?token=OWPHCIFSRA6GH3G2HQEWQDOFRIHKUHQM (192.168.0.69) [_TRUSTED_USER_] 4.14ms
+2024-02-24 20:09:49,897 [websockets.py:open()] - Websocket Opened: ID: 281473059913680, Proxied: True, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36, Host Name: 192.168.0.88
+2024-02-24 20:09:49,934 [websockets.py:_handle_identify()] - Websocket 281473059913680 Client Identified - Name: fluidd, Version: 1.28.1-d1ef3a4, Type: web
+2024-02-24 20:09:49,936 [file_manager.py:get_file_list()] - Updating File List <config>...
+2024-02-24 20:20:19,565 [authorization.py:_prune_conn_handler()] - Trusted Connection Expired, IP: 127.0.0.1
+2024-02-24 21:05:19,661 [authorization.py:_prune_conn_handler()] - Trusted Connection Expired, IP: 192.168.0.190
+2024-02-24 21:10:19,662 [authorization.py:_prune_conn_handler()] - Trusted Connection Expired, IP: 192.168.0.69
+2024-02-24 21:47:16,560 [authorization.py:_check_trusted_connection()] - Trusted Connection Detected, IP: 127.0.0.1
+2024-02-24 21:47:16,581 [application.py:log_request()] - 400 GET /server/files/directory?path= (127.0.0.1) [_TRUSTED_USER_] 22.97ms
+2024-02-24 21:47:18,033 [application.py:log_request()] - 400 GET /server/files/directory?path= (127.0.0.1) [_TRUSTED_USER_] 4.53ms
+2024-02-24 21:47:43,824 [websockets.py:on_close()] - Websocket Closed: ID: 281473059761512 Close Code: None, Close Reason: None, Pong Time Elapsed: 4.75
+2024-02-24 21:47:55,934 [authorization.py:_check_trusted_connection()] - Trusted Connection Detected, IP: 192.168.0.234
+2024-02-24 21:47:56,188 [application.py:log_request()] - 101 GET /websocket?token=7BZPDWD2YQ5PNC7LS5WFDTVIGEZD7AJH (192.168.0.234) [_TRUSTED_USER_] 4.13ms
+2024-02-24 21:47:56,189 [websockets.py:open()] - Websocket Opened: ID: 281473059491456, Proxied: True, User Agent: Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Mobile Safari/537.36, Host Name: 192.168.0.88
+2024-02-24 21:47:56,204 [websockets.py:_handle_identify()] - Websocket 281473059491456 Client Identified - Name: fluidd, Version: 1.28.1-d1ef3a4, Type: web
+2024-02-24 21:47:56,206 [file_manager.py:get_file_list()] - Updating File List <config>...
+2024-02-24 21:48:03,316 [klippy_connection.py:_on_connection_closed()] - Klippy Connection Removed
+2024-02-24 21:48:03,507 [common.py:build_error()] - JSON-RPC Request Error - Requested Method: printer.info, Code: 503, Message: Klippy Host not connected
+2024-02-24 21:48:03,580 [common.py:build_error()] - JSON-RPC Request Error - Requested Method: printer.info, Code: 503, Message: Klippy Host not connected
+2024-02-24 21:48:03,781 [websockets.py:on_close()] - Websocket Closed: ID: 281473059873288 Close Code: None, Close Reason: None, Pong Time Elapsed: 6.23
+2024-02-24 21:48:03,902 [server.py:_handle_term_signal()] - Exiting with signal SIGTERM
+2024-02-24 21:48:04,009 [websockets.py:write_to_socket()] - Websocket closed while writing: 281473059913680
+2024-02-24 21:48:04,009 [websockets.py:write_to_socket()] - Websocket closed while writing: 281473059491456
+2024-02-24 21:48:04,012 [websockets.py:on_close()] - Websocket Closed: ID: 281473059913680 Close Code: 1001, Close Reason: Server Shutdown, Pong Time Elapsed: 4.11
+2024-02-24 21:48:04,038 [websockets.py:on_close()] - Websocket Closed: ID: 281473059491456 Close Code: 1001, Close Reason: Server Shutdown, Pong Time Elapsed: 7.85
+2024-02-24 21:48:04,055 [database.py:close()] - Database statistics:
+
+announcements:
+psize: 4096
+depth: 0
+branch_pages: 0
+leaf_pages: 0
+overflow_pages: 0
+entries: 0
+authorized_users:
+psize: 4096
+depth: 1
+branch_pages: 0
+leaf_pages: 1
+overflow_pages: 0
+entries: 1
+fluidd:
+psize: 4096
+depth: 1
+branch_pages: 0
+leaf_pages: 1
+overflow_pages: 2
+entries: 6
+gcode_metadata:
+psize: 4096
+depth: 2
+branch_pages: 1
+leaf_pages: 2
+overflow_pages: 0
+entries: 8
+history:
+psize: 4096
+depth: 2
+branch_pages: 1
+leaf_pages: 2
+overflow_pages: 0
+entries: 6
+moonraker:
+psize: 4096
+depth: 1
+branch_pages: 0
+leaf_pages: 1
+overflow_pages: 0
+entries: 7
+update_manager:
+psize: 4096
+depth: 1
+branch_pages: 0
+leaf_pages: 1
+overflow_pages: 1
+entries: 4
+webcams:
+psize: 4096
+depth: 1
+branch_pages: 0
+leaf_pages: 1
+overflow_pages: 0
+entries: 1
+2024-02-24 21:48:04,163 [server.py:main()] - Server Shutdown
