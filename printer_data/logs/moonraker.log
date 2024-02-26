@@ -215,3 +215,81 @@ Content-Type: multipart/form-data; boundary=----WebKitFormBoundarythARwBFsSvniM7
 2024-02-27 03:48:09,856 [websockets.py:on_close()] - Websocket Closed: ID: 281473570158576 Close Code: None, Close Reason: None, Pong Time Elapsed: 4.55
 2024-02-27 03:50:20,681 [authorization.py:_prune_conn_handler()] - Trusted Connection Expired, IP: 127.0.0.1
 2024-02-27 03:55:20,682 [authorization.py:_prune_conn_handler()] - Trusted Connection Expired, IP: 192.168.0.190
+2024-02-27 04:20:05,632 [authorization.py:_check_trusted_connection()] - Trusted Connection Detected, IP: 192.168.0.69
+2024-02-27 04:20:05,854 [application.py:log_request()] - 101 GET /websocket?token=FPGONGEXH4JKNUMXR7RLLBUT7KHKIJVO (192.168.0.69) [_TRUSTED_USER_] 4.78ms
+2024-02-27 04:20:05,855 [websockets.py:open()] - Websocket Opened: ID: 281473571038264, Proxied: True, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36, Host Name: 192.168.0.88
+2024-02-27 04:20:05,885 [websockets.py:_handle_identify()] - Websocket 281473571038264 Client Identified - Name: fluidd, Version: 1.28.1-d1ef3a4, Type: web
+2024-02-27 04:20:05,887 [file_manager.py:get_file_list()] - Updating File List <config>...
+2024-02-27 05:20:20,702 [authorization.py:_prune_conn_handler()] - Trusted Connection Expired, IP: 192.168.0.69
+2024-02-27 06:21:46,539 [authorization.py:_check_trusted_connection()] - Trusted Connection Detected, IP: 192.168.0.234
+2024-02-27 06:21:46,749 [application.py:log_request()] - 101 GET /websocket?token=BN35L4M7S5GCKHR4YTDN7XOATHPJPPFL (192.168.0.234) [_TRUSTED_USER_] 4.15ms
+2024-02-27 06:21:46,750 [websockets.py:open()] - Websocket Opened: ID: 281473570189720, Proxied: True, User Agent: Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Mobile Safari/537.36, Host Name: 192.168.0.88
+2024-02-27 06:21:46,762 [websockets.py:_handle_identify()] - Websocket 281473570189720 Client Identified - Name: fluidd, Version: 1.28.1-d1ef3a4, Type: web
+2024-02-27 06:21:46,764 [file_manager.py:get_file_list()] - Updating File List <config>...
+2024-02-27 06:22:05,297 [klippy_connection.py:_on_connection_closed()] - Klippy Connection Removed
+2024-02-27 06:22:05,306 [websockets.py:write_to_socket()] - Websocket closed while writing: 281473570232136
+2024-02-27 06:22:05,328 [websockets.py:on_close()] - Websocket Closed: ID: 281473570232136 Close Code: None, Close Reason: None, Pong Time Elapsed: 0.80
+2024-02-27 06:22:05,563 [common.py:build_error()] - JSON-RPC Request Error - Requested Method: printer.info, Code: 503, Message: Klippy Host not connected
+2024-02-27 06:22:05,601 [common.py:build_error()] - JSON-RPC Request Error - Requested Method: printer.info, Code: 503, Message: Klippy Host not connected
+2024-02-27 06:22:05,810 [server.py:_handle_term_signal()] - Exiting with signal SIGTERM
+2024-02-27 06:22:05,957 [websockets.py:on_close()] - Websocket Closed: ID: 281473570189720 Close Code: 1001, Close Reason: Server Shutdown, Pong Time Elapsed: 9.19
+2024-02-27 06:22:05,985 [websockets.py:on_close()] - Websocket Closed: ID: 281473571038264 Close Code: 1001, Close Reason: Server Shutdown, Pong Time Elapsed: 0.00
+2024-02-27 06:22:06,005 [database.py:close()] - Database statistics:
+
+announcements:
+psize: 4096
+depth: 0
+branch_pages: 0
+leaf_pages: 0
+overflow_pages: 0
+entries: 0
+authorized_users:
+psize: 4096
+depth: 1
+branch_pages: 0
+leaf_pages: 1
+overflow_pages: 0
+entries: 1
+fluidd:
+psize: 4096
+depth: 1
+branch_pages: 0
+leaf_pages: 1
+overflow_pages: 2
+entries: 6
+gcode_metadata:
+psize: 4096
+depth: 2
+branch_pages: 1
+leaf_pages: 2
+overflow_pages: 0
+entries: 9
+history:
+psize: 4096
+depth: 2
+branch_pages: 1
+leaf_pages: 3
+overflow_pages: 0
+entries: 9
+moonraker:
+psize: 4096
+depth: 1
+branch_pages: 0
+leaf_pages: 1
+overflow_pages: 0
+entries: 7
+update_manager:
+psize: 4096
+depth: 1
+branch_pages: 0
+leaf_pages: 1
+overflow_pages: 1
+entries: 4
+webcams:
+psize: 4096
+depth: 1
+branch_pages: 0
+leaf_pages: 1
+overflow_pages: 0
+entries: 1
+2024-02-27 06:22:06,106 [server.py:main()] - Server Shutdown
