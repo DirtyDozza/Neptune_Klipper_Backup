@@ -212,3 +212,73 @@ Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryomPq5agYV6hcQe
 2024-02-28 03:19:55,510 [authorization.py:_prune_conn_handler()] - Trusted Connection Expired, IP: 127.0.0.1
 2024-02-28 03:39:19,682 [websockets.py:on_close()] - Websocket Closed: ID: 281473555247288 Close Code: None, Close Reason: None, Pong Time Elapsed: 9.21
 2024-02-28 03:39:55,516 [authorization.py:_prune_conn_handler()] - Trusted Connection Expired, IP: 192.168.0.190
+2024-02-28 04:54:02,074 [authorization.py:_check_trusted_connection()] - Trusted Connection Detected, IP: 192.168.0.234
+2024-02-28 04:54:02,299 [application.py:log_request()] - 101 GET /websocket?token=HKVKMULQBQCXP4CQ3UV7EADIOJRL5NRY (192.168.0.234) [_TRUSTED_USER_] 4.27ms
+2024-02-28 04:54:02,300 [websockets.py:open()] - Websocket Opened: ID: 281473555837504, Proxied: True, User Agent: Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Mobile Safari/537.36, Host Name: 192.168.0.88
+2024-02-28 04:54:02,311 [websockets.py:_handle_identify()] - Websocket 281473555837504 Client Identified - Name: fluidd, Version: 1.28.1-d1ef3a4, Type: web
+2024-02-28 04:54:02,313 [file_manager.py:get_file_list()] - Updating File List <config>...
+2024-02-28 04:54:55,945 [klippy_connection.py:_on_connection_closed()] - Klippy Connection Removed
+2024-02-28 04:54:56,323 [common.py:build_error()] - JSON-RPC Request Error - Requested Method: printer.info, Code: 503, Message: Klippy Host not connected
+2024-02-28 04:54:56,347 [websockets.py:write_to_socket()] - Websocket closed while writing: 281473555138432
+2024-02-28 04:54:56,355 [websockets.py:on_close()] - Websocket Closed: ID: 281473555138432 Close Code: None, Close Reason: None, Pong Time Elapsed: 7.12
+2024-02-28 04:54:56,509 [server.py:_handle_term_signal()] - Exiting with signal SIGTERM
+2024-02-28 04:54:56,630 [websockets.py:on_close()] - Websocket Closed: ID: 281473555837504 Close Code: 1001, Close Reason: Server Shutdown, Pong Time Elapsed: 4.32
+2024-02-28 04:54:56,654 [database.py:close()] - Database statistics:
+
+announcements:
+psize: 4096
+depth: 0
+branch_pages: 0
+leaf_pages: 0
+overflow_pages: 0
+entries: 0
+authorized_users:
+psize: 4096
+depth: 1
+branch_pages: 0
+leaf_pages: 1
+overflow_pages: 0
+entries: 1
+fluidd:
+psize: 4096
+depth: 1
+branch_pages: 0
+leaf_pages: 1
+overflow_pages: 2
+entries: 6
+gcode_metadata:
+psize: 4096
+depth: 2
+branch_pages: 1
+leaf_pages: 2
+overflow_pages: 0
+entries: 10
+history:
+psize: 4096
+depth: 2
+branch_pages: 1
+leaf_pages: 4
+overflow_pages: 0
+entries: 13
+moonraker:
+psize: 4096
+depth: 1
+branch_pages: 0
+leaf_pages: 1
+overflow_pages: 0
+entries: 7
+update_manager:
+psize: 4096
+depth: 1
+branch_pages: 0
+leaf_pages: 1
+overflow_pages: 1
+entries: 4
+webcams:
+psize: 4096
+depth: 1
+branch_pages: 0
+leaf_pages: 1
+overflow_pages: 0
+entries: 1
+2024-02-28 04:54:56,755 [server.py:main()] - Server Shutdown
