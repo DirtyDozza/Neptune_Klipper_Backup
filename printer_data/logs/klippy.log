@@ -1025,3 +1025,19 @@ Skipping symbolic link: printer_data/logs/fluidd-access.log
 
 Skipping symbolic link: printer_data/logs/fluidd-error.log
 
+Skipping symbolic link: printer_data/logs/webcamd.log
+
+[main 6dfa367] New backup from 03/05/2024 - 05:47:46 AM
+ 5 files changed, 3427 insertions(+), 8755 deletions(-)
+ rewrite printer_data/logs/klippy.log (98%)
+ copy printer_data/logs/{klippy.log => klippy.log.2024-03-05_05-46-16} (63%)
+ rewrite printer_data/logs/moonraker.log (67%)
+ copy printer_data/logs/{moonraker.log => moonraker.log.2024-03-05} (91%)
+
+To https://github.com/DirtyDozza/Neptune_Klipper_Backup.git
+   8a2972c..6dfa367  main -> main
+
+Branch 'main' set up to track remote branch 'main' from 'origin'.
+
+Command {update_git_script} finished
+

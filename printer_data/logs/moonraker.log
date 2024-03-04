@@ -160,3 +160,66 @@ Klipper Version: v0.12.0-113-g28f06a10-dirty
 2024-03-05 05:46:21,562 [job_state.py:_handle_started()] - Job state initialized: standby
 2024-03-05 05:46:21,835 [klippy_connection.py:_check_ready()] - Klippy ready
 2024-03-05 05:46:22,317 [data_store.py:_init_sensors()] - Configuring available sensors: ['heater_bed', 'heater_generic heater_bed1', 'extruder']
+2024-03-05 05:48:10,131 [klippy_connection.py:_on_connection_closed()] - Klippy Connection Removed
+2024-03-05 05:48:10,247 [websockets.py:on_close()] - Websocket Closed: ID: 281473280147016 Close Code: None, Close Reason: None, Pong Time Elapsed: 5.18
+2024-03-05 05:48:10,515 [server.py:_handle_term_signal()] - Exiting with signal SIGTERM
+2024-03-05 05:48:10,689 [websockets.py:on_close()] - Websocket Closed: ID: 281473279973304 Close Code: 1001, Close Reason: Server Shutdown, Pong Time Elapsed: 5.93
+2024-03-05 05:48:10,712 [database.py:close()] - Database statistics:
+
+announcements:
+psize: 4096
+depth: 0
+branch_pages: 0
+leaf_pages: 0
+overflow_pages: 0
+entries: 0
+authorized_users:
+psize: 4096
+depth: 1
+branch_pages: 0
+leaf_pages: 1
+overflow_pages: 0
+entries: 1
+fluidd:
+psize: 4096
+depth: 1
+branch_pages: 0
+leaf_pages: 1
+overflow_pages: 2
+entries: 6
+gcode_metadata:
+psize: 4096
+depth: 2
+branch_pages: 1
+leaf_pages: 2
+overflow_pages: 0
+entries: 11
+history:
+psize: 4096
+depth: 2
+branch_pages: 1
+leaf_pages: 5
+overflow_pages: 0
+entries: 15
+moonraker:
+psize: 4096
+depth: 1
+branch_pages: 0
+leaf_pages: 1
+overflow_pages: 0
+entries: 7
+update_manager:
+psize: 4096
+depth: 1
+branch_pages: 0
+leaf_pages: 1
+overflow_pages: 1
+entries: 4
+webcams:
+psize: 4096
+depth: 1
+branch_pages: 0
+leaf_pages: 1
+overflow_pages: 0
+entries: 1
+2024-03-05 05:48:10,809 [server.py:main()] - Server Shutdown
