@@ -235,3 +235,34 @@ Printer is shutdown
 2024-04-22 03:53:22,037 [job_state.py:_handle_started()] - Job state initialized: standby
 2024-04-22 03:53:22,306 [klippy_connection.py:_check_ready()] - Klippy ready
 2024-04-22 03:53:22,791 [data_store.py:_init_sensors()] - Configuring available sensors: ['heater_bed', 'heater_generic heater_bed1', 'extruder']
+2024-04-22 04:02:17,454 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 60.00 seconds
+2024-04-22 04:03:17,457 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 120.00 seconds
+2024-04-22 04:04:17,458 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 180.01 seconds
+2024-04-22 04:05:17,460 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 240.01 seconds
+2024-04-22 04:06:17,462 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 300.01 seconds
+2024-04-22 04:07:17,465 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 360.01 seconds
+2024-04-22 04:08:17,467 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 420.01 seconds
+2024-04-22 04:09:01,293 [klippy_connection.py:_on_connection_closed()] - Klippy Connection Removed
+2024-04-22 04:09:01,457 [common.py:build_error()] - JSON-RPC Request Error - Requested Method: printer.info, Code: 503, Message: Klippy Host not connected
+2024-04-22 04:09:02,373 [klippy_connection.py:_do_connect()] - Klippy Connection Established
+2024-04-22 04:09:05,349 [klippy_connection.py:_request_initial_subscriptions()] - Webhooks Subscribed
+2024-04-22 04:09:05,353 [klippy_connection.py:_request_initial_subscriptions()] - GCode Output Subscribed
+2024-04-22 04:09:05,600 [job_state.py:_handle_started()] - Job state initialized: standby
+2024-04-22 04:09:05,870 [klippy_connection.py:_check_ready()] - Klippy ready
+2024-04-22 04:09:06,356 [data_store.py:_init_sensors()] - Configuring available sensors: ['heater_bed', 'heater_generic heater_bed1', 'extruder']
+2024-04-22 04:16:30,021 [job_state.py:_status_update()] - Job Started: Dragonite V2.gcode
+2024-04-22 04:17:30,277 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 60.00 seconds
+2024-04-22 04:17:30,679 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 60.00 seconds
+2024-04-22 04:17:31,220 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 60.00 seconds
+2024-04-22 04:17:31,261 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 60.00 seconds
+2024-04-22 04:17:31,304 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 60.00 seconds
+2024-04-22 04:17:31,304 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 60.00 seconds
+2024-04-22 04:23:47,619 [job_state.py:_status_update()] - Job Started: rhinomax_shark_parts_v17_slanted_tray.gcode
+2024-04-22 04:39:42,655 [authorization.py:_prune_conn_handler()] - Trusted Connection Expired, IP: 127.0.0.1
+2024-04-22 05:10:06,318 [job_state.py:_status_update()] - Job Started: rhinomax_shark_parts_v17_slanted_tray.gcode
+2024-04-22 05:11:06,297 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 60.00 seconds
+2024-04-22 05:11:06,338 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 60.00 seconds
+2024-04-22 05:11:06,382 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 60.00 seconds
+2024-04-22 05:11:06,383 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 60.00 seconds
+2024-04-22 05:24:42,678 [authorization.py:_prune_conn_handler()] - Trusted Connection Expired, IP: 192.168.0.69
+2024-04-22 05:43:17,909 [websockets.py:on_close()] - Websocket Closed: ID: 281473142582240 Close Code: None, Close Reason: None, Pong Time Elapsed: 3.84
