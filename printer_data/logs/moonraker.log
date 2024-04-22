@@ -266,3 +266,37 @@ Printer is shutdown
 2024-04-22 05:11:06,383 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 60.00 seconds
 2024-04-22 05:24:42,678 [authorization.py:_prune_conn_handler()] - Trusted Connection Expired, IP: 192.168.0.69
 2024-04-22 05:43:17,909 [websockets.py:on_close()] - Websocket Closed: ID: 281473142582240 Close Code: None, Close Reason: None, Pong Time Elapsed: 3.84
+2024-04-22 08:55:12,304 [klippy_connection.py:_process_status_update()] - Klippy has shutdown
+2024-04-22 08:55:12,312 [proc_stats.py:_handle_shutdown()] - 
+Moonraker System Usage Statistics:
+System Time: 1713747283.129926, Usage: 4.12%, Memory: 39560 kB
+System Time: 1713747284.130775, Usage: 1.9%, Memory: 39560 kB
+System Time: 1713747285.131973, Usage: 9.57%, Memory: 39560 kB
+System Time: 1713747286.132998, Usage: 1.87%, Memory: 39560 kB
+System Time: 1713747287.134508, Usage: 2.39%, Memory: 39560 kB
+System Time: 1713747288.135545, Usage: 1.88%, Memory: 39560 kB
+System Time: 1713747289.137356, Usage: 3.54%, Memory: 39560 kB
+System Time: 1713747290.137662, Usage: 1.93%, Memory: 39560 kB
+System Time: 1713747291.138401, Usage: 1.9%, Memory: 39560 kB
+System Time: 1713747292.140709, Usage: 1.9%, Memory: 39560 kB
+System Time: 1713747293.146502, Usage: 2.59%, Memory: 39560 kB
+System Time: 1713747294.142742, Usage: 3.4%, Memory: 39560 kB
+System Time: 1713747295.143782, Usage: 1.84%, Memory: 39560 kB
+System Time: 1713747296.144728, Usage: 1.87%, Memory: 39560 kB
+System Time: 1713747297.145768, Usage: 2.14%, Memory: 39560 kB
+System Time: 1713747298.147754, Usage: 2.06%, Memory: 39560 kB
+System Time: 1713747299.149369, Usage: 3.51%, Memory: 39560 kB
+System Time: 1713747300.149792, Usage: 4.33%, Memory: 39560 kB
+System Time: 1713747301.151990, Usage: 9.51%, Memory: 39560 kB
+System Time: 1713747302.152807, Usage: 1.91%, Memory: 39560 kB
+System Time: 1713747303.154127, Usage: 1.88%, Memory: 39560 kB
+System Time: 1713747304.155580, Usage: 2.05%, Memory: 39560 kB
+System Time: 1713747305.156295, Usage: 3.01%, Memory: 39560 kB
+System Time: 1713747306.157494, Usage: 1.92%, Memory: 39560 kB
+System Time: 1713747307.158388, Usage: 2.12%, Memory: 39560 kB
+System Time: 1713747308.158946, Usage: 2.05%, Memory: 39560 kB
+System Time: 1713747309.160897, Usage: 3.54%, Memory: 39560 kB
+System Time: 1713747310.160868, Usage: 1.96%, Memory: 39560 kB
+System Time: 1713747311.161991, Usage: 1.87%, Memory: 39560 kB
+System Time: 1713747312.169528, Usage: 2.62%, Memory: 39560 kB
+CPU Temperature: 34.545
