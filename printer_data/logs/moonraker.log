@@ -1,4 +1,4 @@
--------------------- Log Start | Sun Apr 21 19:34:46 2024 --------------------
+-------------------- Log Start | Mon Apr 22 21:45:19 2024 --------------------
 data_path: /home/mks/printer_data
 is_default_data_path: False
 config_file: /home/mks/klipper_config/moonraker.conf
@@ -67,7 +67,7 @@ All Configuration Files:
 #################################################################
 
 Database Versions: pylmdb = 1.4.1, lmdb = (0, 9, 29)
-Unsafe Shutdown Count: 0
+Unsafe Shutdown Count: 1
 
 System Info:
 
@@ -123,8 +123,8 @@ unit_name: moonraker.service
 is_default: True
 manager: systemd
 Properties:
-**Requires=['sysinit.target', 'system.slice', 'network-online.target']
-**After=['basic.target', 'sysinit.target', 'system.slice', 'network-online.target', 'systemd-journald.socket']
+**Requires=['system.slice', 'sysinit.target', 'network-online.target']
+**After=['system.slice', 'systemd-journald.socket', 'sysinit.target', 'network-online.target', 'basic.target']
 **SupplementaryGroups=['moonraker-admin']
 **EnvironmentFiles=/home/mks/printer_data/systemd/moonraker.env
 **ExecStart=/home/mks/moonraker-env/bin/python $MOONRAKER_ARGS
@@ -139,7 +139,7 @@ is_default: True
 manager: systemd
 Properties:
 **Requires=['sysinit.target', 'system.slice']
-**After=['basic.target', 'system.slice', 'network.target', 'sysinit.target', 'systemd-journald.socket']
+**After=['systemd-journald.socket', 'network.target', 'sysinit.target', 'basic.target', 'system.slice']
 **SupplementaryGroups=[]
 **EnvironmentFiles=[]
 **ExecStart=/home/mks/klippy-env/bin/python /home/mks/klipper/klippy/klippy.py ${KLIPPER_CONFIG} -I ${KLIPPER_PRINTER} -l ${KLIPPER_LOG} -a ${KLIPPER_SOCKET}
@@ -152,13 +152,7 @@ Git Repo klipper: Warnings detected:
   Repo has untracked source files: ['klippy/extras/gcode_shell_command.py', 'klippy/extras/x_twist_compensation.py']
 Git Repo klipper-backup: No warnings detected
 Klipper Version: v0.12.0-113-g28f06a10-dirty
-2024-04-22 03:34:46,502 [job_state.py:_handle_started()] - Job state initialized: standby
-2024-04-22 03:34:46,726 [authorization.py:_check_trusted_connection()] - Trusted Connection Detected, IP: 127.0.0.1
-2024-04-22 03:34:46,735 [application.py:log_request()] - 101 GET /websocket? (127.0.0.1) [_TRUSTED_USER_] 15.47ms
-2024-04-22 03:34:46,737 [websockets.py:open()] - Websocket Opened: ID: 281473142570456, Proxied: False, User Agent: WebSocket++/0.8.1, Host Name: localhost
-2024-04-22 03:34:46,798 [klippy_connection.py:_check_ready()] - Klippy ready
-2024-04-22 03:34:47,254 [data_store.py:_init_sensors()] - Configuring available sensors: ['heater_bed', 'heater_generic heater_bed1', 'extruder']
-2024-04-22 03:34:49,961 [klippy_connection.py:close()] - Error closing Klippy Unix Socket
+2024-04-23 05:45:19,456 [klippy_connection.py:close()] - Error closing Klippy Unix Socket
 Traceback (most recent call last):
   File "/home/mks/moonraker/moonraker/components/klippy_connection.py", line 769, in close
     await self.writer.wait_closed()
@@ -173,130 +167,135 @@ Traceback (most recent call last):
   File "/usr/lib/python3.7/asyncio/selector_events.py", line 801, in _read_ready__data_received
     data = self._sock.recv(self.max_size)
 ConnectionResetError: [Errno 104] Connection reset by peer
-2024-04-22 03:34:49,961 [klippy_connection.py:_on_connection_closed()] - Klippy Connection Removed
-2024-04-22 03:34:49,965 [common.py:build_error()] - JSON-RPC Request Error - Requested Method: printer.objects.query, Code: 503, Message: Klippy Disconnected
-2024-04-22 03:34:50,918 [common.py:build_error()] - JSON-RPC Request Error - Requested Method: printer.objects.query, Code: 503, Message: Klippy Host not connected
-2024-04-22 03:34:51,227 [klippy_connection.py:_do_connect()] - Klippy Connection Established
-2024-04-22 03:34:54,702 [klippy_connection.py:_request_initial_subscriptions()] - Webhooks Subscribed
-2024-04-22 03:34:54,706 [klippy_connection.py:_request_initial_subscriptions()] - GCode Output Subscribed
-2024-04-22 03:34:54,955 [job_state.py:_handle_started()] - Job state initialized: standby
-2024-04-22 03:34:55,229 [klippy_connection.py:_check_ready()] - Klippy ready
-2024-04-22 03:34:55,709 [data_store.py:_init_sensors()] - Configuring available sensors: ['heater_bed', 'heater_generic heater_bed1', 'extruder']
-2024-04-22 03:52:43,439 [authorization.py:_check_trusted_connection()] - Trusted Connection Detected, IP: 192.168.0.69
-2024-04-22 03:52:44,005 [application.py:log_request()] - 101 GET /websocket?token=3H33FD65MKS2DCKRDVJJJEDI7426YUOM (192.168.0.69) [_TRUSTED_USER_] 9.01ms
-2024-04-22 03:52:44,006 [websockets.py:open()] - Websocket Opened: ID: 281473142582240, Proxied: True, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36, Host Name: 192.168.0.88
-2024-04-22 03:52:44,037 [websockets.py:_handle_identify()] - Websocket 281473142582240 Client Identified - Name: fluidd, Version: 1.28.1-d1ef3a4, Type: web
-2024-04-22 03:52:44,039 [file_manager.py:get_file_list()] - Updating File List <config>...
-2024-04-22 03:53:08,395 [klippy_connection.py:_process_status_update()] - Klippy has shutdown
-2024-04-22 03:53:08,404 [proc_stats.py:_handle_shutdown()] - 
-Moonraker System Usage Statistics:
-System Time: 1713729158.453622, Usage: 1.82%, Memory: 37060 kB
-System Time: 1713729159.454954, Usage: 1.88%, Memory: 37060 kB
-System Time: 1713729160.456939, Usage: 1.85%, Memory: 37060 kB
-System Time: 1713729161.458096, Usage: 1.9%, Memory: 37060 kB
-System Time: 1713729162.459501, Usage: 12.03%, Memory: 37060 kB
-System Time: 1713729163.460093, Usage: 3.44%, Memory: 37068 kB
-System Time: 1713729164.461708, Usage: 14.66%, Memory: 37124 kB
-System Time: 1713729165.462160, Usage: 35.41%, Memory: 37772 kB
-System Time: 1713729166.463170, Usage: 8.04%, Memory: 37772 kB
-System Time: 1713729167.463956, Usage: 10.49%, Memory: 37772 kB
-System Time: 1713729168.465182, Usage: 2.36%, Memory: 37776 kB
-System Time: 1713729169.467390, Usage: 2.41%, Memory: 37776 kB
-System Time: 1713729170.469024, Usage: 2.34%, Memory: 37776 kB
-System Time: 1713729171.560353, Usage: 14.26%, Memory: 37776 kB
-System Time: 1713729172.561058, Usage: 20.82%, Memory: 37776 kB
-System Time: 1713729173.562047, Usage: 2.42%, Memory: 37776 kB
-System Time: 1713729174.562557, Usage: 3.0%, Memory: 37780 kB
-System Time: 1713729175.563938, Usage: 2.38%, Memory: 37784 kB
-System Time: 1713729176.564837, Usage: 4.08%, Memory: 37784 kB
-System Time: 1713729177.565784, Usage: 2.67%, Memory: 37784 kB
-System Time: 1713729178.566937, Usage: 3.13%, Memory: 37784 kB
-System Time: 1713729179.568559, Usage: 2.33%, Memory: 37784 kB
-System Time: 1713729180.569282, Usage: 2.37%, Memory: 37784 kB
-System Time: 1713729181.570974, Usage: 2.33%, Memory: 37784 kB
-System Time: 1713729182.572359, Usage: 4.75%, Memory: 37784 kB
-System Time: 1713729183.573499, Usage: 10.05%, Memory: 37784 kB
-System Time: 1713729184.578304, Usage: 2.64%, Memory: 37784 kB
-System Time: 1713729185.575932, Usage: 2.35%, Memory: 37784 kB
-System Time: 1713729186.577426, Usage: 4.02%, Memory: 37784 kB
-System Time: 1713729187.584596, Usage: 2.68%, Memory: 37784 kB
-CPU Temperature: 37.272
-2024-04-22 03:53:17,667 [common.py:build_error()] - JSON-RPC Request Error - Requested Method: printer.gcode.script, Code: 400, Message: Shutdown due to webhooks request
-Once the underlying issue is corrected, use the
-"FIRMWARE_RESTART" command to reset the firmware, reload the
-config, and restart the host software.
-Printer is shutdown
-
-2024-04-22 03:53:17,717 [klippy_connection.py:_on_connection_closed()] - Klippy Connection Removed
-2024-04-22 03:53:17,874 [common.py:build_error()] - JSON-RPC Request Error - Requested Method: printer.info, Code: 503, Message: Klippy Host not connected
-2024-04-22 03:53:18,981 [klippy_connection.py:_do_connect()] - Klippy Connection Established
-2024-04-22 03:53:21,785 [klippy_connection.py:_request_initial_subscriptions()] - Webhooks Subscribed
-2024-04-22 03:53:21,789 [klippy_connection.py:_request_initial_subscriptions()] - GCode Output Subscribed
-2024-04-22 03:53:22,037 [job_state.py:_handle_started()] - Job state initialized: standby
-2024-04-22 03:53:22,306 [klippy_connection.py:_check_ready()] - Klippy ready
-2024-04-22 03:53:22,791 [data_store.py:_init_sensors()] - Configuring available sensors: ['heater_bed', 'heater_generic heater_bed1', 'extruder']
-2024-04-22 04:02:17,454 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 60.00 seconds
-2024-04-22 04:03:17,457 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 120.00 seconds
-2024-04-22 04:04:17,458 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 180.01 seconds
-2024-04-22 04:05:17,460 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 240.01 seconds
-2024-04-22 04:06:17,462 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 300.01 seconds
-2024-04-22 04:07:17,465 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 360.01 seconds
-2024-04-22 04:08:17,467 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 420.01 seconds
-2024-04-22 04:09:01,293 [klippy_connection.py:_on_connection_closed()] - Klippy Connection Removed
-2024-04-22 04:09:01,457 [common.py:build_error()] - JSON-RPC Request Error - Requested Method: printer.info, Code: 503, Message: Klippy Host not connected
-2024-04-22 04:09:02,373 [klippy_connection.py:_do_connect()] - Klippy Connection Established
-2024-04-22 04:09:05,349 [klippy_connection.py:_request_initial_subscriptions()] - Webhooks Subscribed
-2024-04-22 04:09:05,353 [klippy_connection.py:_request_initial_subscriptions()] - GCode Output Subscribed
-2024-04-22 04:09:05,600 [job_state.py:_handle_started()] - Job state initialized: standby
-2024-04-22 04:09:05,870 [klippy_connection.py:_check_ready()] - Klippy ready
-2024-04-22 04:09:06,356 [data_store.py:_init_sensors()] - Configuring available sensors: ['heater_bed', 'heater_generic heater_bed1', 'extruder']
-2024-04-22 04:16:30,021 [job_state.py:_status_update()] - Job Started: Dragonite V2.gcode
-2024-04-22 04:17:30,277 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 60.00 seconds
-2024-04-22 04:17:30,679 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 60.00 seconds
-2024-04-22 04:17:31,220 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 60.00 seconds
-2024-04-22 04:17:31,261 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 60.00 seconds
-2024-04-22 04:17:31,304 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 60.00 seconds
-2024-04-22 04:17:31,304 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 60.00 seconds
-2024-04-22 04:23:47,619 [job_state.py:_status_update()] - Job Started: rhinomax_shark_parts_v17_slanted_tray.gcode
-2024-04-22 04:39:42,655 [authorization.py:_prune_conn_handler()] - Trusted Connection Expired, IP: 127.0.0.1
-2024-04-22 05:10:06,318 [job_state.py:_status_update()] - Job Started: rhinomax_shark_parts_v17_slanted_tray.gcode
-2024-04-22 05:11:06,297 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 60.00 seconds
-2024-04-22 05:11:06,338 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 60.00 seconds
-2024-04-22 05:11:06,382 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 60.00 seconds
-2024-04-22 05:11:06,383 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 60.00 seconds
-2024-04-22 05:24:42,678 [authorization.py:_prune_conn_handler()] - Trusted Connection Expired, IP: 192.168.0.69
-2024-04-22 05:43:17,909 [websockets.py:on_close()] - Websocket Closed: ID: 281473142582240 Close Code: None, Close Reason: None, Pong Time Elapsed: 3.84
-2024-04-22 08:55:12,304 [klippy_connection.py:_process_status_update()] - Klippy has shutdown
-2024-04-22 08:55:12,312 [proc_stats.py:_handle_shutdown()] - 
-Moonraker System Usage Statistics:
-System Time: 1713747283.129926, Usage: 4.12%, Memory: 39560 kB
-System Time: 1713747284.130775, Usage: 1.9%, Memory: 39560 kB
-System Time: 1713747285.131973, Usage: 9.57%, Memory: 39560 kB
-System Time: 1713747286.132998, Usage: 1.87%, Memory: 39560 kB
-System Time: 1713747287.134508, Usage: 2.39%, Memory: 39560 kB
-System Time: 1713747288.135545, Usage: 1.88%, Memory: 39560 kB
-System Time: 1713747289.137356, Usage: 3.54%, Memory: 39560 kB
-System Time: 1713747290.137662, Usage: 1.93%, Memory: 39560 kB
-System Time: 1713747291.138401, Usage: 1.9%, Memory: 39560 kB
-System Time: 1713747292.140709, Usage: 1.9%, Memory: 39560 kB
-System Time: 1713747293.146502, Usage: 2.59%, Memory: 39560 kB
-System Time: 1713747294.142742, Usage: 3.4%, Memory: 39560 kB
-System Time: 1713747295.143782, Usage: 1.84%, Memory: 39560 kB
-System Time: 1713747296.144728, Usage: 1.87%, Memory: 39560 kB
-System Time: 1713747297.145768, Usage: 2.14%, Memory: 39560 kB
-System Time: 1713747298.147754, Usage: 2.06%, Memory: 39560 kB
-System Time: 1713747299.149369, Usage: 3.51%, Memory: 39560 kB
-System Time: 1713747300.149792, Usage: 4.33%, Memory: 39560 kB
-System Time: 1713747301.151990, Usage: 9.51%, Memory: 39560 kB
-System Time: 1713747302.152807, Usage: 1.91%, Memory: 39560 kB
-System Time: 1713747303.154127, Usage: 1.88%, Memory: 39560 kB
-System Time: 1713747304.155580, Usage: 2.05%, Memory: 39560 kB
-System Time: 1713747305.156295, Usage: 3.01%, Memory: 39560 kB
-System Time: 1713747306.157494, Usage: 1.92%, Memory: 39560 kB
-System Time: 1713747307.158388, Usage: 2.12%, Memory: 39560 kB
-System Time: 1713747308.158946, Usage: 2.05%, Memory: 39560 kB
-System Time: 1713747309.160897, Usage: 3.54%, Memory: 39560 kB
-System Time: 1713747310.160868, Usage: 1.96%, Memory: 39560 kB
-System Time: 1713747311.161991, Usage: 1.87%, Memory: 39560 kB
-System Time: 1713747312.169528, Usage: 2.62%, Memory: 39560 kB
-CPU Temperature: 34.545
+2024-04-23 05:45:19,457 [klippy_connection.py:_on_connection_closed()] - Klippy Connection Removed
+2024-04-23 05:45:19,482 [common.py:build_error()] - JSON-RPC Request Error - Requested Method: printer.objects.query, Code: 503, Message: Klippy Disconnected
+2024-04-23 05:45:20,282 [base_deploy.py:log_info()] - PackageKit: Detected 5 package updates:
+imagemagick
+imagemagick-6-common
+imagemagick-6.q16
+libmagickcore-6.q16-6
+libmagickwand-6.q16-6
+2024-04-23 05:45:20,327 [shell_command.py:_check_proc_success()] - Command (git -C /home/mks/moonraker status --porcelain -b) successfully finished
+2024-04-23 05:45:20,379 [shell_command.py:_check_proc_success()] - Command (git -C /home/mks/moonraker branch --list --no-color) successfully finished
+2024-04-23 05:45:20,433 [common.py:build_error()] - JSON-RPC Request Error - Requested Method: printer.objects.query, Code: 503, Message: Klippy Host not connected
+2024-04-23 05:45:20,442 [shell_command.py:_check_proc_success()] - Command (git -C /home/mks/moonraker remote get-url origin) successfully finished
+2024-04-23 05:45:20,770 [klippy_connection.py:_do_connect()] - Klippy Connection Established
+2024-04-23 05:45:22,028 [shell_command.py:_check_proc_success()] - Command (git -C /home/mks/moonraker fetch origin --prune --progress) successfully finished
+2024-04-23 05:45:22,079 [shell_command.py:_check_proc_success()] - Command (git -C /home/mks/moonraker merge-base --is-ancestor HEAD origin/master) successfully finished
+2024-04-23 05:45:22,109 [shell_command.py:_check_proc_success()] - Command (git -C /home/mks/moonraker rev-parse HEAD) successfully finished
+2024-04-23 05:45:22,168 [shell_command.py:_check_proc_success()] - Command (git -C /home/mks/moonraker describe --always --tags --long --dirty --abbrev=8) successfully finished
+2024-04-23 05:45:22,200 [shell_command.py:_check_proc_success()] - Command (git -C /home/mks/moonraker rev-parse origin/master) successfully finished
+2024-04-23 05:45:22,247 [shell_command.py:_check_proc_success()] - Command (git -C /home/mks/moonraker describe origin/master --always --tags --long --abbrev=8) successfully finished
+2024-04-23 05:45:22,277 [shell_command.py:_check_proc_success()] - Command (git -C /home/mks/moonraker rev-list HEAD..9447494bd50dcc254525a8edc2eb2c90a9528b2c --count) successfully finished
+2024-04-23 05:45:22,310 [shell_command.py:_check_proc_success()] - Command (git -C /home/mks/moonraker log aadff0d54e98a536c13d4aca295e3250e06b67b8..origin/master --format="sha:%H%x1Dauthor:%an%x1Ddate:%ct%x1Dsubject:%s%x1Dmessage:%b%x1E" --max-count=100) successfully finished
+2024-04-23 05:45:22,443 [shell_command.py:_check_proc_success()] - Command (git -C /home/mks/moonraker for-each-ref --count=100 --sort='-creatordate' --contains=HEAD --merged=origin/master --format='%(if)%(*objecttype)%(then)%(*objecttype) %(*objectname)%(else)%(objecttype) %(objectname)%(end) %(refname)' 'refs/tags') successfully finished
+2024-04-23 05:45:22,444 [git_deploy.py:log_repo_info()] - Git Repo moonraker Detected:
+Owner: Arksine
+Repository Name: moonraker
+Path: /home/mks/moonraker
+Remote: origin
+Branch: master
+Remote URL: https://github.com/Arksine/moonraker.git
+Recovery URL: https://github.com/Arksine/moonraker.git
+Current Commit SHA: aadff0d54e98a536c13d4aca295e3250e06b67b8
+Upstream Commit SHA: 9447494bd50dcc254525a8edc2eb2c90a9528b2c
+Current Version: v0.8.0-314-gaadff0d5
+Upstream Version: v0.8.0-327-g9447494b
+Rollback Commit: aadff0d54e98a536c13d4aca295e3250e06b67b8
+Rollback Branch: master
+Rollback Version: v0.8.0-314-gaadff0d5
+Is Dirty: False
+Is Detached: False
+Is Shallow: False
+Commits Behind Count: 13
+Diverged: False
+2024-04-23 05:45:22,445 [base_deploy.py:log_info()] - Git Repo moonraker: Channel: dev
+2024-04-23 05:45:22,445 [base_deploy.py:log_info()] - Git Repo moonraker: Validity check for git repo passed
+2024-04-23 05:45:22,518 [shell_command.py:_check_proc_success()] - Command (git -C /home/mks/klipper status --porcelain -b) successfully finished
+2024-04-23 05:45:22,570 [shell_command.py:_check_proc_success()] - Command (git -C /home/mks/klipper branch --list --no-color) successfully finished
+2024-04-23 05:45:22,622 [shell_command.py:_check_proc_success()] - Command (git -C /home/mks/klipper remote get-url origin) successfully finished
+2024-04-23 05:45:24,256 [klippy_connection.py:_request_initial_subscriptions()] - Webhooks Subscribed
+2024-04-23 05:45:24,261 [klippy_connection.py:_request_initial_subscriptions()] - GCode Output Subscribed
+2024-04-23 05:45:24,509 [job_state.py:_handle_started()] - Job state initialized: standby
+2024-04-23 05:45:24,784 [klippy_connection.py:_check_ready()] - Klippy ready
+2024-04-23 05:45:25,263 [data_store.py:_init_sensors()] - Configuring available sensors: ['heater_bed', 'heater_generic heater_bed1', 'extruder']
+2024-04-23 05:45:26,649 [shell_command.py:_check_proc_success()] - Command (git -C /home/mks/klipper fetch origin --prune --progress) successfully finished
+2024-04-23 05:45:26,683 [shell_command.py:_check_proc_success()] - Command (git -C /home/mks/klipper merge-base --is-ancestor HEAD origin/master) successfully finished
+2024-04-23 05:45:26,711 [shell_command.py:_check_proc_success()] - Command (git -C /home/mks/klipper rev-parse HEAD) successfully finished
+2024-04-23 05:45:26,917 [shell_command.py:_check_proc_success()] - Command (git -C /home/mks/klipper describe --always --tags --long --dirty --abbrev=8) successfully finished
+2024-04-23 05:45:26,947 [shell_command.py:_check_proc_success()] - Command (git -C /home/mks/klipper rev-parse origin/master) successfully finished
+2024-04-23 05:45:27,137 [shell_command.py:_check_proc_success()] - Command (git -C /home/mks/klipper describe origin/master --always --tags --long --abbrev=8) successfully finished
+2024-04-23 05:45:27,174 [shell_command.py:_check_proc_success()] - Command (git -C /home/mks/klipper rev-list HEAD..2f6e94c94cae036b70b02df996dc12e2e61e5dcb --count) successfully finished
+2024-04-23 05:45:27,214 [shell_command.py:_check_proc_success()] - Command (git -C /home/mks/klipper log 28f06a104bc0cfe3a7d36db343ade5a805b3e132..origin/master --format="sha:%H%x1Dauthor:%an%x1Ddate:%ct%x1Dsubject:%s%x1Dmessage:%b%x1E" --max-count=100) successfully finished
+2024-04-23 05:45:27,466 [shell_command.py:_check_proc_success()] - Command (git -C /home/mks/klipper for-each-ref --count=100 --sort='-creatordate' --contains=HEAD --merged=origin/master --format='%(if)%(*objecttype)%(then)%(*objecttype) %(*objectname)%(else)%(objecttype) %(objectname)%(end) %(refname)' 'refs/tags') successfully finished
+2024-04-23 05:45:27,468 [git_deploy.py:log_repo_info()] - Git Repo klipper Detected:
+Owner: Klipper3d
+Repository Name: klipper
+Path: /home/mks/klipper
+Remote: origin
+Branch: master
+Remote URL: https://github.com/Klipper3d/klipper
+Recovery URL: https://github.com/Klipper3d/klipper
+Current Commit SHA: 28f06a104bc0cfe3a7d36db343ade5a805b3e132
+Upstream Commit SHA: 2f6e94c94cae036b70b02df996dc12e2e61e5dcb
+Current Version: v0.12.0-113-g28f06a10
+Upstream Version: v0.12.0-171-g2f6e94c9
+Rollback Commit: 28f06a104bc0cfe3a7d36db343ade5a805b3e132
+Rollback Branch: master
+Rollback Version: v0.12.0-113-g28f06a10
+Is Dirty: False
+Is Detached: False
+Is Shallow: False
+Commits Behind Count: 58
+Diverged: False
+Repo Warnings:
+  Repo has untracked source files: ['klippy/extras/gcode_shell_command.py', 'klippy/extras/x_twist_compensation.py']
+2024-04-23 05:45:27,469 [base_deploy.py:log_info()] - Git Repo klipper: Channel: dev
+2024-04-23 05:45:27,469 [base_deploy.py:log_info()] - Git Repo klipper: Validity check for git repo passed
+2024-04-23 05:45:27,530 [shell_command.py:_check_proc_success()] - Command (git -C /home/mks/klipper-backup status --porcelain -b) successfully finished
+2024-04-23 05:45:27,582 [shell_command.py:_check_proc_success()] - Command (git -C /home/mks/klipper-backup branch --list --no-color) successfully finished
+2024-04-23 05:45:27,633 [shell_command.py:_check_proc_success()] - Command (git -C /home/mks/klipper-backup remote get-url origin) successfully finished
+2024-04-23 05:45:28,876 [shell_command.py:_check_proc_success()] - Command (git -C /home/mks/klipper-backup fetch origin --prune --progress) successfully finished
+2024-04-23 05:45:28,911 [shell_command.py:_check_proc_success()] - Command (git -C /home/mks/klipper-backup merge-base --is-ancestor HEAD origin/main) successfully finished
+2024-04-23 05:45:28,938 [shell_command.py:_check_proc_success()] - Command (git -C /home/mks/klipper-backup rev-parse HEAD) successfully finished
+2024-04-23 05:45:28,968 [shell_command.py:_check_proc_success()] - Command (git -C /home/mks/klipper-backup describe --always --tags --long --dirty --abbrev=8) successfully finished
+2024-04-23 05:45:28,995 [shell_command.py:_check_proc_success()] - Command (git -C /home/mks/klipper-backup rev-parse origin/main) successfully finished
+2024-04-23 05:45:29,034 [shell_command.py:_check_proc_success()] - Command (git -C /home/mks/klipper-backup describe origin/main --always --tags --long --abbrev=8) successfully finished
+2024-04-23 05:45:29,064 [shell_command.py:_check_proc_success()] - Command (git -C /home/mks/klipper-backup rev-list HEAD..0948c38bf8cd19831cb3199e25489809da5de9aa --count) successfully finished
+2024-04-23 05:45:29,097 [shell_command.py:_check_proc_success()] - Command (git -C /home/mks/klipper-backup log 67929a3e868279547ead4d4f55f2be8ab352f241..origin/main --format="sha:%H%x1Dauthor:%an%x1Ddate:%ct%x1Dsubject:%s%x1Dmessage:%b%x1E" --max-count=100) successfully finished
+2024-04-23 05:45:29,135 [shell_command.py:_check_proc_success()] - Command (git -C /home/mks/klipper-backup for-each-ref --count=100 --sort='-creatordate' --contains=HEAD --merged=origin/main --format='%(if)%(*objecttype)%(then)%(*objecttype) %(*objectname)%(else)%(objecttype) %(objectname)%(end) %(refname)' 'refs/tags') successfully finished
+2024-04-23 05:45:29,136 [git_deploy.py:log_repo_info()] - Git Repo klipper-backup Detected:
+Owner: Staubgeborener
+Repository Name: klipper-backup
+Path: /home/mks/klipper-backup
+Remote: origin
+Branch: main
+Remote URL: https://github.com/Staubgeborener/klipper-backup.git
+Recovery URL: https://github.com/Staubgeborener/klipper-backup.git
+Current Commit SHA: 67929a3e868279547ead4d4f55f2be8ab352f241
+Upstream Commit SHA: 0948c38bf8cd19831cb3199e25489809da5de9aa
+Current Version: v1.2.1-0-g67929a3e
+Upstream Version: v1.2.2-3-g0948c38b
+Rollback Commit: 67929a3e868279547ead4d4f55f2be8ab352f241
+Rollback Branch: main
+Rollback Version: v1.2.1-0-g67929a3e
+Is Dirty: False
+Is Detached: False
+Is Shallow: False
+Commits Behind Count: 17
+Diverged: False
+2024-04-23 05:45:29,137 [base_deploy.py:log_info()] - Git Repo klipper-backup: Channel: dev
+2024-04-23 05:45:29,137 [base_deploy.py:log_info()] - Git Repo klipper-backup: Validity check for git repo passed
+2024-04-23 05:50:14,198 [authorization.py:_prune_conn_handler()] - Trusted Connection Expired, IP: 127.0.0.1
+2024-04-23 05:50:18,927 [authorization.py:_check_trusted_connection()] - Trusted Connection Detected, IP: 192.168.0.69
+2024-04-23 05:50:19,204 [application.py:log_request()] - 101 GET /websocket?token=SVVOLN55SVKYX3OOAM253V5QAD4HIH4M (192.168.0.69) [_TRUSTED_USER_] 9.38ms
+2024-04-23 05:50:19,205 [websockets.py:open()] - Websocket Opened: ID: 281472609086656, Proxied: True, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36, Host Name: 192.168.0.88
+2024-04-23 05:50:19,223 [websockets.py:_handle_identify()] - Websocket 281472609086656 Client Identified - Name: fluidd, Version: 1.28.1-d1ef3a4, Type: web
+2024-04-23 05:50:19,225 [file_manager.py:get_file_list()] - Updating File List <config>...
+2024-04-23 05:50:55,758 [job_state.py:_status_update()] - Job Started: Blastoise V2.gcode
+2024-04-23 06:29:28,942 [websockets.py:on_close()] - Websocket Closed: ID: 281472609086656 Close Code: None, Close Reason: None, Pong Time Elapsed: 9.69
+2024-04-23 06:29:38,899 [application.py:log_request()] - 101 GET /websocket?token=L7C5WCEVCMGBAFBQRQRZ5FZBUBS27L5B (192.168.0.69) [_TRUSTED_USER_] 4.14ms
+2024-04-23 06:29:38,900 [websockets.py:open()] - Websocket Opened: ID: 281472608883320, Proxied: True, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36, Host Name: 192.168.0.88
+2024-04-23 06:29:39,006 [websockets.py:_handle_identify()] - Websocket 281472608883320 Client Identified - Name: fluidd, Version: 1.28.1-d1ef3a4, Type: web
+2024-04-23 06:29:39,009 [file_manager.py:get_file_list()] - Updating File List <config>...
+2024-04-23 07:30:14,220 [authorization.py:_prune_conn_handler()] - Trusted Connection Expired, IP: 192.168.0.69
