@@ -299,3 +299,58 @@ Diverged: False
 2024-04-23 06:29:39,006 [websockets.py:_handle_identify()] - Websocket 281472608883320 Client Identified - Name: fluidd, Version: 1.28.1-d1ef3a4, Type: web
 2024-04-23 06:29:39,009 [file_manager.py:get_file_list()] - Updating File List <config>...
 2024-04-23 07:30:14,220 [authorization.py:_prune_conn_handler()] - Trusted Connection Expired, IP: 192.168.0.69
+2024-04-23 08:17:44,490 [authorization.py:_check_trusted_connection()] - Trusted Connection Detected, IP: 192.168.0.69
+2024-04-23 08:17:44,491 [application.py:prepare()] - Upload Request Received from 192.168.0.69
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryZSDhLdAK4Jf3Lkib
+2024-04-23 08:17:45,013 [application.py:post()] - Processing Uploaded File: 0104_-_Cubone.gcode
+2024-04-23 08:17:45,684 [shell_command.py:pipe_data_received()] - INFO:metadata:Object Processing is disabled
+
+2024-04-23 08:17:45,916 [shell_command.py:_check_proc_success()] - Command (/home/mks/moonraker-env/bin/python /home/mks/moonraker/moonraker/components/file_manager/metadata.py -p /home/mks/gcode_files -f "0104_-_Cubone.gcode") successfully finished
+2024-04-23 08:17:45,926 [application.py:log_request()] - 201 POST /server/files/upload (192.168.0.69) [_TRUSTED_USER_] 1438.05ms
+2024-04-23 08:18:51,701 [job_state.py:_status_update()] - Job Started: 0104_-_Cubone.gcode
+2024-04-23 08:19:51,726 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 60.00 seconds
+2024-04-23 08:19:52,124 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 60.00 seconds
+2024-04-23 08:19:52,663 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 60.00 seconds
+2024-04-23 08:19:52,718 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 60.00 seconds
+2024-04-23 08:19:52,758 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 60.00 seconds
+2024-04-23 08:19:52,760 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 60.00 seconds
+2024-04-23 08:20:51,728 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 120.01 seconds
+2024-04-23 08:20:52,127 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 120.00 seconds
+2024-04-23 08:20:52,667 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 120.01 seconds
+2024-04-23 08:20:52,720 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 120.00 seconds
+2024-04-23 08:20:52,760 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 120.00 seconds
+2024-04-23 08:20:52,762 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 120.00 seconds
+2024-04-23 09:13:07,873 [klippy_connection.py:_process_status_update()] - Klippy has shutdown
+2024-04-23 09:13:07,889 [proc_stats.py:_handle_shutdown()] - 
+Moonraker System Usage Statistics:
+System Time: 1713834758.489081, Usage: 2.52%, Memory: 39548 kB
+System Time: 1713834759.490671, Usage: 2.87%, Memory: 39548 kB
+System Time: 1713834760.491064, Usage: 2.63%, Memory: 39548 kB
+System Time: 1713834761.492174, Usage: 2.67%, Memory: 39548 kB
+System Time: 1713834762.495121, Usage: 4.62%, Memory: 39548 kB
+System Time: 1713834763.494793, Usage: 3.06%, Memory: 39548 kB
+System Time: 1713834764.495640, Usage: 2.65%, Memory: 39548 kB
+System Time: 1713834765.497706, Usage: 2.7%, Memory: 39548 kB
+System Time: 1713834766.500372, Usage: 4.19%, Memory: 39548 kB
+System Time: 1713834767.500106, Usage: 2.9%, Memory: 39548 kB
+System Time: 1713834768.500813, Usage: 2.7%, Memory: 39548 kB
+System Time: 1713834769.501584, Usage: 2.95%, Memory: 39548 kB
+System Time: 1713834770.502342, Usage: 2.69%, Memory: 39548 kB
+System Time: 1713834771.503573, Usage: 5.26%, Memory: 39548 kB
+System Time: 1713834772.505172, Usage: 4.92%, Memory: 39548 kB
+System Time: 1713834773.505315, Usage: 11.69%, Memory: 39548 kB
+System Time: 1713834774.505586, Usage: 2.65%, Memory: 39548 kB
+System Time: 1713834775.506009, Usage: 2.65%, Memory: 39548 kB
+System Time: 1713834776.507492, Usage: 2.62%, Memory: 39548 kB
+System Time: 1713834777.508298, Usage: 2.68%, Memory: 39548 kB
+System Time: 1713834778.508675, Usage: 3.98%, Memory: 39548 kB
+System Time: 1713834779.509871, Usage: 3.02%, Memory: 39548 kB
+System Time: 1713834780.510529, Usage: 2.63%, Memory: 39548 kB
+System Time: 1713834781.510974, Usage: 2.62%, Memory: 39548 kB
+System Time: 1713834782.512583, Usage: 4.87%, Memory: 39548 kB
+System Time: 1713834783.513431, Usage: 2.71%, Memory: 39548 kB
+System Time: 1713834784.514247, Usage: 2.68%, Memory: 39548 kB
+System Time: 1713834785.514595, Usage: 2.63%, Memory: 39548 kB
+System Time: 1713834786.515985, Usage: 2.58%, Memory: 39548 kB
+System Time: 1713834787.516004, Usage: 2.65%, Memory: 39548 kB
+CPU Temperature: 39.09
