@@ -189,3 +189,33 @@ Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryvFB48BC59BbJu7
 
 2024-04-24 03:58:26,953 [shell_command.py:_check_proc_success()] - Command (/home/mks/moonraker-env/bin/python /home/mks/moonraker/moonraker/components/file_manager/metadata.py -p /home/mks/gcode_files -f "Untitled.gcode") successfully finished
 2024-04-24 03:58:26,963 [application.py:log_request()] - 201 POST /server/files/upload (192.168.0.69) [_TRUSTED_USER_] 824.86ms
+2024-04-24 04:00:55,121 [application.py:prepare()] - Upload Request Received from 192.168.0.69
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryScifYqltZIUTtgcF
+2024-04-24 04:00:55,128 [application.py:post()] - Processing Uploaded File: webcam.txt
+2024-04-24 04:00:55,139 [application.py:log_request()] - 201 POST /server/files/upload (192.168.0.69) [_TRUSTED_USER_] 20.23ms
+2024-04-24 04:01:42,231 [job_state.py:_status_update()] - Job Started: Untitled.gcode
+2024-04-24 04:02:17,314 [authorization.py:_prune_conn_handler()] - Trusted Connection Expired, IP: 127.0.0.1
+2024-04-24 04:12:42,588 [job_state.py:_status_update()] - Job Started: rhinomax_shark_parts_v17_slanted_tray.gcode
+2024-04-24 05:05:38,768 [job_state.py:_status_update()] - Job Started: Dragonite V2.gcode
+2024-04-24 05:06:38,796 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 60.00 seconds
+2024-04-24 05:06:39,195 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 60.00 seconds
+2024-04-24 05:06:39,738 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 60.00 seconds
+2024-04-24 05:06:39,786 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 60.00 seconds
+2024-04-24 05:06:39,826 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 60.00 seconds
+2024-04-24 05:06:39,827 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 60.00 seconds
+2024-04-24 05:07:39,740 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 120.00 seconds
+2024-04-24 05:07:39,788 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 120.00 seconds
+2024-04-24 05:07:39,829 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 120.01 seconds
+2024-04-24 05:07:39,830 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 120.01 seconds
+2024-04-24 05:51:48,091 [websockets.py:on_close()] - Websocket Closed: ID: 281473078475240 Close Code: None, Close Reason: None, Pong Time Elapsed: 0.89
+2024-04-24 05:52:21,903 [application.py:log_request()] - 101 GET /websocket?token=SSRF3SMMCALSCKFDMEJHUNLVS2RSG6WM (192.168.0.69) [_TRUSTED_USER_] 4.36ms
+2024-04-24 05:52:21,904 [websockets.py:open()] - Websocket Opened: ID: 281473077792440, Proxied: True, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36, Host Name: 192.168.0.88
+2024-04-24 05:52:22,585 [websockets.py:_handle_identify()] - Websocket 281473077792440 Client Identified - Name: fluidd, Version: 1.28.1-d1ef3a4, Type: web
+2024-04-24 05:52:22,587 [file_manager.py:get_file_list()] - Updating File List <config>...
+2024-04-24 06:47:23,764 [websockets.py:on_close()] - Websocket Closed: ID: 281473077792440 Close Code: None, Close Reason: None, Pong Time Elapsed: 1.37
+2024-04-24 06:57:17,362 [authorization.py:_prune_conn_handler()] - Trusted Connection Expired, IP: 192.168.0.69
+2024-04-24 07:58:21,945 [authorization.py:_check_trusted_connection()] - Trusted Connection Detected, IP: 192.168.0.69
+2024-04-24 07:58:22,650 [application.py:log_request()] - 101 GET /websocket?token=OEFSQN4EEEWSGA3EUEC26GBC6472YXI4 (192.168.0.69) [_TRUSTED_USER_] 4.08ms
+2024-04-24 07:58:22,651 [websockets.py:open()] - Websocket Opened: ID: 281473077715632, Proxied: True, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36, Host Name: 192.168.0.88
+2024-04-24 07:58:22,697 [websockets.py:_handle_identify()] - Websocket 281473077715632 Client Identified - Name: fluidd, Version: 1.28.1-d1ef3a4, Type: web
+2024-04-24 07:58:22,702 [file_manager.py:get_file_list()] - Updating File List <config>...
