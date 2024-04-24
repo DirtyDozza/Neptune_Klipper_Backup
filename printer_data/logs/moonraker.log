@@ -219,3 +219,35 @@ Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryScifYqltZIUTtg
 2024-04-24 07:58:22,651 [websockets.py:open()] - Websocket Opened: ID: 281473077715632, Proxied: True, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36, Host Name: 192.168.0.88
 2024-04-24 07:58:22,697 [websockets.py:_handle_identify()] - Websocket 281473077715632 Client Identified - Name: fluidd, Version: 1.28.1-d1ef3a4, Type: web
 2024-04-24 07:58:22,702 [file_manager.py:get_file_list()] - Updating File List <config>...
+2024-04-24 08:02:08,807 [websockets.py:on_close()] - Websocket Closed: ID: 281473077715632 Close Code: 1001, Close Reason: None, Pong Time Elapsed: 6.00
+2024-04-24 08:02:10,014 [application.py:log_request()] - 101 GET /websocket?token=AMZWTIGZHXTKTDK3GJRIR6L2WGTJC6OG (192.168.0.69) [_TRUSTED_USER_] 5.09ms
+2024-04-24 08:02:10,015 [websockets.py:open()] - Websocket Opened: ID: 281473078074504, Proxied: True, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36, Host Name: 192.168.0.88
+2024-04-24 08:02:10,191 [websockets.py:_handle_identify()] - Websocket 281473078074504 Client Identified - Name: fluidd, Version: 1.28.1-d1ef3a4, Type: web
+2024-04-24 08:02:10,193 [file_manager.py:get_file_list()] - Updating File List <config>...
+2024-04-24 08:04:30,534 [websockets.py:on_close()] - Websocket Closed: ID: 281473078074504 Close Code: 1001, Close Reason: None, Pong Time Elapsed: 0.29
+2024-04-24 08:04:31,972 [application.py:log_request()] - 101 GET /websocket?token=JPNTD7UCMW4E5NN4NV7A4SR25HWJAFGM (192.168.0.69) [_TRUSTED_USER_] 4.01ms
+2024-04-24 08:04:31,973 [websockets.py:open()] - Websocket Opened: ID: 281473077803384, Proxied: True, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36, Host Name: 192.168.0.88
+2024-04-24 08:04:32,190 [websockets.py:_handle_identify()] - Websocket 281473077803384 Client Identified - Name: fluidd, Version: 1.28.1-d1ef3a4, Type: web
+2024-04-24 08:04:32,193 [file_manager.py:get_file_list()] - Updating File List <config>...
+2024-04-24 08:09:56,594 [application.py:log_request()] - 101 GET /websocket?token=PZX5FC75PXY36M52OMMZQVF5IEF76DEJ (192.168.0.69) [_TRUSTED_USER_] 4.66ms
+2024-04-24 08:09:56,595 [websockets.py:open()] - Websocket Opened: ID: 281473077882664, Proxied: True, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36, Host Name: 192.168.0.88
+2024-04-24 08:09:56,739 [websockets.py:_handle_identify()] - Websocket 281473077882664 Client Identified - Name: fluidd, Version: 1.28.1-d1ef3a4, Type: web
+2024-04-24 08:09:56,741 [file_manager.py:get_file_list()] - Updating File List <config>...
+2024-04-24 08:10:02,318 [websockets.py:on_close()] - Websocket Closed: ID: 281473077882664 Close Code: 1001, Close Reason: None, Pong Time Elapsed: 5.73
+2024-04-24 08:10:44,798 [application.py:prepare()] - Upload Request Received from 192.168.0.69
+Content-Type: multipart/form-data; boundary="boundary_.oOo._12Sha+6BmqCvsZ+LMP8YL/hL7szvIT+D"
+2024-04-24 08:10:47,065 [application.py:post()] - Processing Uploaded File: Wobbuffet-01.ufp
+2024-04-24 08:10:47,655 [shell_command.py:pipe_data_received()] - INFO:metadata:Object Processing is disabled
+
+2024-04-24 08:10:48,874 [shell_command.py:_check_proc_success()] - Command (/home/mks/moonraker-env/bin/python /home/mks/moonraker/moonraker/components/file_manager/metadata.py -p /home/mks/gcode_files -f "Wobbuffet-01.gcode" -u "/tmp/moonraker.upload-15233.mru") successfully finished
+2024-04-24 08:10:48,884 [application.py:log_request()] - 201 POST /api/files/local (192.168.0.69) [_API_KEY_USER_] 4088.23ms
+2024-04-24 08:10:49,588 [job_state.py:_status_update()] - Job Started: Wobbuffet-01.gcode
+2024-04-24 08:58:03,141 [application.py:prepare()] - Upload Request Received from 192.168.0.69
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundarybW14ShWO5px8ZtN1
+2024-04-24 08:58:19,766 [application.py:post()] - Processing Uploaded File: machop.gcode
+2024-04-24 08:58:20,562 [shell_command.py:pipe_data_received()] - INFO:metadata:Object Processing is disabled
+
+2024-04-24 08:58:20,791 [shell_command.py:_check_proc_success()] - Command (/home/mks/moonraker-env/bin/python /home/mks/moonraker/moonraker/components/file_manager/metadata.py -p /home/mks/gcode_files -f "machop.gcode") successfully finished
+2024-04-24 08:58:20,800 [application.py:log_request()] - 201 POST /server/files/upload (192.168.0.69) [_TRUSTED_USER_] 17661.57ms
+2024-04-24 09:15:28,407 [websockets.py:on_close()] - Websocket Closed: ID: 281473077803384 Close Code: 1001, Close Reason: None, Pong Time Elapsed: 6.12
+2024-04-24 10:02:17,414 [authorization.py:_prune_conn_handler()] - Trusted Connection Expired, IP: 192.168.0.69
