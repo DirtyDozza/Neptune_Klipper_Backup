@@ -607,3 +607,37 @@ ConnectionResetError: [Errno 104] Connection reset by peer
 2024-04-24 18:52:27,546 [authorization.py:_prune_conn_handler()] - Trusted Connection Expired, IP: 192.168.0.69
 2024-04-24 19:02:27,548 [authorization.py:_prune_conn_handler()] - Trusted Connection Expired, IP: 192.168.0.105
 2024-04-24 19:10:13,494 [authorization.py:_check_trusted_connection()] - Trusted Connection Detected, IP: 192.168.0.105
+2024-04-24 20:12:27,566 [authorization.py:_prune_conn_handler()] - Trusted Connection Expired, IP: 192.168.0.105
+2024-04-24 22:10:33,132 [authorization.py:_check_trusted_connection()] - Trusted Connection Detected, IP: 192.168.0.69
+2024-04-24 22:10:33,450 [application.py:log_request()] - 101 GET /websocket?token=L3SOQZSCBI4WKUC27DVDD3T3E72EOHD5 (192.168.0.69) [_TRUSTED_USER_] 5.08ms
+2024-04-24 22:10:33,451 [websockets.py:open()] - Websocket Opened: ID: 281472743504192, Proxied: True, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36, Host Name: 192.168.0.88
+2024-04-24 22:10:33,466 [websockets.py:_handle_identify()] - Websocket 281472743504192 Client Identified - Name: fluidd, Version: 1.28.1-d1ef3a4, Type: web
+2024-04-24 22:10:33,472 [file_manager.py:get_file_list()] - Updating File List <config>...
+2024-04-24 22:10:50,407 [authorization.py:_check_trusted_connection()] - Trusted Connection Detected, IP: 192.168.0.105
+2024-04-24 22:12:56,122 [application.py:prepare()] - Upload Request Received from 192.168.0.69
+Content-Type: multipart/form-data; boundary="boundary_.oOo._s+LXKBzgq39wBcsU5GYQWXM4aSiIcR2Q"
+2024-04-24 22:12:56,516 [application.py:post()] - Processing Uploaded File: /Happy_Ditto.ufp
+2024-04-24 22:12:57,232 [shell_command.py:pipe_data_received()] - INFO:metadata:Object Processing is disabled
+
+2024-04-24 22:12:57,916 [shell_command.py:_check_proc_success()] - Command (/home/mks/moonraker-env/bin/python /home/mks/moonraker/moonraker/components/file_manager/metadata.py -p /home/mks/gcode_files -f "Happy_Ditto.gcode" -u "/tmp/moonraker.upload-15957.mru") successfully finished
+2024-04-24 22:12:57,966 [application.py:log_request()] - 201 POST /server/files/upload (192.168.0.69) [_API_KEY_USER_] 1845.30ms
+2024-04-24 22:12:58,191 [job_state.py:_status_update()] - Job Started: Happy_Ditto.gcode
+2024-04-24 22:13:15,312 [websockets.py:on_close()] - Websocket Closed: ID: 281472743504192 Close Code: 1001, Close Reason: None, Pong Time Elapsed: 1.84
+2024-04-24 22:13:15,896 [application.py:log_request()] - 101 GET /websocket?token=YWFMVWDV4DJCGPGATLTH23ULQVS24VQQ (192.168.0.69) [_TRUSTED_USER_] 4.78ms
+2024-04-24 22:13:15,897 [websockets.py:open()] - Websocket Opened: ID: 281472743474624, Proxied: True, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36, Host Name: 192.168.0.88
+2024-04-24 22:13:15,953 [websockets.py:_handle_identify()] - Websocket 281472743474624 Client Identified - Name: fluidd, Version: 1.28.1-d1ef3a4, Type: web
+2024-04-24 22:13:15,955 [file_manager.py:get_file_list()] - Updating File List <config>...
+2024-04-24 22:13:58,237 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 60.00 seconds
+2024-04-24 22:13:58,635 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 60.00 seconds
+2024-04-24 22:13:59,232 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 60.00 seconds
+2024-04-24 22:13:59,272 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 60.00 seconds
+2024-04-24 22:13:59,311 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 60.00 seconds
+2024-04-24 22:13:59,313 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 60.00 seconds
+2024-04-24 22:14:58,239 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 120.00 seconds
+2024-04-24 22:14:58,638 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 120.00 seconds
+2024-04-24 22:14:59,234 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 120.01 seconds
+2024-04-24 22:14:59,275 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 120.01 seconds
+2024-04-24 22:14:59,321 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 120.01 seconds
+2024-04-24 22:14:59,322 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 120.01 seconds
+2024-04-24 23:17:27,619 [authorization.py:_prune_conn_handler()] - Trusted Connection Expired, IP: 192.168.0.105
+2024-04-24 23:57:26,481 [websockets.py:on_close()] - Websocket Closed: ID: 281472743710112 Close Code: 1001, Close Reason: None, Pong Time Elapsed: 2.68
