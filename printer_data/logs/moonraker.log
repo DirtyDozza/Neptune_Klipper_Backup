@@ -222,3 +222,75 @@ Content-Type: multipart/form-data; boundary="boundary_.oOo._6ojeCk2WYgW9Erp5st5Z
 2024-04-25 07:00:27,850 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 60.00 seconds
 2024-04-25 07:00:27,893 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 60.00 seconds
 2024-04-25 07:00:27,894 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 60.00 seconds
+2024-04-25 08:02:27,776 [authorization.py:_prune_conn_handler()] - Trusted Connection Expired, IP: 192.168.0.69
+2024-04-25 08:47:19,590 [websockets.py:on_close()] - Websocket Closed: ID: 281472743855272 Close Code: None, Close Reason: None, Pong Time Elapsed: 2.61
+2024-04-25 08:47:31,122 [authorization.py:_check_trusted_connection()] - Trusted Connection Detected, IP: 192.168.0.69
+2024-04-25 08:47:31,631 [application.py:log_request()] - 101 GET /websocket?token=TP4H62Z5SF4NQ2XODAVMZHB6B6HESXBO (192.168.0.69) [_TRUSTED_USER_] 4.05ms
+2024-04-25 08:47:31,632 [websockets.py:open()] - Websocket Opened: ID: 281472743689856, Proxied: True, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36, Host Name: 192.168.0.88
+2024-04-25 08:47:31,664 [websockets.py:_handle_identify()] - Websocket 281472743689856 Client Identified - Name: fluidd, Version: 1.28.1-d1ef3a4, Type: web
+2024-04-25 08:47:31,666 [file_manager.py:get_file_list()] - Updating File List <config>...
+2024-04-25 09:36:43,073 [websockets.py:on_close()] - Websocket Closed: ID: 281472744168472 Close Code: None, Close Reason: None, Pong Time Elapsed: 5.92
+2024-04-25 09:36:43,330 [klippy_connection.py:_on_connection_closed()] - Klippy Connection Removed
+2024-04-25 09:36:43,602 [server.py:_handle_term_signal()] - Exiting with signal SIGTERM
+2024-04-25 09:36:43,832 [common.py:build_error()] - JSON-RPC Request Error - Requested Method: printer.info, Code: 503, Message: Klippy Host not connected
+2024-04-25 09:36:43,881 [websockets.py:write_to_socket()] - Websocket closed while writing: 281472743689856
+2024-04-25 09:36:43,950 [websockets.py:on_close()] - Websocket Closed: ID: 281472743689856 Close Code: 1001, Close Reason: Server Shutdown, Pong Time Elapsed: 2.07
+2024-04-25 09:36:43,961 [database.py:close()] - Database statistics:
+
+announcements:
+psize: 4096
+depth: 0
+branch_pages: 0
+leaf_pages: 0
+overflow_pages: 0
+entries: 0
+authorized_users:
+psize: 4096
+depth: 1
+branch_pages: 0
+leaf_pages: 1
+overflow_pages: 0
+entries: 1
+fluidd:
+psize: 4096
+depth: 1
+branch_pages: 0
+leaf_pages: 1
+overflow_pages: 2
+entries: 6
+gcode_metadata:
+psize: 4096
+depth: 2
+branch_pages: 1
+leaf_pages: 5
+overflow_pages: 0
+entries: 15
+history:
+psize: 4096
+depth: 2
+branch_pages: 1
+leaf_pages: 12
+overflow_pages: 0
+entries: 37
+moonraker:
+psize: 4096
+depth: 1
+branch_pages: 0
+leaf_pages: 1
+overflow_pages: 0
+entries: 7
+update_manager:
+psize: 4096
+depth: 1
+branch_pages: 0
+leaf_pages: 1
+overflow_pages: 7
+entries: 4
+webcams:
+psize: 4096
+depth: 1
+branch_pages: 0
+leaf_pages: 1
+overflow_pages: 0
+entries: 1
+2024-04-25 09:36:44,071 [server.py:main()] - Server Shutdown
