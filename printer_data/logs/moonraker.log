@@ -180,3 +180,45 @@ Content-Type: multipart/form-data; boundary="boundary_.oOo._mL8LdfZTPg/7VtPxzbML
 2024-04-25 02:57:16,025 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 120.01 seconds
 2024-04-25 02:57:16,026 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 120.01 seconds
 2024-04-25 03:57:27,716 [authorization.py:_prune_conn_handler()] - Trusted Connection Expired, IP: 192.168.0.69
+2024-04-25 04:24:36,341 [websockets.py:on_close()] - Websocket Closed: ID: 281472743610632 Close Code: None, Close Reason: None, Pong Time Elapsed: 0.96
+2024-04-25 04:24:56,169 [authorization.py:_check_trusted_connection()] - Trusted Connection Detected, IP: 192.168.0.69
+2024-04-25 04:24:56,700 [application.py:log_request()] - 101 GET /websocket?token=PTB735SRAZCYM4XHVNBD64ANFX6E6FAK (192.168.0.69) [_TRUSTED_USER_] 4.13ms
+2024-04-25 04:24:56,701 [websockets.py:open()] - Websocket Opened: ID: 281472743855272, Proxied: True, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36, Host Name: 192.168.0.88
+2024-04-25 04:24:56,753 [websockets.py:_handle_identify()] - Websocket 281472743855272 Client Identified - Name: fluidd, Version: 1.28.1-d1ef3a4, Type: web
+2024-04-25 04:24:56,755 [file_manager.py:get_file_list()] - Updating File List <config>...
+2024-04-25 05:27:27,734 [authorization.py:_prune_conn_handler()] - Trusted Connection Expired, IP: 192.168.0.69
+2024-04-25 05:57:11,205 [application.py:prepare()] - Upload Request Received from 192.168.0.69
+Content-Type: multipart/form-data; boundary="boundary_.oOo._Dc9Kk/qMF55Fk+wJgrQxcKYTCu3XbnGC"
+2024-04-25 05:57:11,394 [application.py:post()] - Processing Uploaded File: /Tyre Tub Lid.ufp
+2024-04-25 05:57:11,985 [shell_command.py:pipe_data_received()] - INFO:metadata:Object Processing is disabled
+
+2024-04-25 05:57:12,559 [shell_command.py:_check_proc_success()] - Command (/home/mks/moonraker-env/bin/python /home/mks/moonraker/moonraker/components/file_manager/metadata.py -p /home/mks/gcode_files -f "Tyre Tub Lid.gcode" -u "/tmp/moonraker.upload-43813.mru") successfully finished
+2024-04-25 05:57:12,570 [application.py:log_request()] - 201 POST /server/files/upload (192.168.0.69) [_API_KEY_USER_] 1365.81ms
+2024-04-25 05:57:12,774 [authorization.py:_check_trusted_connection()] - Trusted Connection Detected, IP: 192.168.0.69
+2024-04-25 05:57:25,195 [job_state.py:_status_update()] - Job Started: Tyre Tub Lid.gcode
+2024-04-25 05:58:25,241 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 60.00 seconds
+2024-04-25 05:58:25,643 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 60.00 seconds
+2024-04-25 05:58:26,193 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 60.00 seconds
+2024-04-25 05:58:26,237 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 60.01 seconds
+2024-04-25 05:58:26,277 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 60.00 seconds
+2024-04-25 05:58:26,281 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 60.01 seconds
+2024-04-25 05:59:25,244 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 120.00 seconds
+2024-04-25 05:59:25,645 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 120.00 seconds
+2024-04-25 05:59:26,195 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 120.00 seconds
+2024-04-25 05:59:26,241 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 120.01 seconds
+2024-04-25 05:59:26,280 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 120.01 seconds
+2024-04-25 05:59:26,284 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 120.01 seconds
+2024-04-25 06:13:06,809 [application.py:prepare()] - Upload Request Received from 192.168.0.69
+Content-Type: multipart/form-data; boundary="boundary_.oOo._6ojeCk2WYgW9Erp5st5Z56Poz5jQYTq8"
+2024-04-25 06:13:08,265 [application.py:post()] - Processing Uploaded File: /Tyre Tub.ufp
+2024-04-25 06:13:08,844 [shell_command.py:pipe_data_received()] - INFO:metadata:Object Processing is disabled
+
+2024-04-25 06:13:10,060 [shell_command.py:_check_proc_success()] - Command (/home/mks/moonraker-env/bin/python /home/mks/moonraker/moonraker/components/file_manager/metadata.py -p /home/mks/gcode_files -f "Tyre Tub.gcode" -u "/tmp/moonraker.upload-44768.mru") successfully finished
+2024-04-25 06:13:10,070 [application.py:log_request()] - 201 POST /server/files/upload (192.168.0.69) [_API_KEY_USER_] 3263.42ms
+2024-04-25 06:59:26,805 [job_state.py:_status_update()] - Job Started: Tyre Tub.gcode
+2024-04-25 07:00:26,854 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 60.00 seconds
+2024-04-25 07:00:27,256 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 60.00 seconds
+2024-04-25 07:00:27,809 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 60.00 seconds
+2024-04-25 07:00:27,850 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 60.00 seconds
+2024-04-25 07:00:27,893 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 60.00 seconds
+2024-04-25 07:00:27,894 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 60.00 seconds
