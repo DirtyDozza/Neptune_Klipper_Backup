@@ -738,3 +738,34 @@ Content-Type: multipart/form-data; boundary="boundary_.oOo._Gv+y30es1JchAbWGnFWa
 2024-04-26 18:57:02,862 [authorization.py:_prune_conn_handler()] - Trusted Connection Expired, IP: 192.168.0.69
 2024-04-26 19:00:38,231 [websockets.py:on_close()] - Websocket Closed: ID: 281473238405016 Close Code: None, Close Reason: None, Pong Time Elapsed: 2.95
 2024-04-26 19:37:02,872 [authorization.py:_prune_conn_handler()] - Trusted Connection Expired, IP: 192.168.0.105
+2024-04-26 22:07:39,173 [authorization.py:_check_trusted_connection()] - Trusted Connection Detected, IP: 192.168.0.69
+2024-04-26 22:07:39,277 [application.py:log_request()] - 101 GET /websocket?token=FDIOD6SPTFK4B6XO23QMGCAY7OQSFD5D (192.168.0.69) [_TRUSTED_USER_] 5.43ms
+2024-04-26 22:07:39,278 [websockets.py:open()] - Websocket Opened: ID: 281473289664720, Proxied: True, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36, Host Name: 192.168.0.88
+2024-04-26 22:07:39,293 [websockets.py:_handle_identify()] - Websocket 281473289664720 Client Identified - Name: fluidd, Version: 1.28.1-d1ef3a4, Type: web
+2024-04-26 22:07:39,295 [file_manager.py:get_file_list()] - Updating File List <config>...
+2024-04-26 22:58:44,436 [application.py:prepare()] - Upload Request Received from 192.168.0.69
+Content-Type: multipart/form-data; boundary="boundary_.oOo._HH2mekUCLZEDxYnAUmVTK7PlXPXOtpVK"
+2024-04-26 22:58:47,326 [application.py:post()] - Processing Uploaded File: /16 Traffic_cones.ufp
+2024-04-26 22:58:47,888 [shell_command.py:pipe_data_received()] - INFO:metadata:Object Processing is disabled
+
+2024-04-26 22:58:48,909 [shell_command.py:_check_proc_success()] - Command (/home/mks/moonraker-env/bin/python /home/mks/moonraker/moonraker/components/file_manager/metadata.py -p /home/mks/gcode_files -f "16 Traffic_cones.gcode" -u "/tmp/moonraker.upload-19327.mru") successfully finished
+2024-04-26 22:58:48,959 [application.py:log_request()] - 201 POST /server/files/upload (192.168.0.69) [_API_KEY_USER_] 4525.04ms
+2024-04-26 22:58:49,052 [authorization.py:_check_trusted_connection()] - Trusted Connection Detected, IP: 192.168.0.105
+2024-04-26 22:58:49,196 [job_state.py:_status_update()] - Job Started: 16 Traffic_cones.gcode
+2024-04-26 22:59:49,218 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 60.00 seconds
+2024-04-26 22:59:49,614 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 60.00 seconds
+2024-04-26 22:59:50,224 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 60.00 seconds
+2024-04-26 22:59:50,267 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 60.00 seconds
+2024-04-26 22:59:50,311 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 60.00 seconds
+2024-04-26 22:59:50,311 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 60.00 seconds
+2024-04-26 23:00:02,898 [websockets.py:on_close()] - Websocket Closed: ID: 281473289664720 Close Code: 1001, Close Reason: None, Pong Time Elapsed: 3.37
+2024-04-26 23:00:03,589 [application.py:log_request()] - 101 GET /websocket?token=4ZWNYQHHNWM6TY5IVJDWSQZH7K4AKPFN (192.168.0.69) [_TRUSTED_USER_] 4.25ms
+2024-04-26 23:00:03,590 [websockets.py:open()] - Websocket Opened: ID: 281473289386696, Proxied: True, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36, Host Name: 192.168.0.88
+2024-04-26 23:00:03,697 [websockets.py:_handle_identify()] - Websocket 281473289386696 Client Identified - Name: fluidd, Version: 1.28.1-d1ef3a4, Type: web
+2024-04-26 23:00:03,702 [file_manager.py:get_file_list()] - Updating File List <config>...
+2024-04-26 23:00:49,220 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 120.00 seconds
+2024-04-26 23:00:49,616 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 120.00 seconds
+2024-04-26 23:00:50,227 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 120.00 seconds
+2024-04-26 23:00:50,270 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 120.01 seconds
+2024-04-26 23:00:50,313 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 120.00 seconds
+2024-04-26 23:00:50,313 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 120.00 seconds
