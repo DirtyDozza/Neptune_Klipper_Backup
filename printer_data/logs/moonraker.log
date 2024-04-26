@@ -187,3 +187,86 @@ Klipper Version: v0.12.0-113-g28f06a10-dirty
 2024-04-26 03:55:21,958 [websockets.py:open()] - Websocket Opened: ID: 281473480390304, Proxied: True, User Agent: Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Mobile Safari/537.36, Host Name: 192.168.0.88
 2024-04-26 03:55:21,986 [websockets.py:_handle_identify()] - Websocket 281473480390304 Client Identified - Name: fluidd, Version: 1.28.1-d1ef3a4, Type: web
 2024-04-26 03:55:22,022 [file_manager.py:get_file_list()] - Updating File List <config>...
+2024-04-26 04:07:40,662 [websockets.py:write_to_socket()] - Websocket closed while writing: 281473480390304
+2024-04-26 04:07:40,663 [websockets.py:on_close()] - Websocket Closed: ID: 281473480390304 Close Code: None, Close Reason: None, Pong Time Elapsed: 8.21
+2024-04-26 04:14:37,022 [websockets.py:on_close()] - Websocket Closed: ID: 281473480147016 Close Code: 1001, Close Reason: None, Pong Time Elapsed: 9.04
+2024-04-26 04:14:38,605 [application.py:log_request()] - 101 GET /websocket?token=73NWNTKO4ZPHJSW22MV7A7VWZAQUGN7L (192.168.0.69) [_TRUSTED_USER_] 5.60ms
+2024-04-26 04:14:38,606 [websockets.py:open()] - Websocket Opened: ID: 281473479598544, Proxied: True, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36, Host Name: 192.168.0.88
+2024-04-26 04:14:38,727 [websockets.py:_handle_identify()] - Websocket 281473479598544 Client Identified - Name: fluidd, Version: 1.28.1-d1ef3a4, Type: web
+2024-04-26 04:14:38,729 [file_manager.py:get_file_list()] - Updating File List <config>...
+2024-04-26 04:17:38,823 [websockets.py:on_close()] - Websocket Closed: ID: 281473479598544 Close Code: 1001, Close Reason: None, Pong Time Elapsed: 9.96
+2024-04-26 04:17:40,342 [application.py:log_request()] - 101 GET /websocket?token=APX63QPZWMGEBUNTYTQYO4FRKYH5MACX (192.168.0.69) [_TRUSTED_USER_] 5.05ms
+2024-04-26 04:17:40,343 [websockets.py:open()] - Websocket Opened: ID: 281473479890592, Proxied: True, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36, Host Name: 192.168.0.88
+2024-04-26 04:17:40,583 [websockets.py:_handle_identify()] - Websocket 281473479890592 Client Identified - Name: fluidd, Version: 1.28.1-d1ef3a4, Type: web
+2024-04-26 04:17:40,585 [file_manager.py:get_file_list()] - Updating File List <config>...
+2024-04-26 04:20:50,090 [application.py:prepare()] - Upload Request Received from 192.168.0.69
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryoBKDHDTOfuEGh1gm
+2024-04-26 04:20:50,143 [application.py:post()] - Processing Uploaded File: webcam.txt
+2024-04-26 04:20:50,155 [application.py:log_request()] - 201 POST /server/files/upload (192.168.0.69) [_TRUSTED_USER_] 67.79ms
+2024-04-26 04:23:54,673 [application.py:prepare()] - Upload Request Received from 192.168.0.69
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryCW8P7J7ki3v3KXDu
+2024-04-26 04:23:54,680 [application.py:post()] - Processing Uploaded File: webcam.txt
+2024-04-26 04:23:54,692 [application.py:log_request()] - 201 POST /server/files/upload (192.168.0.69) [_TRUSTED_USER_] 22.38ms
+2024-04-26 04:23:56,249 [application.py:prepare()] - Upload Request Received from 192.168.0.69
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryNBcXeExsF6vIBLGo
+2024-04-26 04:23:56,255 [application.py:post()] - Processing Uploaded File: webcam.txt
+2024-04-26 04:23:56,267 [application.py:log_request()] - 201 POST /server/files/upload (192.168.0.69) [_TRUSTED_USER_] 20.18ms
+2024-04-26 04:26:59,526 [application.py:prepare()] - Upload Request Received from 192.168.0.69
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryrMAgdIbgppYJ16gz
+2024-04-26 04:26:59,534 [application.py:post()] - Processing Uploaded File: webcam.txt
+2024-04-26 04:26:59,546 [application.py:log_request()] - 201 POST /server/files/upload (192.168.0.69) [_TRUSTED_USER_] 22.97ms
+2024-04-26 04:39:38,800 [application.py:prepare()] - Upload Request Received from 192.168.0.69
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryZa6CelSf13snNvHR
+2024-04-26 04:39:38,807 [application.py:post()] - Processing Uploaded File: webcam.txt
+2024-04-26 04:39:38,819 [application.py:log_request()] - 201 POST /server/files/upload (192.168.0.69) [_TRUSTED_USER_] 22.15ms
+2024-04-26 04:42:39,715 [application.py:prepare()] - Upload Request Received from 192.168.0.69
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary40hrHbmvh2hFiMKj
+2024-04-26 04:42:39,723 [application.py:post()] - Processing Uploaded File: webcam.txt
+2024-04-26 04:42:39,735 [application.py:log_request()] - 201 POST /server/files/upload (192.168.0.69) [_TRUSTED_USER_] 22.41ms
+2024-04-26 04:49:32,699 [application.py:prepare()] - Upload Request Received from 192.168.0.69
+Content-Type: multipart/form-data; boundary="boundary_.oOo._iThrTPGTQLafN0gorTA2Z0+APZNhw4ur"
+2024-04-26 04:49:33,118 [application.py:post()] - Processing Uploaded File: /cuerpo_porta_ruedas.ufp
+2024-04-26 04:49:33,660 [shell_command.py:pipe_data_received()] - INFO:metadata:Object Processing is disabled
+
+2024-04-26 04:49:34,039 [shell_command.py:_check_proc_success()] - Command (/home/mks/moonraker-env/bin/python /home/mks/moonraker/moonraker/components/file_manager/metadata.py -p /home/mks/gcode_files -f "cuerpo_porta_ruedas.gcode" -u "/tmp/moonraker.upload-20255.mru") successfully finished
+2024-04-26 04:49:34,048 [application.py:log_request()] - 201 POST /server/files/upload (192.168.0.69) [_API_KEY_USER_] 1350.42ms
+2024-04-26 04:49:51,277 [job_state.py:_status_update()] - Job Started: cuerpo_porta_ruedas.gcode
+2024-04-26 04:50:51,319 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 60.00 seconds
+2024-04-26 04:50:51,719 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 60.00 seconds
+2024-04-26 04:50:52,253 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 60.00 seconds
+2024-04-26 04:50:52,295 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 60.00 seconds
+2024-04-26 04:50:52,338 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 60.00 seconds
+2024-04-26 04:50:52,339 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 60.00 seconds
+2024-04-26 04:51:51,321 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 120.00 seconds
+2024-04-26 04:51:51,722 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 120.00 seconds
+2024-04-26 04:51:52,255 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 120.00 seconds
+2024-04-26 04:51:52,298 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 120.00 seconds
+2024-04-26 04:51:52,340 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 120.00 seconds
+2024-04-26 04:51:52,341 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 120.00 seconds
+2024-04-26 04:57:25,918 [authorization.py:_prune_conn_handler()] - Trusted Connection Expired, IP: 192.168.0.234
+2024-04-26 05:07:23,575 [application.py:prepare()] - Upload Request Received from 192.168.0.69
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryUr8cL5ylmAAHD6tE
+2024-04-26 05:07:31,599 [application.py:post()] - Processing Uploaded File: webcam.txt
+2024-04-26 05:07:31,611 [application.py:log_request()] - 201 POST /server/files/upload (192.168.0.69) [_TRUSTED_USER_] 8037.59ms
+2024-04-26 06:43:55,362 [application.py:prepare()] - Upload Request Received from 192.168.0.69
+Content-Type: multipart/form-data; boundary="boundary_.oOo._cwNRAQ+iGc39UhLqRROVRBWWw6coFY/f"
+2024-04-26 06:43:58,538 [application.py:post()] - Processing Uploaded File: /Rears.ufp
+2024-04-26 06:43:59,087 [shell_command.py:pipe_data_received()] - INFO:metadata:Object Processing is disabled
+
+2024-04-26 06:43:59,478 [shell_command.py:_check_proc_success()] - Command (/home/mks/moonraker-env/bin/python /home/mks/moonraker/moonraker/components/file_manager/metadata.py -p /home/mks/gcode_files -f "Rears.gcode" -u "/tmp/moonraker.upload-27118.mru") successfully finished
+2024-04-26 06:43:59,523 [application.py:log_request()] - 201 POST /server/files/upload (192.168.0.69) [_API_KEY_USER_] 4163.10ms
+2024-04-26 06:43:59,703 [job_state.py:_status_update()] - Job Started: Rears.gcode
+2024-04-26 06:44:33,050 [common.py:build_error()] - JSON-RPC Request Error - Requested Method: server.files.move, Code: 403, Message: File currently in use
+2024-04-26 06:44:59,750 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 60.00 seconds
+2024-04-26 06:45:00,149 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 60.00 seconds
+2024-04-26 06:45:00,690 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 60.00 seconds
+2024-04-26 06:45:00,731 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 60.00 seconds
+2024-04-26 06:45:00,772 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 60.00 seconds
+2024-04-26 06:45:00,773 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 60.00 seconds
+2024-04-26 06:45:59,752 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 120.00 seconds
+2024-04-26 06:46:00,151 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 120.00 seconds
+2024-04-26 06:46:00,691 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 120.00 seconds
+2024-04-26 06:46:00,734 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 120.01 seconds
+2024-04-26 06:46:00,775 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 120.01 seconds
+2024-04-26 06:46:00,775 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 120.01 seconds
+2024-04-26 07:47:25,959 [authorization.py:_prune_conn_handler()] - Trusted Connection Expired, IP: 192.168.0.69
