@@ -1,4 +1,4 @@
--------------------- Log Start | Wed May  1 15:18:31 2024 --------------------
+-------------------- Log Start | Wed May  1 16:33:24 2024 --------------------
 data_path: /home/mks/printer_data
 is_default_data_path: False
 config_file: /home/mks/klipper_config/moonraker.conf
@@ -152,91 +152,62 @@ Git Repo klipper: Warnings detected:
   Repo has untracked source files: ['klippy/extras/gcode_shell_command.py', 'klippy/extras/x_twist_compensation.py']
 Git Repo klipper-backup: No warnings detected
 Klipper Version: v0.12.0-113-g28f06a10-dirty
-2024-05-01 23:18:31,793 [klippy_connection.py:close()] - Error closing Klippy Unix Socket
-Traceback (most recent call last):
-  File "/home/mks/moonraker/moonraker/components/klippy_connection.py", line 769, in close
-    await self.writer.wait_closed()
-  File "/usr/lib/python3.7/asyncio/streams.py", line 323, in wait_closed
-    await self._protocol._closed
-  File "/home/mks/moonraker/moonraker/components/klippy_connection.py", line 172, in _read_stream
-    data = await reader.readuntil(b'\x03')
-  File "/usr/lib/python3.7/asyncio/streams.py", line 588, in readuntil
-    await self._wait_for_data('readuntil')
-  File "/usr/lib/python3.7/asyncio/streams.py", line 473, in _wait_for_data
-    await self._waiter
-  File "/usr/lib/python3.7/asyncio/selector_events.py", line 801, in _read_ready__data_received
-    data = self._sock.recv(self.max_size)
-ConnectionResetError: [Errno 104] Connection reset by peer
-2024-05-01 23:18:31,793 [klippy_connection.py:_on_connection_closed()] - Klippy Connection Removed
-2024-05-01 23:18:31,796 [common.py:build_error()] - JSON-RPC Request Error - Requested Method: printer.objects.query, Code: 503, Message: Klippy Disconnected
-2024-05-01 23:18:32,747 [common.py:build_error()] - JSON-RPC Request Error - Requested Method: printer.objects.query, Code: 503, Message: Klippy Host not connected
-2024-05-01 23:18:33,056 [klippy_connection.py:_do_connect()] - Klippy Connection Established
-2024-05-01 23:18:36,364 [klippy_connection.py:_request_initial_subscriptions()] - Webhooks Subscribed
-2024-05-01 23:18:36,368 [klippy_connection.py:_request_initial_subscriptions()] - GCode Output Subscribed
-2024-05-01 23:18:36,615 [job_state.py:_handle_started()] - Job state initialized: standby
-2024-05-01 23:18:36,891 [klippy_connection.py:_check_ready()] - Klippy ready
-2024-05-01 23:18:37,371 [data_store.py:_init_sensors()] - Configuring available sensors: ['heater_bed', 'heater_generic heater_bed1', 'extruder']
-2024-05-01 23:19:50,677 [authorization.py:_check_trusted_connection()] - Trusted Connection Detected, IP: 192.168.0.234
-2024-05-01 23:19:50,959 [application.py:log_request()] - 101 GET /websocket?token=ANS27XBZVJD7TV7EVOJFBTEMC7QZIF3C (192.168.0.234) [_TRUSTED_USER_] 9.41ms
-2024-05-01 23:19:50,960 [websockets.py:open()] - Websocket Opened: ID: 281473623435864, Proxied: True, User Agent: Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Mobile Safari/537.36, Host Name: 192.168.0.88
-2024-05-01 23:19:51,011 [websockets.py:_handle_identify()] - Websocket 281473623435864 Client Identified - Name: fluidd, Version: 1.28.1-d1ef3a4, Type: web
-2024-05-01 23:19:51,028 [file_manager.py:get_file_list()] - Updating File List <config>...
-2024-05-01 23:21:49,688 [authorization.py:_check_trusted_connection()] - Trusted Connection Detected, IP: 192.168.0.69
-2024-05-01 23:21:50,814 [application.py:log_request()] - 101 GET /websocket?token=PGZQYAKCIQESOGWDFLMAXGTKFM3PES2F (192.168.0.69) [_TRUSTED_USER_] 4.68ms
-2024-05-01 23:21:50,815 [websockets.py:open()] - Websocket Opened: ID: 281473599287928, Proxied: True, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36, Host Name: 192.168.0.88
-2024-05-01 23:21:50,903 [websockets.py:_handle_identify()] - Websocket 281473599287928 Client Identified - Name: fluidd, Version: 1.28.1-d1ef3a4, Type: web
-2024-05-01 23:21:50,906 [file_manager.py:get_file_list()] - Updating File List <config>...
-2024-05-01 23:22:30,309 [websockets.py:on_close()] - Websocket Closed: ID: 281473599287928 Close Code: 1001, Close Reason: None, Pong Time Elapsed: 9.32
-2024-05-01 23:22:31,148 [application.py:log_request()] - 101 GET /websocket?token=QZ66CBILP3ZMWSB7MTERJQDJXGP2RUQB (192.168.0.69) [_TRUSTED_USER_] 4.44ms
-2024-05-01 23:22:31,149 [websockets.py:open()] - Websocket Opened: ID: 281473623436984, Proxied: True, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36, Host Name: 192.168.0.88
-2024-05-01 23:22:31,243 [websockets.py:_handle_identify()] - Websocket 281473623436984 Client Identified - Name: fluidd, Version: 1.28.1-d1ef3a4, Type: web
-2024-05-01 23:22:31,246 [file_manager.py:get_file_list()] - Updating File List <config>...
-2024-05-01 23:22:31,709 [websockets.py:on_close()] - Websocket Closed: ID: 281473623435864 Close Code: None, Close Reason: None, Pong Time Elapsed: 0.73
-2024-05-01 23:23:09,874 [application.py:prepare()] - Upload Request Received from 192.168.0.69
-Content-Type: multipart/form-data; boundary="boundary_.oOo._buSaV+nIMfGs7BSZIEw4bNDXeDkzkKWf"
-2024-05-01 23:23:10,863 [application.py:post()] - Processing Uploaded File: /Mirrors.ufp
-2024-05-01 23:23:11,487 [shell_command.py:pipe_data_received()] - INFO:metadata:Object Processing is disabled
+2024-05-02 00:33:24,295 [authorization.py:_prune_conn_handler()] - Trusted Connection Expired, IP: 192.168.0.234
+2024-05-02 00:38:24,296 [authorization.py:_prune_conn_handler()] - Trusted Connection Expired, IP: 192.168.0.69
+2024-05-02 00:38:59,638 [websockets.py:on_close()] - Websocket Closed: ID: 281473622998544 Close Code: None, Close Reason: None, Pong Time Elapsed: 2.66
+2024-05-02 01:46:05,557 [authorization.py:_check_trusted_connection()] - Trusted Connection Detected, IP: 127.0.0.1
+2024-05-02 01:46:05,577 [application.py:log_request()] - 400 GET /server/files/directory?path= (127.0.0.1) [_TRUSTED_USER_] 22.52ms
+2024-05-02 01:46:07,028 [application.py:log_request()] - 400 GET /server/files/directory?path= (127.0.0.1) [_TRUSTED_USER_] 4.60ms
+2024-05-02 01:46:11,385 [application.py:log_request()] - 400 GET /server/files/directory?path=gcodes/sda1/ (127.0.0.1) [_TRUSTED_USER_] 4.97ms
+2024-05-02 01:50:08,388 [authorization.py:_check_trusted_connection()] - Trusted Connection Detected, IP: 192.168.0.234
+2024-05-02 01:50:08,624 [application.py:log_request()] - 101 GET /websocket?token=G3J6NAWY6SWMMP2UYCO5DI7Y7G5T2HH7 (192.168.0.234) [_TRUSTED_USER_] 4.29ms
+2024-05-02 01:50:08,625 [websockets.py:open()] - Websocket Opened: ID: 281473572113768, Proxied: True, User Agent: Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Mobile Safari/537.36, Host Name: 192.168.0.88
+2024-05-02 01:50:08,637 [websockets.py:_handle_identify()] - Websocket 281473572113768 Client Identified - Name: fluidd, Version: 1.28.1-d1ef3a4, Type: web
+2024-05-02 01:50:08,638 [file_manager.py:get_file_list()] - Updating File List <config>...
+2024-05-02 01:50:25,809 [job_state.py:_status_update()] - Job Started: imprezawing.gcode
+2024-05-02 01:53:36,932 [websockets.py:on_close()] - Websocket Closed: ID: 281473572113768 Close Code: None, Close Reason: None, Pong Time Elapsed: 7.82
+2024-05-02 02:01:32,017 [application.py:log_request()] - 101 GET /websocket?token=MPGFZMBBLEJWU57FAPRVEMIETXIWN6CM (192.168.0.234) [_TRUSTED_USER_] 4.40ms
+2024-05-02 02:01:32,018 [websockets.py:open()] - Websocket Opened: ID: 281473623218608, Proxied: True, User Agent: Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Mobile Safari/537.36, Host Name: 192.168.0.88
+2024-05-02 02:01:32,029 [websockets.py:_handle_identify()] - Websocket 281473623218608 Client Identified - Name: fluidd, Version: 1.28.1-d1ef3a4, Type: web
+2024-05-02 02:01:32,031 [file_manager.py:get_file_list()] - Updating File List <config>...
+2024-05-02 02:06:27,041 [websockets.py:on_close()] - Websocket Closed: ID: 281473623218608 Close Code: None, Close Reason: None, Pong Time Elapsed: 5.01
+2024-05-02 02:14:54,854 [authorization.py:_check_trusted_connection()] - Trusted Connection Detected, IP: 192.168.0.69
+2024-05-02 02:14:55,560 [application.py:log_request()] - 101 GET /websocket?token=HILWCAC2JH4UQRXKZUCEQ7MHP7X23IEL (192.168.0.69) [_TRUSTED_USER_] 4.43ms
+2024-05-02 02:14:55,561 [websockets.py:open()] - Websocket Opened: ID: 281473623167496, Proxied: True, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36, Host Name: 192.168.0.88
+2024-05-02 02:14:55,581 [websockets.py:_handle_identify()] - Websocket 281473623167496 Client Identified - Name: fluidd, Version: 1.28.1-d1ef3a4, Type: web
+2024-05-02 02:14:55,583 [file_manager.py:get_file_list()] - Updating File List <config>...
+2024-05-02 02:15:26,011 [websockets.py:write_to_socket()] - Websocket closed while writing: 281473623167496
+2024-05-02 02:15:30,564 [websockets.py:on_close()] - Websocket Closed: ID: 281473623167496 Close Code: None, Close Reason: None, Pong Time Elapsed: 35.01
+2024-05-02 02:15:34,067 [application.py:log_request()] - 101 GET /websocket?token=KUYEHK6CYO2DNXMAVSFFMEJHM4XVYP5U (192.168.0.69) [_TRUSTED_USER_] 5.39ms
+2024-05-02 02:15:34,068 [websockets.py:open()] - Websocket Opened: ID: 281473599681088, Proxied: True, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36, Host Name: 192.168.0.88
+2024-05-02 02:15:34,137 [websockets.py:_handle_identify()] - Websocket 281473599681088 Client Identified - Name: fluidd, Version: 1.28.1-d1ef3a4, Type: web
+2024-05-02 02:15:34,139 [file_manager.py:get_file_list()] - Updating File List <config>...
+2024-05-02 02:19:46,424 [common.py:build_error()] - JSON-RPC Request Error - Requested Method: machine.update.refresh, Code: 503, Message: Server is busy, cannot perform refresh
+2024-05-02 02:35:38,303 [application.py:prepare()] - Upload Request Received from 192.168.0.69
+Content-Type: multipart/form-data; boundary="boundary_.oOo._60xkysi99FMZjOWE6n39TXxMUIyOgSin"
+2024-05-02 02:35:44,475 [application.py:post()] - Processing Uploaded File: /Black Mirrors.gcode
+2024-05-02 02:35:45,175 [shell_command.py:pipe_data_received()] - INFO:metadata:Object Processing is disabled
 
-2024-05-01 23:23:12,000 [shell_command.py:_check_proc_success()] - Command (/home/mks/moonraker-env/bin/python /home/mks/moonraker/moonraker/components/file_manager/metadata.py -p /home/mks/gcode_files -f "Mirrors.gcode" -u "/tmp/moonraker.upload-319.mru") successfully finished
-2024-05-01 23:23:12,041 [application.py:log_request()] - 201 POST /server/files/upload (192.168.0.69) [_API_KEY_USER_] 2168.29ms
-2024-05-01 23:23:12,177 [job_state.py:_status_update()] - Job Started: Mirrors.gcode
-2024-05-01 23:23:24,207 [authorization.py:_prune_conn_handler()] - Trusted Connection Expired, IP: 127.0.0.1
-2024-05-01 23:26:42,757 [application.py:log_request()] - 101 GET /websocket?token=K24AAJM4G63A2KEJZGMJRRP2QLEEB73O (192.168.0.69) [_TRUSTED_USER_] 5.26ms
-2024-05-01 23:26:42,759 [websockets.py:open()] - Websocket Opened: ID: 281473623055496, Proxied: True, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36, Host Name: 192.168.0.88
-2024-05-01 23:26:42,872 [websockets.py:_handle_identify()] - Websocket 281473623055496 Client Identified - Name: fluidd, Version: 1.28.1-d1ef3a4, Type: web
-2024-05-01 23:26:42,874 [file_manager.py:get_file_list()] - Updating File List <config>...
-2024-05-01 23:26:55,625 [websockets.py:on_close()] - Websocket Closed: ID: 281473623055496 Close Code: 1001, Close Reason: None, Pong Time Elapsed: 0.91
-2024-05-01 23:29:30,169 [application.py:prepare()] - Upload Request Received from 192.168.0.69
-Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryankcMvpPihSisGDs
-2024-05-01 23:29:30,176 [application.py:post()] - Processing Uploaded File: webcam.txt
-2024-05-01 23:29:30,192 [application.py:log_request()] - 201 POST /server/files/upload (192.168.0.69) [_TRUSTED_USER_] 25.51ms
-2024-05-01 23:30:37,786 [application.py:log_request()] - 101 GET /websocket?token=Q5SRJ2CAA3V3HILKG7RIIMTTQAP7XFFQ (192.168.0.234) [_TRUSTED_USER_] 4.85ms
-2024-05-01 23:30:37,788 [websockets.py:open()] - Websocket Opened: ID: 281473623104760, Proxied: True, User Agent: Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Mobile Safari/537.36, Host Name: 192.168.0.88
-2024-05-01 23:30:37,808 [websockets.py:_handle_identify()] - Websocket 281473623104760 Client Identified - Name: fluidd, Version: 1.28.1-d1ef3a4, Type: web
-2024-05-01 23:30:37,810 [file_manager.py:get_file_list()] - Updating File List <config>...
-2024-05-01 23:31:13,687 [websockets.py:on_close()] - Websocket Closed: ID: 281473623436984 Close Code: 1001, Close Reason: None, Pong Time Elapsed: 1.54
-2024-05-01 23:31:14,430 [application.py:log_request()] - 101 GET /websocket?token=RSZASM2MOS5L6EK773AJONB4GWAMUBUC (192.168.0.69) [_TRUSTED_USER_] 4.67ms
-2024-05-01 23:31:14,431 [websockets.py:open()] - Websocket Opened: ID: 281473599277264, Proxied: True, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36, Host Name: 192.168.0.88
-2024-05-01 23:31:14,501 [websockets.py:_handle_identify()] - Websocket 281473599277264 Client Identified - Name: fluidd, Version: 1.28.1-d1ef3a4, Type: web
-2024-05-01 23:31:14,503 [file_manager.py:get_file_list()] - Updating File List <config>...
-2024-05-01 23:31:45,198 [websockets.py:on_close()] - Websocket Closed: ID: 281473623104760 Close Code: 1001, Close Reason: None, Pong Time Elapsed: 6.31
-2024-05-01 23:33:04,651 [websockets.py:write_to_socket()] - Websocket closed while writing: 281473599277264
-2024-05-01 23:33:09,436 [websockets.py:on_close()] - Websocket Closed: ID: 281473599277264 Close Code: None, Close Reason: None, Pong Time Elapsed: 44.87
-2024-05-01 23:33:26,527 [application.py:log_request()] - 101 GET /websocket?token=FJYBDLN6FJA52DIR5B3FRYUQV7KVFPOJ (192.168.0.69) [_TRUSTED_USER_] 4.57ms
-2024-05-01 23:33:26,528 [websockets.py:open()] - Websocket Opened: ID: 281473622998544, Proxied: True, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36, Host Name: 192.168.0.88
-2024-05-01 23:33:26,596 [websockets.py:_handle_identify()] - Websocket 281473622998544 Client Identified - Name: fluidd, Version: 1.28.1-d1ef3a4, Type: web
-2024-05-01 23:33:26,599 [file_manager.py:get_file_list()] - Updating File List <config>...
-2024-05-01 23:36:00,821 [application.py:prepare()] - Upload Request Received from 192.168.0.69
-Content-Type: multipart/form-data; boundary="boundary_.oOo._gJhRL9JNDWp8D3QTMKiow0faXOlVzbVz"
-2024-05-01 23:36:00,828 [application.py:post()] - Processing Uploaded File: /imprezawing.gcode
-2024-05-01 23:36:01,455 [shell_command.py:pipe_data_received()] - INFO:metadata:Object Processing is disabled
-
-2024-05-01 23:36:01,550 [shell_command.py:_check_proc_success()] - Command (/home/mks/moonraker-env/bin/python /home/mks/moonraker/moonraker/components/file_manager/metadata.py -p /home/mks/gcode_files -f "imprezawing.gcode") successfully finished
-2024-05-01 23:36:01,560 [application.py:log_request()] - 201 POST /server/files/upload (192.168.0.69) [_API_KEY_USER_] 740.27ms
-2024-05-01 23:37:40,226 [application.py:prepare()] - Upload Request Received from 192.168.0.69
-Content-Type: multipart/form-data; boundary="boundary_.oOo._XT1/WLYw3/aB6OJrEeeoJ1fCgxEW6L8P"
-2024-05-01 23:37:42,296 [application.py:post()] - Processing Uploaded File: /imprezawing.gcode
-2024-05-01 23:37:42,976 [shell_command.py:pipe_data_received()] - INFO:metadata:Object Processing is disabled
-
-2024-05-01 23:37:43,197 [shell_command.py:_check_proc_success()] - Command (/home/mks/moonraker-env/bin/python /home/mks/moonraker/moonraker/components/file_manager/metadata.py -p /home/mks/gcode_files -f "imprezawing.gcode") successfully finished
-2024-05-01 23:37:43,207 [application.py:log_request()] - 201 POST /server/files/upload (192.168.0.69) [_API_KEY_USER_] 2981.68ms
+2024-05-02 02:35:45,389 [shell_command.py:_check_proc_success()] - Command (/home/mks/moonraker-env/bin/python /home/mks/moonraker/moonraker/components/file_manager/metadata.py -p /home/mks/gcode_files -f "Black Mirrors.gcode") successfully finished
+2024-05-02 02:35:45,399 [application.py:log_request()] - 201 POST /server/files/upload (192.168.0.69) [_API_KEY_USER_] 7096.69ms
+2024-05-02 02:48:24,329 [authorization.py:_prune_conn_handler()] - Trusted Connection Expired, IP: 127.0.0.1
+2024-05-02 03:03:24,332 [authorization.py:_prune_conn_handler()] - Trusted Connection Expired, IP: 192.168.0.234
+2024-05-02 03:38:24,343 [authorization.py:_prune_conn_handler()] - Trusted Connection Expired, IP: 192.168.0.69
+2024-05-02 03:45:59,344 [authorization.py:_check_trusted_connection()] - Trusted Connection Detected, IP: 192.168.0.234
+2024-05-02 03:45:59,395 [application.py:log_request()] - 101 GET /websocket?token=W5YCWLZ5TZF2B5IEEGTBZYFWUOZCQJC4 (192.168.0.234) [_TRUSTED_USER_] 4.63ms
+2024-05-02 03:45:59,397 [websockets.py:open()] - Websocket Opened: ID: 281473599872304, Proxied: True, User Agent: Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Mobile Safari/537.36, Host Name: 192.168.0.88
+2024-05-02 03:45:59,423 [websockets.py:_handle_identify()] - Websocket 281473599872304 Client Identified - Name: fluidd, Version: 1.28.1-d1ef3a4, Type: web
+2024-05-02 03:45:59,425 [file_manager.py:get_file_list()] - Updating File List <config>...
+2024-05-02 03:48:09,570 [websockets.py:on_close()] - Websocket Closed: ID: 281473599872304 Close Code: None, Close Reason: None, Pong Time Elapsed: 9.82
+2024-05-02 03:50:39,899 [authorization.py:_check_trusted_connection()] - Trusted Connection Detected, IP: 127.0.0.1
+2024-05-02 03:50:39,905 [application.py:log_request()] - 400 GET /server/files/directory?path=gcodes/sda1/ (127.0.0.1) [_TRUSTED_USER_] 7.64ms
+2024-05-02 03:50:41,026 [application.py:log_request()] - 400 GET /server/files/directory?path=gcodes/sda1/ (127.0.0.1) [_TRUSTED_USER_] 4.73ms
+2024-05-02 03:50:43,021 [application.py:log_request()] - 400 GET /server/files/directory?path=gcodes/sda1/ (127.0.0.1) [_TRUSTED_USER_] 4.83ms
+2024-05-02 03:50:45,014 [application.py:log_request()] - 400 GET /server/files/directory?path=gcodes/sda1/ (127.0.0.1) [_TRUSTED_USER_] 5.12ms
+2024-05-02 03:50:47,039 [application.py:log_request()] - 400 GET /server/files/directory?path=gcodes/sda1/ (127.0.0.1) [_TRUSTED_USER_] 6.52ms
+2024-05-02 03:50:57,355 [application.py:log_request()] - 101 GET /websocket?token=N6MINKPE3PGRUFTVEDTACPLKIL6DKLQX (192.168.0.234) [_TRUSTED_USER_] 4.26ms
+2024-05-02 03:50:57,356 [websockets.py:open()] - Websocket Opened: ID: 281473623424696, Proxied: True, User Agent: Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Mobile Safari/537.36, Host Name: 192.168.0.88
+2024-05-02 03:50:57,367 [websockets.py:_handle_identify()] - Websocket 281473623424696 Client Identified - Name: fluidd, Version: 1.28.1-d1ef3a4, Type: web
+2024-05-02 03:50:57,372 [file_manager.py:get_file_list()] - Updating File List <config>...
+2024-05-02 03:51:09,759 [job_state.py:_status_update()] - Job Started: imprezawing.gcode
+2024-05-02 03:55:46,570 [websockets.py:on_close()] - Websocket Closed: ID: 281473623424696 Close Code: None, Close Reason: None, Pong Time Elapsed: 9.18
