@@ -211,3 +211,37 @@ Content-Type: multipart/form-data; boundary="boundary_.oOo._60xkysi99FMZjOWE6n39
 2024-05-02 03:50:57,372 [file_manager.py:get_file_list()] - Updating File List <config>...
 2024-05-02 03:51:09,759 [job_state.py:_status_update()] - Job Started: imprezawing.gcode
 2024-05-02 03:55:46,570 [websockets.py:on_close()] - Websocket Closed: ID: 281473623424696 Close Code: None, Close Reason: None, Pong Time Elapsed: 9.18
+2024-05-02 04:19:00,321 [application.py:prepare()] - Upload Request Received from 192.168.0.69
+Content-Type: multipart/form-data; boundary="boundary_.oOo._dhnbUQ9air5zCTrh7AIb9QmPW/tLUMl7"
+2024-05-02 04:19:07,819 [application.py:post()] - Processing Uploaded File: /2 different mirrors 2 different sizes.gcode
+2024-05-02 04:19:08,466 [shell_command.py:pipe_data_received()] - INFO:metadata:Object Processing is disabled
+
+2024-05-02 04:19:08,681 [shell_command.py:_check_proc_success()] - Command (/home/mks/moonraker-env/bin/python /home/mks/moonraker/moonraker/components/file_manager/metadata.py -p /home/mks/gcode_files -f "2 different mirrors 2 different sizes.gcode") successfully finished
+2024-05-02 04:19:08,691 [application.py:log_request()] - 201 POST /server/files/upload (192.168.0.69) [_API_KEY_USER_] 8371.13ms
+2024-05-02 04:19:08,939 [authorization.py:_check_trusted_connection()] - Trusted Connection Detected, IP: 192.168.0.69
+2024-05-02 04:25:16,025 [common.py:build_error()] - JSON-RPC Request Error - Requested Method: server.files.post_directory, Code: 400, Message: [Errno 2] No such file or directory: '/home/mks/gcode_files/[rintrer_data/config'
+2024-05-02 04:26:39,217 [common.py:build_error()] - JSON-RPC Request Error - Requested Method: server.files.post_directory, Code: 400, Message: [Errno 2] No such file or directory: '/home/mks/klipper_config/home/mks/gcode_files'
+2024-05-02 04:29:19,764 [application.py:log_request()] - 404 GET /server/files/gcodes/.thumbs/Tyre%20Tub-32x32.png?date=1713996789.3784924 (192.168.0.69) [_TRUSTED_USER_] 16.65ms
+2024-05-02 04:29:19,790 [application.py:log_request()] - 404 GET /server/files/gcodes/.thumbs/munchlax-32x32.png?date=1713984914.3624866 (192.168.0.69) [_TRUSTED_USER_] 7.79ms
+2024-05-02 04:29:20,044 [application.py:log_request()] - 404 GET /server/files/gcodes/.thumbs/Happy_Ditto-32x32.png?date=1713967977.4944787 (192.168.0.69) [_TRUSTED_USER_] 6.22ms
+2024-05-02 04:31:47,797 [common.py:build_error()] - JSON-RPC Request Error - Requested Method: server.history.delete_job, Code: -32601, Message: Invalid job uid: 00000A
+2024-05-02 04:53:24,359 [authorization.py:_prune_conn_handler()] - Trusted Connection Expired, IP: 192.168.0.234
+2024-05-02 04:53:24,360 [authorization.py:_prune_conn_handler()] - Trusted Connection Expired, IP: 127.0.0.1
+2024-05-02 05:34:47,401 [application.py:log_request()] - 101 GET /websocket?token=REULNHNAIHCQD7QIYL7SZPAYFXZ7PUAB (192.168.0.69) [_TRUSTED_USER_] 4.49ms
+2024-05-02 05:34:47,402 [websockets.py:open()] - Websocket Opened: ID: 281473623217880, Proxied: True, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36, Host Name: 192.168.0.88
+2024-05-02 05:34:47,598 [websockets.py:_handle_identify()] - Websocket 281473623217880 Client Identified - Name: fluidd, Version: 1.28.1-d1ef3a4, Type: web
+2024-05-02 05:34:47,600 [file_manager.py:get_file_list()] - Updating File List <config>...
+2024-05-02 05:34:53,300 [job_state.py:_status_update()] - Job Started: 2 different mirrors 2 different sizes.gcode
+2024-05-02 05:35:53,330 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 60.00 seconds
+2024-05-02 05:35:53,731 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 60.00 seconds
+2024-05-02 05:35:54,274 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 60.00 seconds
+2024-05-02 05:35:54,321 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 60.00 seconds
+2024-05-02 05:35:54,358 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 60.00 seconds
+2024-05-02 05:35:54,360 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 60.00 seconds
+2024-05-02 05:36:53,333 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 120.00 seconds
+2024-05-02 05:36:53,733 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 120.00 seconds
+2024-05-02 05:36:54,276 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 120.00 seconds
+2024-05-02 05:36:54,323 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 120.00 seconds
+2024-05-02 05:36:54,364 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 120.01 seconds
+2024-05-02 05:36:54,364 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 120.01 seconds
+2024-05-02 06:38:24,384 [authorization.py:_prune_conn_handler()] - Trusted Connection Expired, IP: 192.168.0.69
