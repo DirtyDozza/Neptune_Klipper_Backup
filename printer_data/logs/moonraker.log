@@ -449,3 +449,70 @@ Content-Type: multipart/form-data; boundary="boundary_.oOo._TyJMLkmZc/UwS2ei1FoE
 2024-05-17 22:58:39,425 [websockets.py:_handle_identify()] - Websocket 281473233787872 Client Identified - Name: fluidd, Version: 1.28.1-d1ef3a4, Type: web
 2024-05-17 22:58:39,427 [file_manager.py:get_file_list()] - Updating File List <config>...
 2024-05-17 23:01:34,277 [authorization.py:_prune_conn_handler()] - Trusted Connection Expired, IP: 192.168.0.234
+2024-05-17 23:13:28,237 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 60.00 seconds
+2024-05-17 23:14:28,240 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 120.00 seconds
+2024-05-17 23:15:28,243 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 180.01 seconds
+2024-05-17 23:16:28,245 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 240.01 seconds
+2024-05-17 23:18:42,027 [klippy_connection.py:_on_connection_closed()] - Klippy Connection Removed
+2024-05-17 23:18:42,555 [common.py:build_error()] - JSON-RPC Request Error - Requested Method: printer.info, Code: 503, Message: Klippy Host not connected
+2024-05-17 23:18:43,291 [klippy_connection.py:_do_connect()] - Klippy Connection Established
+2024-05-17 23:18:46,147 [klippy_connection.py:_request_initial_subscriptions()] - Webhooks Subscribed
+2024-05-17 23:18:46,151 [klippy_connection.py:_request_initial_subscriptions()] - GCode Output Subscribed
+2024-05-17 23:18:46,398 [job_state.py:_handle_started()] - Job state initialized: standby
+2024-05-17 23:18:46,669 [klippy_connection.py:_check_ready()] - Klippy ready
+2024-05-17 23:18:47,153 [data_store.py:_init_sensors()] - Configuring available sensors: ['heater_bed', 'heater_generic heater_bed1', 'extruder']
+2024-05-17 23:20:25,667 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 60.00 seconds
+2024-05-17 23:21:25,669 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 120.00 seconds
+2024-05-17 23:22:25,671 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 180.01 seconds
+2024-05-17 23:23:25,674 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 240.01 seconds
+2024-05-17 23:24:02,140 [websockets.py:on_close()] - Websocket Closed: ID: 281473233787872 Close Code: None, Close Reason: None, Pong Time Elapsed: 2.66
+2024-05-17 23:24:25,676 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 300.01 seconds
+2024-05-17 23:25:25,678 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 360.01 seconds
+2024-05-17 23:25:51,740 [application.py:log_request()] - 101 GET /websocket?token=RHO5S6XZGKCPAC3V6UA774UOQLW7HUM7 (192.168.0.69) [_TRUSTED_USER_] 4.20ms
+2024-05-17 23:25:51,741 [websockets.py:open()] - Websocket Opened: ID: 281473233412560, Proxied: True, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36, Host Name: 192.168.0.88
+2024-05-17 23:25:51,913 [websockets.py:_handle_identify()] - Websocket 281473233412560 Client Identified - Name: fluidd, Version: 1.28.1-d1ef3a4, Type: web
+2024-05-17 23:25:51,915 [file_manager.py:get_file_list()] - Updating File List <config>...
+2024-05-17 23:26:25,680 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 420.01 seconds
+2024-05-17 23:27:25,682 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 480.02 seconds
+2024-05-17 23:28:17,436 [klippy_connection.py:_on_connection_closed()] - Klippy Connection Removed
+2024-05-17 23:28:18,451 [klippy_connection.py:_do_connect()] - Klippy Connection Established
+2024-05-17 23:28:21,458 [klippy_connection.py:_request_initial_subscriptions()] - Webhooks Subscribed
+2024-05-17 23:28:21,462 [klippy_connection.py:_request_initial_subscriptions()] - GCode Output Subscribed
+2024-05-17 23:28:21,710 [job_state.py:_handle_started()] - Job state initialized: standby
+2024-05-17 23:28:21,982 [klippy_connection.py:_check_ready()] - Klippy ready
+2024-05-17 23:28:22,465 [data_store.py:_init_sensors()] - Configuring available sensors: ['heater_bed', 'heater_generic heater_bed1', 'extruder']
+2024-05-17 23:28:41,811 [common.py:build_error()] - JSON-RPC Request Error - Requested Method: printer.gcode.script, Code: 400, Message: Unknown heater 'heater_bed_1'
+2024-05-17 23:29:57,567 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 60.00 seconds
+2024-05-17 23:30:57,569 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 120.00 seconds
+2024-05-17 23:31:57,571 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 180.01 seconds
+2024-05-17 23:32:57,573 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 240.01 seconds
+2024-05-17 23:33:57,575 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 300.01 seconds
+2024-05-17 23:34:57,577 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 360.01 seconds
+2024-05-17 23:35:57,579 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 420.01 seconds
+2024-05-17 23:36:57,581 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 480.02 seconds
+2024-05-17 23:37:57,583 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 540.02 seconds
+2024-05-17 23:38:57,585 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 600.02 seconds
+2024-05-17 23:39:57,588 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 660.02 seconds
+2024-05-17 23:40:57,590 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 720.03 seconds
+2024-05-17 23:45:05,368 [klippy_connection.py:_on_connection_closed()] - Klippy Connection Removed
+2024-05-17 23:45:06,364 [common.py:build_error()] - JSON-RPC Request Error - Requested Method: printer.info, Code: 503, Message: Klippy Host not connected
+2024-05-17 23:45:06,641 [klippy_connection.py:_do_connect()] - Klippy Connection Established
+2024-05-17 23:45:09,511 [klippy_connection.py:_request_initial_subscriptions()] - Webhooks Subscribed
+2024-05-17 23:45:09,515 [klippy_connection.py:_request_initial_subscriptions()] - GCode Output Subscribed
+2024-05-17 23:45:09,762 [job_state.py:_handle_started()] - Job state initialized: standby
+2024-05-17 23:45:10,033 [klippy_connection.py:_check_ready()] - Klippy ready
+2024-05-17 23:45:10,518 [data_store.py:_init_sensors()] - Configuring available sensors: ['heater_bed', 'heater_generic heater_bed1', 'extruder']
+2024-05-17 23:51:49,203 [application.py:prepare()] - Upload Request Received from 192.168.0.69
+Content-Type: multipart/form-data; boundary="boundary_.oOo._7IwVRbdqbEaG7/VH/ClfPCl0GvYU+HhI"
+2024-05-17 23:51:50,630 [application.py:post()] - Processing Uploaded File: /fuhapter.ufp
+2024-05-17 23:51:51,250 [shell_command.py:pipe_data_received()] - INFO:metadata:Object Processing is disabled
+
+2024-05-17 23:51:52,211 [shell_command.py:_check_proc_success()] - Command (/home/mks/moonraker-env/bin/python /home/mks/moonraker/moonraker/components/file_manager/metadata.py -p /home/mks/gcode_files -f "fuhapter.gcode" -u "/tmp/moonraker.upload-8143.mru") successfully finished
+2024-05-17 23:51:52,255 [application.py:log_request()] - 201 POST /server/files/upload (192.168.0.69) [_API_KEY_USER_] 3053.92ms
+2024-05-17 23:51:52,440 [job_state.py:_status_update()] - Job Started: fuhapter.gcode
+2024-05-17 23:52:52,462 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 60.00 seconds
+2024-05-17 23:52:52,863 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 60.00 seconds
+2024-05-17 23:52:53,546 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 60.00 seconds
+2024-05-17 23:52:53,588 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 60.00 seconds
+2024-05-17 23:52:53,629 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 60.00 seconds
+2024-05-17 23:52:53,630 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 60.00 seconds
