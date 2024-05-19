@@ -339,3 +339,34 @@ Content-Type: multipart/form-data; boundary="boundary_.oOo._0BPE1aTxIhAr9cv/GUUA
 2024-05-19 19:27:00,503 [websockets.py:_handle_identify()] - Websocket 281473432858576 Client Identified - Name: fluidd, Version: 1.28.1-d1ef3a4, Type: web
 2024-05-19 19:27:00,505 [file_manager.py:get_file_list()] - Updating File List <config>...
 2024-05-19 19:42:10,759 [websockets.py:on_close()] - Websocket Closed: ID: 281473432858576 Close Code: None, Close Reason: None, Pong Time Elapsed: 0.24
+2024-05-19 20:09:36,643 [application.py:log_request()] - 101 GET /websocket?token=CH2PKFPDYHMWK5IWIDEPD7OXPX3BUIQP (192.168.0.69) [_TRUSTED_USER_] 4.59ms
+2024-05-19 20:09:36,644 [websockets.py:open()] - Websocket Opened: ID: 281473432938872, Proxied: True, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36, Host Name: 192.168.0.88
+2024-05-19 20:09:36,681 [websockets.py:_handle_identify()] - Websocket 281473432938872 Client Identified - Name: fluidd, Version: 1.28.1-d1ef3a4, Type: web
+2024-05-19 20:09:36,684 [file_manager.py:get_file_list()] - Updating File List <config>...
+2024-05-19 20:15:29,770 [websockets.py:on_close()] - Websocket Closed: ID: 281473432938872 Close Code: None, Close Reason: None, Pong Time Elapsed: 3.12
+2024-05-19 20:22:09,963 [application.py:log_request()] - 101 GET /websocket?token=TQXYXT33D6T5YTB7YMHQ5OQDHFCBBFAH (192.168.0.69) [_TRUSTED_USER_] 4.34ms
+2024-05-19 20:22:09,964 [websockets.py:open()] - Websocket Opened: ID: 281473373326304, Proxied: True, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36, Host Name: 192.168.0.88
+2024-05-19 20:22:09,990 [websockets.py:_handle_identify()] - Websocket 281473373326304 Client Identified - Name: fluidd, Version: 1.28.1-d1ef3a4, Type: web
+2024-05-19 20:22:09,992 [file_manager.py:get_file_list()] - Updating File List <config>...
+2024-05-19 21:04:09,669 [websockets.py:on_close()] - Websocket Closed: ID: 281473373326304 Close Code: None, Close Reason: None, Pong Time Elapsed: 9.70
+2024-05-19 21:24:43,832 [authorization.py:_prune_conn_handler()] - Trusted Connection Expired, IP: 192.168.0.69
+2024-05-19 22:27:11,556 [application.py:prepare()] - Upload Request Received from 192.168.0.69
+Content-Type: multipart/form-data; boundary="boundary_.oOo._D0fbxcSeP9qUhtNAOM16EDIOUz3uRvg1"
+2024-05-19 22:27:12,045 [application.py:post()] - Processing Uploaded File: /futaba_adapter.ufp
+2024-05-19 22:27:12,595 [shell_command.py:pipe_data_received()] - INFO:metadata:Object Processing is disabled
+
+2024-05-19 22:27:13,297 [shell_command.py:_check_proc_success()] - Command (/home/mks/moonraker-env/bin/python /home/mks/moonraker/moonraker/components/file_manager/metadata.py -p /home/mks/gcode_files -f "futaba_adapter.gcode" -u "/tmp/moonraker.upload-19377.mru") successfully finished
+2024-05-19 22:27:13,302 [file_manager.py:_check_action()] - 
+Inotify action mismatch:
+Expected action: create_file, Inotify action: modify_file
+Requested path: /home/mks/gcode_files/futaba_adapter.gcode
+Inotify path: /home/mks/gcode_files/futaba_adapter.gcode
+Is move/copy: False
+2024-05-19 22:27:13,341 [application.py:log_request()] - 201 POST /server/files/upload (192.168.0.69) [_API_KEY_USER_] 1785.85ms
+2024-05-19 22:27:13,429 [job_state.py:_status_update()] - Job Started: futaba_adapter.gcode
+2024-05-19 22:27:25,923 [authorization.py:_check_trusted_connection()] - Trusted Connection Detected, IP: 192.168.0.69
+2024-05-19 22:27:26,186 [application.py:log_request()] - 101 GET /websocket?token=2VWBOOTNGOVRDNYDRMOIF376QX3TC2ZI (192.168.0.69) [_TRUSTED_USER_] 4.65ms
+2024-05-19 22:27:26,187 [websockets.py:open()] - Websocket Opened: ID: 281473373305768, Proxied: True, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36, Host Name: 192.168.0.88
+2024-05-19 22:27:26,200 [websockets.py:_handle_identify()] - Websocket 281473373305768 Client Identified - Name: fluidd, Version: 1.28.1-d1ef3a4, Type: web
+2024-05-19 22:27:26,202 [file_manager.py:get_file_list()] - Updating File List <config>...
+2024-05-19 23:29:43,969 [authorization.py:_prune_conn_handler()] - Trusted Connection Expired, IP: 192.168.0.69
