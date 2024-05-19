@@ -1,4 +1,4 @@
--------------------- Log Start | Fri May 17 23:03:35 2024 --------------------
+-------------------- Log Start | Sun May 19 16:04:44 2024 --------------------
 data_path: /home/mks/printer_data
 is_default_data_path: False
 config_file: /home/mks/klipper_config/moonraker.conf
@@ -117,14 +117,17 @@ System Info:
   octoeverywhere
   ratos-configurator
 Module libcamera unavailble, import failed
-
+2024-05-19 17:04:44,776 [machine.py:check_virt_status()] - No Virtualization Detected
+2024-05-19 17:04:44,832 [machine.py:_find_public_ip()] - Detected Local IP: 192.168.0.88
+2024-05-19 17:04:44,842 [webcam.py:_set_default_host_ip()] - Default public webcam address set: http://192.168.0.88
+2024-05-19 17:04:45,245 [server.py:add_log_rollover_item()] - 
 Systemd unit moonraker.service:
 unit_name: moonraker.service
 is_default: True
 manager: systemd
 Properties:
-**Requires=['network-online.target', 'sysinit.target', 'system.slice']
-**After=['basic.target', 'network-online.target', 'systemd-journald.socket', 'sysinit.target', 'system.slice']
+**Requires=['network-online.target', 'system.slice', 'sysinit.target']
+**After=['basic.target', 'systemd-journald.socket', 'network-online.target', 'system.slice', 'sysinit.target']
 **SupplementaryGroups=['moonraker-admin']
 **EnvironmentFiles=/home/mks/printer_data/systemd/moonraker.env
 **ExecStart=/home/mks/moonraker-env/bin/python $MOONRAKER_ARGS
@@ -132,7 +135,21 @@ Properties:
 **FragmentPath=/etc/systemd/system/moonraker.service
 **Description=API Server for Klipper SV1
 **User=mks
-
+2024-05-19 17:04:45,245 [server.py:_initialize_component()] - Performing Component Post Init: [proc_stats]
+2024-05-19 17:04:45,246 [server.py:_initialize_component()] - Performing Component Post Init: [announcements]
+2024-05-19 17:04:45,256 [server.py:_initialize_component()] - Performing Component Post Init: [webcam]
+2024-05-19 17:04:45,257 [webcam.py:_set_default_host_ip()] - Default public webcam address set: http://192.168.0.88
+2024-05-19 17:04:45,262 [webcam.py:component_init()] - Failed to process webcam from db
+Traceback (most recent call last):
+  File "/home/mks/moonraker/moonraker/components/webcam.py", line 80, in component_init
+    webcam = WebCam.from_database(self.server, cam_data)
+  File "/home/mks/moonraker/moonraker/components/webcam.py", line 462, in from_database
+    uid=cam_data["uid"]
+  File "/home/mks/moonraker/moonraker/components/webcam.py", line 261, in __init__
+    f"Invalid value for 'aspect_ratio': {self.aspect_ratio}"
+moonraker.utils.ServerError: Invalid value for 'aspect_ratio': 1920 : 1080
+2024-05-19 17:04:45,277 [server.py:_initialize_component()] - Performing Component Post Init: [klippy_connection]
+2024-05-19 17:04:45,286 [server.py:add_log_rollover_item()] - 
 Systemd unit klipper.service:
 unit_name: klipper.service
 is_default: True
@@ -147,87 +164,178 @@ Properties:
 **FragmentPath=/etc/systemd/system/klipper.service
 **Description=Systemd Klipper Service
 **User=mks
-Git Repo moonraker: No warnings detected
-Git Repo klipper: Warnings detected:
+2024-05-19 17:04:45,287 [server.py:_initialize_component()] - Performing Component Post Init: [history]
+2024-05-19 17:04:45,290 [server.py:_initialize_component()] - Performing Component Post Init: [update_manager]
+2024-05-19 17:04:46,199 [base_deploy.py:log_info()] - PackageDeploy: PackageKit Provider Configured
+2024-05-19 17:04:46,806 [git_deploy.py:log_repo_info()] - Git Repo moonraker Detected:
+Owner: Arksine
+Repository Name: moonraker
+Path: /home/mks/moonraker
+Remote: origin
+Branch: master
+Remote URL: https://github.com/Arksine/moonraker.git
+Recovery URL: https://github.com/Arksine/moonraker.git
+Current Commit SHA: aadff0d54e98a536c13d4aca295e3250e06b67b8
+Upstream Commit SHA: fca0cf30279b7f93e56c9b0bb47f5c3ad979d9ad
+Current Version: v0.8.0-314-gaadff0d5
+Upstream Version: v0.8.0-358-gfca0cf30
+Rollback Commit: aadff0d54e98a536c13d4aca295e3250e06b67b8
+Rollback Branch: master
+Rollback Version: v0.8.0-314-gaadff0d5
+Is Dirty: False
+Is Detached: False
+Is Shallow: False
+Commits Behind Count: 44
+Diverged: False
+2024-05-19 17:04:47,417 [git_deploy.py:log_repo_info()] - Git Repo klipper Detected:
+Owner: Klipper3d
+Repository Name: klipper
+Path: /home/mks/klipper
+Remote: origin
+Branch: master
+Remote URL: https://github.com/Klipper3d/klipper
+Recovery URL: https://github.com/Klipper3d/klipper
+Current Commit SHA: 28f06a104bc0cfe3a7d36db343ade5a805b3e132
+Upstream Commit SHA: b7f7b8a346388cc32d80b6e6f60e5fdb4cbd3ce6
+Current Version: v0.12.0-113-g28f06a10
+Upstream Version: v0.12.0-192-gb7f7b8a3
+Rollback Commit: 28f06a104bc0cfe3a7d36db343ade5a805b3e132
+Rollback Branch: master
+Rollback Version: v0.12.0-113-g28f06a10
+Is Dirty: False
+Is Detached: False
+Is Shallow: False
+Commits Behind Count: 79
+Diverged: False
+Repo Warnings:
   Repo has untracked source files: ['klippy/extras/gcode_shell_command.py', 'klippy/extras/x_twist_compensation.py']
-Git Repo klipper-backup: No warnings detected
-Klipper Version: v0.12.0-113-g28f06a10-dirty
-2024-05-18 00:03:35,982 [websockets.py:on_close()] - Websocket Closed: ID: 281473233412560 Close Code: None, Close Reason: None, Pong Time Elapsed: 4.21
-2024-05-18 00:04:01,550 [application.py:log_request()] - 101 GET /websocket?token=LXQEXRWRCXJA5W2KCRTOJALEOOUVWMBD (192.168.0.69) [_TRUSTED_USER_] 5.16ms
-2024-05-18 00:04:01,551 [websockets.py:open()] - Websocket Opened: ID: 281473233380520, Proxied: True, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36, Host Name: 192.168.0.88
-2024-05-18 00:04:01,563 [websockets.py:_handle_identify()] - Websocket 281473233380520 Client Identified - Name: fluidd, Version: 1.28.1-d1ef3a4, Type: web
-2024-05-18 00:04:01,565 [file_manager.py:get_file_list()] - Updating File List <config>...
-2024-05-18 01:06:34,309 [authorization.py:_prune_conn_handler()] - Trusted Connection Expired, IP: 192.168.0.69
-2024-05-18 01:30:27,590 [websockets.py:write_to_socket()] - Websocket closed while writing: 281473165656584
-2024-05-18 01:30:27,596 [websockets.py:on_close()] - Websocket Closed: ID: 281473165656584 Close Code: None, Close Reason: None, Pong Time Elapsed: 7.91
-2024-05-18 01:30:27,603 [klippy_connection.py:_on_connection_closed()] - Klippy Connection Removed
-2024-05-18 01:30:27,763 [common.py:build_error()] - JSON-RPC Request Error - Requested Method: printer.info, Code: 503, Message: Klippy Host not connected
-2024-05-18 01:30:27,915 [server.py:_handle_term_signal()] - Exiting with signal SIGTERM
-2024-05-18 01:30:28,078 [websockets.py:write_to_socket()] - Websocket closed while writing: 281473233380520
-2024-05-18 01:30:28,082 [websockets.py:on_close()] - Websocket Closed: ID: 281473233380520 Close Code: 1001, Close Reason: Server Shutdown, Pong Time Elapsed: 6.49
-2024-05-18 01:30:28,121 [database.py:close()] - Database statistics:
-
-announcements:
-psize: 4096
-depth: 0
-branch_pages: 0
-leaf_pages: 0
-overflow_pages: 0
-entries: 0
-authorized_users:
-psize: 4096
-depth: 1
-branch_pages: 0
-leaf_pages: 1
-overflow_pages: 0
-entries: 1
-fluidd:
-psize: 4096
-depth: 1
-branch_pages: 0
-leaf_pages: 1
-overflow_pages: 3
-entries: 6
-gcode_metadata:
-psize: 4096
-depth: 2
-branch_pages: 1
-leaf_pages: 6
-overflow_pages: 0
-entries: 22
-history:
-psize: 4096
-depth: 2
-branch_pages: 1
-leaf_pages: 2
-overflow_pages: 0
-entries: 5
-moonraker:
-psize: 4096
-depth: 1
-branch_pages: 0
-leaf_pages: 1
-overflow_pages: 0
-entries: 7
-update_manager:
-psize: 4096
-depth: 1
-branch_pages: 0
-leaf_pages: 1
-overflow_pages: 11
-entries: 4
-webcams:
-psize: 4096
-depth: 1
-branch_pages: 0
-leaf_pages: 1
-overflow_pages: 0
-entries: 1
-2024-05-18 01:30:28,161 [machine.py:_parse_network_interfaces()] - Error processing network update
+2024-05-19 17:04:48,018 [git_deploy.py:log_repo_info()] - Git Repo klipper-backup Detected:
+Owner: Staubgeborener
+Repository Name: klipper-backup
+Path: /home/mks/klipper-backup
+Remote: origin
+Branch: main
+Remote URL: https://github.com/Staubgeborener/klipper-backup.git
+Recovery URL: https://github.com/Staubgeborener/klipper-backup.git
+Current Commit SHA: 67929a3e868279547ead4d4f55f2be8ab352f241
+Upstream Commit SHA: d51cc589c8eb52b1eee8748edaab07d5fe6e31b6
+Current Version: v1.2.1-0-g67929a3e
+Upstream Version: v1.3.0-2-gd51cc589
+Rollback Commit: 67929a3e868279547ead4d4f55f2be8ab352f241
+Rollback Branch: main
+Rollback Version: v1.2.1-0-g67929a3e
+Is Dirty: False
+Is Detached: False
+Is Shallow: False
+Commits Behind Count: 23
+Diverged: False
+2024-05-19 17:04:48,030 [base_deploy.py:log_info()] - PackageKit: Next refresh in: 5 Days, 4 Hours, 32 Minutes, 14 Seconds
+2024-05-19 17:04:48,030 [base_deploy.py:log_info()] - Git Repo moonraker: Next refresh in: 5 Days, 4 Hours, 32 Minutes, 19 Seconds
+2024-05-19 17:04:48,031 [base_deploy.py:log_info()] - Git Repo klipper: Next refresh in: 5 Days, 4 Hours, 32 Minutes, 33 Seconds
+2024-05-19 17:04:48,031 [base_deploy.py:log_info()] - Git Repo klipper-backup: Next refresh in: 5 Days, 4 Hours, 32 Minutes, 36 Seconds
+2024-05-19 17:04:48,065 [extensions.py:start_unix_server()] - Creating Unix Domain Socket at '/home/mks/printer_data/comms/moonraker.sock'
+2024-05-19 17:04:48,079 [server.py:start_server()] - Starting Moonraker on (0.0.0.0, 7125), Hostname: DozPi
+2024-05-19 17:04:48,082 [application.py:listen()] - SSL Certificate/Key not configured, aborting HTTPS Server startup
+2024-05-19 17:04:48,354 [klippy_connection.py:_do_connect()] - Klippy Connection Established
+2024-05-19 17:04:48,534 [authorization.py:_check_trusted_connection()] - Trusted Connection Detected, IP: 127.0.0.1
+2024-05-19 17:04:48,544 [application.py:log_request()] - 101 GET /websocket? (127.0.0.1) [_TRUSTED_USER_] 16.17ms
+2024-05-19 17:04:48,545 [websockets.py:open()] - Websocket Opened: ID: 281473432720496, Proxied: False, User Agent: WebSocket++/0.8.1, Host Name: localhost
+2024-05-19 17:04:48,646 [server.py:add_log_rollover_item()] - 
+Systemd unit klipper.service:
+unit_name: klipper.service
+is_default: True
+manager: systemd
+Properties:
+**Requires=['sysinit.target', 'system.slice']
+**After=['systemd-journald.socket', 'sysinit.target', 'network.target', 'basic.target', 'system.slice']
+**SupplementaryGroups=[]
+**EnvironmentFiles=[]
+**ExecStart=/home/mks/klippy-env/bin/python /home/mks/klipper/klippy/klippy.py ${KLIPPER_CONFIG} -I ${KLIPPER_PRINTER} -l ${KLIPPER_LOG} -a ${KLIPPER_SOCKET}
+**WorkingDirectory=
+**FragmentPath=/etc/systemd/system/klipper.service
+**Description=Systemd Klipper Service
+**User=mks
+2024-05-19 17:04:48,905 [server.py:add_log_rollover_item()] - Klipper Version: v0.12.0-113-g28f06a10-dirty
+2024-05-19 17:04:48,991 [klippy_connection.py:_request_initial_subscriptions()] - Webhooks Subscribed
+2024-05-19 17:04:48,995 [klippy_connection.py:_request_initial_subscriptions()] - GCode Output Subscribed
+2024-05-19 17:04:49,241 [job_state.py:_handle_started()] - Job state initialized: standby
+2024-05-19 17:04:49,535 [klippy_connection.py:_check_ready()] - Klippy ready
+2024-05-19 17:04:49,998 [data_store.py:_init_sensors()] - Configuring available sensors: ['heater_bed', 'heater_generic heater_bed1', 'extruder']
+2024-05-19 17:04:51,766 [klippy_connection.py:close()] - Error closing Klippy Unix Socket
 Traceback (most recent call last):
-  File "/home/mks/moonraker/moonraker/components/machine.py", line 684, in _parse_network_interfaces
-    resp = await self.addr_cmd.run_with_response(log_complete=False)
-  File "/home/mks/moonraker/moonraker/components/shell_command.py", line 279, in run_with_response
-    self.return_code, stdout, stderr)
-moonraker.components.shell_command.ShellCommandError: Error running shell command: 'ip -json -det address'
-2024-05-18 01:30:28,283 [server.py:main()] - Server Shutdown
+  File "/home/mks/moonraker/moonraker/components/klippy_connection.py", line 769, in close
+    await self.writer.wait_closed()
+  File "/usr/lib/python3.7/asyncio/streams.py", line 323, in wait_closed
+    await self._protocol._closed
+  File "/home/mks/moonraker/moonraker/components/klippy_connection.py", line 172, in _read_stream
+    data = await reader.readuntil(b'\x03')
+  File "/usr/lib/python3.7/asyncio/streams.py", line 588, in readuntil
+    await self._wait_for_data('readuntil')
+  File "/usr/lib/python3.7/asyncio/streams.py", line 473, in _wait_for_data
+    await self._waiter
+  File "/usr/lib/python3.7/asyncio/selector_events.py", line 801, in _read_ready__data_received
+    data = self._sock.recv(self.max_size)
+ConnectionResetError: [Errno 104] Connection reset by peer
+2024-05-19 17:04:51,767 [klippy_connection.py:_on_connection_closed()] - Klippy Connection Removed
+2024-05-19 17:04:51,774 [common.py:build_error()] - JSON-RPC Request Error - Requested Method: printer.objects.query, Code: 503, Message: Klippy Disconnected
+2024-05-19 17:04:52,802 [common.py:build_error()] - JSON-RPC Request Error - Requested Method: printer.objects.query, Code: 503, Message: Klippy Host not connected
+2024-05-19 17:04:53,048 [klippy_connection.py:_do_connect()] - Klippy Connection Established
+2024-05-19 17:04:58,003 [klippy_connection.py:_request_initial_subscriptions()] - Webhooks Subscribed
+2024-05-19 17:04:58,009 [klippy_connection.py:_request_initial_subscriptions()] - GCode Output Subscribed
+2024-05-19 17:04:58,253 [job_state.py:_handle_started()] - Job state initialized: standby
+2024-05-19 17:04:58,599 [klippy_connection.py:_check_ready()] - Klippy ready
+2024-05-19 17:04:59,010 [data_store.py:_init_sensors()] - Configuring available sensors: ['heater_bed', 'heater_generic heater_bed1', 'extruder']
+2024-05-19 17:06:29,277 [application.py:log_request()] - 400 GET /server/files/directory?path= (127.0.0.1) [_TRUSTED_USER_] 21.50ms
+2024-05-19 17:07:34,588 [authorization.py:_check_trusted_connection()] - Trusted Connection Detected, IP: 192.168.0.69
+2024-05-19 17:07:34,996 [application.py:log_request()] - 101 GET /websocket?token=WE3ZOI4OUFKVFEGMWN5PRI6GEBDZWQTC (192.168.0.69) [_TRUSTED_USER_] 9.21ms
+2024-05-19 17:07:34,997 [websockets.py:open()] - Websocket Opened: ID: 281473408938896, Proxied: True, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36, Host Name: 192.168.0.88
+2024-05-19 17:07:35,010 [websockets.py:_handle_identify()] - Websocket 281473408938896 Client Identified - Name: fluidd, Version: 1.28.1-d1ef3a4, Type: web
+2024-05-19 17:07:35,012 [file_manager.py:get_file_list()] - Updating File List <config>...
+2024-05-19 17:21:01,759 [application.py:prepare()] - Upload Request Received from 192.168.0.69
+Content-Type: multipart/form-data; boundary="boundary_.oOo._JxNzb7mjGYxhbgKPVnALI1IlvwVfzHgy"
+2024-05-19 17:21:01,876 [application.py:post()] - Processing Uploaded File: /Pao Made - RC turnbuckle extension handle 2.ufp
+2024-05-19 17:21:02,502 [shell_command.py:pipe_data_received()] - INFO:metadata:Object Processing is disabled
+
+2024-05-19 17:21:02,999 [shell_command.py:_check_proc_success()] - Command (/home/mks/moonraker-env/bin/python /home/mks/moonraker/moonraker/components/file_manager/metadata.py -p /home/mks/gcode_files -f "Pao Made - RC turnbuckle extension handle 2.gcode" -u "/tmp/moonraker.upload-1007.mru") successfully finished
+2024-05-19 17:21:03,043 [application.py:log_request()] - 201 POST /server/files/upload (192.168.0.69) [_API_KEY_USER_] 1285.81ms
+2024-05-19 17:21:03,131 [job_state.py:_status_update()] - Job Started: Pao Made - RC turnbuckle extension handle 2.gcode
+2024-05-19 17:22:03,163 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 60.00 seconds
+2024-05-19 17:22:03,559 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 60.00 seconds
+2024-05-19 17:22:04,157 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 60.00 seconds
+2024-05-19 17:22:04,198 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 60.00 seconds
+2024-05-19 17:22:04,241 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 60.00 seconds
+2024-05-19 17:22:04,242 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 60.00 seconds
+2024-05-19 17:23:03,166 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 120.00 seconds
+2024-05-19 17:23:03,562 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 120.00 seconds
+2024-05-19 17:23:04,159 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 120.00 seconds
+2024-05-19 17:23:04,200 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 120.00 seconds
+2024-05-19 17:23:04,242 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 120.01 seconds
+2024-05-19 17:23:04,245 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 120.00 seconds
+2024-05-19 17:47:01,717 [websockets.py:on_close()] - Websocket Closed: ID: 281473408938896 Close Code: None, Close Reason: None, Pong Time Elapsed: 6.71
+2024-05-19 18:09:43,783 [authorization.py:_prune_conn_handler()] - Trusted Connection Expired, IP: 127.0.0.1
+2024-05-19 18:24:43,786 [authorization.py:_prune_conn_handler()] - Trusted Connection Expired, IP: 192.168.0.69
+2024-05-19 18:48:47,645 [authorization.py:_check_trusted_connection()] - Trusted Connection Detected, IP: 192.168.0.69
+2024-05-19 18:48:49,609 [application.py:log_request()] - 101 GET /websocket?token=7AH4ZFQLJE2P54MGTJDTEUPFVOY2HVUC (192.168.0.69) [_TRUSTED_USER_] 4.13ms
+2024-05-19 18:48:49,609 [websockets.py:open()] - Websocket Opened: ID: 281473433000480, Proxied: True, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36, Host Name: 192.168.0.88
+2024-05-19 18:48:49,647 [websockets.py:_handle_identify()] - Websocket 281473433000480 Client Identified - Name: fluidd, Version: 1.28.1-d1ef3a4, Type: web
+2024-05-19 18:48:49,649 [file_manager.py:get_file_list()] - Updating File List <config>...
+2024-05-19 18:50:38,721 [application.py:prepare()] - Upload Request Received from 192.168.0.69
+Content-Type: multipart/form-data; boundary="boundary_.oOo._0BPE1aTxIhAr9cv/GUUAN2XuUYOPRICI"
+2024-05-19 18:50:38,949 [application.py:post()] - Processing Uploaded File: /axolotl_1.ufp
+2024-05-19 18:50:39,520 [shell_command.py:pipe_data_received()] - INFO:metadata:Object Processing is disabled
+
+2024-05-19 18:50:40,212 [shell_command.py:_check_proc_success()] - Command (/home/mks/moonraker-env/bin/python /home/mks/moonraker/moonraker/components/file_manager/metadata.py -p /home/mks/gcode_files -f "axolotl_1.gcode" -u "/tmp/moonraker.upload-6384.mru") successfully finished
+2024-05-19 18:50:40,259 [application.py:log_request()] - 201 POST /server/files/upload (192.168.0.69) [_API_KEY_USER_] 1539.08ms
+2024-05-19 18:50:40,394 [job_state.py:_status_update()] - Job Started: axolotl_1.gcode
+2024-05-19 18:51:40,411 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 60.00 seconds
+2024-05-19 18:51:40,811 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 60.00 seconds
+2024-05-19 18:51:41,435 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 60.00 seconds
+2024-05-19 18:51:41,477 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 60.00 seconds
+2024-05-19 18:51:41,518 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 60.00 seconds
+2024-05-19 18:51:41,519 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 60.00 seconds
+2024-05-19 19:22:52,600 [websockets.py:on_close()] - Websocket Closed: ID: 281473433000480 Close Code: None, Close Reason: None, Pong Time Elapsed: 2.98
+2024-05-19 19:27:00,493 [application.py:log_request()] - 101 GET /websocket?token=VMWYWYL7JEVBQX4ZWDVDWIM2EPDAVGJX (192.168.0.69) [_TRUSTED_USER_] 4.67ms
+2024-05-19 19:27:00,494 [websockets.py:open()] - Websocket Opened: ID: 281473432858576, Proxied: True, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36, Host Name: 192.168.0.88
+2024-05-19 19:27:00,503 [websockets.py:_handle_identify()] - Websocket 281473432858576 Client Identified - Name: fluidd, Version: 1.28.1-d1ef3a4, Type: web
+2024-05-19 19:27:00,505 [file_manager.py:get_file_list()] - Updating File List <config>...
+2024-05-19 19:42:10,759 [websockets.py:on_close()] - Websocket Closed: ID: 281473432858576 Close Code: None, Close Reason: None, Pong Time Elapsed: 0.24
