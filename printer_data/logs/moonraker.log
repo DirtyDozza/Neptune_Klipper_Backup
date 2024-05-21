@@ -354,3 +354,49 @@ Content-Type: multipart/form-data; boundary="boundary_.oOo._gOX1Uvwrkl3N9cAs+GkO
 2024-05-21 19:48:07,320 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 120.00 seconds
 2024-05-21 19:48:07,362 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 120.00 seconds
 2024-05-21 19:48:07,365 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 120.01 seconds
+2024-05-21 20:46:43,505 [authorization.py:_prune_conn_handler()] - Trusted Connection Expired, IP: 192.168.0.69
+2024-05-21 20:51:36,657 [application.py:prepare()] - Upload Request Received from 192.168.0.69
+Content-Type: multipart/form-data; boundary="boundary_.oOo._FToJOHB8nVrw1wpgSDdQlbDja6RDyn9L"
+2024-05-21 20:51:39,069 [application.py:post()] - Processing Uploaded File: /Screw_Tray_Lid.ufp
+2024-05-21 20:51:39,659 [shell_command.py:pipe_data_received()] - INFO:metadata:Object Processing is disabled
+
+2024-05-21 20:51:39,863 [shell_command.py:_check_proc_success()] - Command (/home/mks/moonraker-env/bin/python /home/mks/moonraker/moonraker/components/file_manager/metadata.py -p /home/mks/gcode_files -f "Screw_Tray_Lid.gcode" -u "/tmp/moonraker.upload-81322.mru") successfully finished
+2024-05-21 20:51:39,876 [application.py:log_request()] - 201 POST /server/files/upload (192.168.0.69) [_API_KEY_USER_] 3219.95ms
+2024-05-21 20:51:40,551 [authorization.py:_check_trusted_connection()] - Trusted Connection Detected, IP: 192.168.0.69
+2024-05-21 20:51:47,308 [job_state.py:_status_update()] - Job Started: Screw_Tray_Lid.gcode
+2024-05-21 20:52:47,331 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 60.00 seconds
+2024-05-21 20:52:47,732 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 60.00 seconds
+2024-05-21 20:52:48,274 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 60.00 seconds
+2024-05-21 20:52:48,316 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 60.00 seconds
+2024-05-21 20:52:48,357 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 60.00 seconds
+2024-05-21 20:52:48,358 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 60.00 seconds
+2024-05-21 21:24:07,797 [websockets.py:on_close()] - Websocket Closed: ID: 281473568092904 Close Code: None, Close Reason: None, Pong Time Elapsed: 5.72
+2024-05-21 21:44:34,576 [application.py:log_request()] - 101 GET /websocket?token=XHANXHZQ6GUSMGJGCCBRNBTLIQ6YXBN7 (192.168.0.69) [_TRUSTED_USER_] 4.60ms
+2024-05-21 21:44:34,577 [websockets.py:open()] - Websocket Opened: ID: 281473544249808, Proxied: True, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36, Host Name: 192.168.0.88
+2024-05-21 21:44:35,964 [websockets.py:_handle_identify()] - Websocket 281473544249808 Client Identified - Name: fluidd, Version: 1.28.1-d1ef3a4, Type: web
+2024-05-21 21:44:35,965 [file_manager.py:get_file_list()] - Updating File List <config>...
+2024-05-21 21:47:00,372 [application.py:prepare()] - Upload Request Received from 192.168.0.69
+Content-Type: multipart/form-data; boundary="boundary_.oOo._UMKicL+oXjjWEAsoIrlpB6Pe5i75MnqA"
+2024-05-21 21:47:00,475 [application.py:post()] - Processing Uploaded File: /parts-box-4x-v4_fixed.ufp
+2024-05-21 21:47:01,012 [shell_command.py:pipe_data_received()] - INFO:metadata:Object Processing is disabled
+
+2024-05-21 21:47:01,472 [shell_command.py:_check_proc_success()] - Command (/home/mks/moonraker-env/bin/python /home/mks/moonraker/moonraker/components/file_manager/metadata.py -p /home/mks/gcode_files -f "parts-box-4x-v4_fixed.gcode" -u "/tmp/moonraker.upload-84646.mru") successfully finished
+2024-05-21 21:47:01,517 [application.py:log_request()] - 201 POST /server/files/upload (192.168.0.69) [_API_KEY_USER_] 1147.34ms
+2024-05-21 21:47:01,659 [job_state.py:_status_update()] - Job Started: parts-box-4x-v4_fixed.gcode
+2024-05-21 21:48:01,693 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 60.00 seconds
+2024-05-21 21:48:02,092 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 60.00 seconds
+2024-05-21 21:48:02,662 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 60.00 seconds
+2024-05-21 21:48:02,703 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 60.00 seconds
+2024-05-21 21:48:02,743 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 60.00 seconds
+2024-05-21 21:48:02,744 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 60.00 seconds
+2024-05-21 22:05:41,271 [websockets.py:on_close()] - Websocket Closed: ID: 281473544249808 Close Code: None, Close Reason: None, Pong Time Elapsed: 6.68
+2024-05-21 22:31:24,751 [application.py:log_request()] - 101 GET /websocket?token=276V47D3SDENR74JQ6ZPNWBACTN3PJKL (192.168.0.69) [_TRUSTED_USER_] 4.24ms
+2024-05-21 22:31:24,752 [websockets.py:open()] - Websocket Opened: ID: 281473568106256, Proxied: True, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36, Host Name: 192.168.0.88
+2024-05-21 22:31:24,816 [websockets.py:_handle_identify()] - Websocket 281473568106256 Client Identified - Name: fluidd, Version: 1.28.1-d1ef3a4, Type: web
+2024-05-21 22:31:24,818 [file_manager.py:get_file_list()] - Updating File List <config>...
+2024-05-21 22:32:20,278 [websockets.py:on_close()] - Websocket Closed: ID: 281473568106256 Close Code: None, Close Reason: None, Pong Time Elapsed: 5.45
+2024-05-21 22:34:52,356 [application.py:log_request()] - 101 GET /websocket?token=TT7IQMIWSMVZTK36M5O6I7PDBIXWFZQJ (192.168.0.69) [_TRUSTED_USER_] 4.29ms
+2024-05-21 22:34:52,357 [websockets.py:open()] - Websocket Opened: ID: 281473568161016, Proxied: True, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36, Host Name: 192.168.0.88
+2024-05-21 22:34:52,554 [websockets.py:_handle_identify()] - Websocket 281473568161016 Client Identified - Name: fluidd, Version: 1.28.1-d1ef3a4, Type: web
+2024-05-21 22:34:52,556 [file_manager.py:get_file_list()] - Updating File List <config>...
+2024-05-21 23:36:43,603 [authorization.py:_prune_conn_handler()] - Trusted Connection Expired, IP: 192.168.0.69
