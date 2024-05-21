@@ -180,3 +180,68 @@ Content-Type: multipart/form-data; boundary="boundary_.oOo._OsrnQLoS5o4VLjFbt1Qt
 2024-05-21 01:20:29,870 [file_manager.py:get_file_list()] - Updating File List <config>...
 2024-05-21 01:25:43,970 [websockets.py:on_close()] - Websocket Closed: ID: 281473544400792 Close Code: 1001, Close Reason: None, Pong Time Elapsed: 4.17
 2024-05-21 02:21:43,032 [authorization.py:_prune_conn_handler()] - Trusted Connection Expired, IP: 192.168.0.69
+2024-05-21 08:58:51,306 [application.py:prepare()] - Upload Request Received from 192.168.0.69
+Content-Type: multipart/form-data; boundary="boundary_.oOo._REJtA2PFfNlgmfFcl3ZMJgRBhs0VVeRV"
+2024-05-21 08:58:51,376 [application.py:post()] - Processing Uploaded File: /Drawer.ufp
+2024-05-21 08:58:51,941 [shell_command.py:pipe_data_received()] - INFO:metadata:Object Processing is disabled
+
+2024-05-21 08:58:52,228 [shell_command.py:_check_proc_success()] - Command (/home/mks/moonraker-env/bin/python /home/mks/moonraker/moonraker/components/file_manager/metadata.py -p /home/mks/gcode_files -f "Drawer.gcode" -u "/tmp/moonraker.upload-38557.mru") successfully finished
+2024-05-21 08:58:52,266 [application.py:log_request()] - 201 POST /server/files/upload (192.168.0.69) [_API_KEY_USER_] 961.22ms
+2024-05-21 08:58:52,309 [job_state.py:_status_update()] - Job Started: Drawer.gcode
+2024-05-21 08:58:59,430 [authorization.py:_check_trusted_connection()] - Trusted Connection Detected, IP: 192.168.0.69
+2024-05-21 08:58:59,851 [application.py:log_request()] - 101 GET /websocket?token=OJJAQSJI4WF7P2AJNEGL6XKBMOKBLO5W (192.168.0.69) [_TRUSTED_USER_] 4.43ms
+2024-05-21 08:58:59,852 [websockets.py:open()] - Websocket Opened: ID: 281473544400624, Proxied: True, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36, Host Name: 192.168.0.88
+2024-05-21 08:58:59,890 [websockets.py:_handle_identify()] - Websocket 281473544400624 Client Identified - Name: fluidd, Version: 1.28.1-d1ef3a4, Type: web
+2024-05-21 08:58:59,892 [file_manager.py:get_file_list()] - Updating File List <config>...
+2024-05-21 08:59:52,338 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 60.00 seconds
+2024-05-21 08:59:52,739 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 60.00 seconds
+2024-05-21 08:59:53,290 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 60.00 seconds
+2024-05-21 08:59:53,330 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 60.00 seconds
+2024-05-21 08:59:53,374 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 60.00 seconds
+2024-05-21 08:59:53,375 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 60.00 seconds
+2024-05-21 09:00:52,340 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 120.00 seconds
+2024-05-21 09:00:52,740 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 120.00 seconds
+2024-05-21 09:00:53,291 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 120.00 seconds
+2024-05-21 09:00:53,332 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 120.00 seconds
+2024-05-21 09:00:53,381 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 120.01 seconds
+2024-05-21 09:00:53,382 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 120.01 seconds
+2024-05-21 09:44:00,041 [websockets.py:write_to_socket()] - Websocket closed while writing: 281473544400624
+2024-05-21 09:44:04,856 [websockets.py:on_close()] - Websocket Closed: ID: 281473544400624 Close Code: None, Close Reason: None, Pong Time Elapsed: 45.00
+2024-05-21 09:44:17,621 [application.py:log_request()] - 101 GET /websocket?token=B24FVNREK4VN3RXIOZ23XG37FNHDYC2T (192.168.0.69) [_TRUSTED_USER_] 4.40ms
+2024-05-21 09:44:17,622 [websockets.py:open()] - Websocket Opened: ID: 281473544256760, Proxied: True, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36, Host Name: 192.168.0.88
+2024-05-21 09:44:17,699 [websockets.py:_handle_identify()] - Websocket 281473544256760 Client Identified - Name: fluidd, Version: 1.28.1-d1ef3a4, Type: web
+2024-05-21 09:44:17,701 [file_manager.py:get_file_list()] - Updating File List <config>...
+2024-05-21 09:48:37,820 [websockets.py:write_to_socket()] - Websocket closed while writing: 281473544256760
+2024-05-21 09:48:42,625 [websockets.py:on_close()] - Websocket Closed: ID: 281473544256760 Close Code: None, Close Reason: None, Pong Time Elapsed: 44.80
+2024-05-21 09:49:11,262 [application.py:log_request()] - 101 GET /websocket?token=BG2LIJQDGMZLYV5UW2OEL3JGEIJXII53 (192.168.0.69) [_TRUSTED_USER_] 4.40ms
+2024-05-21 09:49:11,263 [websockets.py:open()] - Websocket Opened: ID: 281473544437656, Proxied: True, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36, Host Name: 192.168.0.88
+2024-05-21 09:49:11,358 [websockets.py:_handle_identify()] - Websocket 281473544437656 Client Identified - Name: fluidd, Version: 1.28.1-d1ef3a4, Type: web
+2024-05-21 09:49:11,360 [file_manager.py:get_file_list()] - Updating File List <config>...
+2024-05-21 10:22:50,481 [websockets.py:on_close()] - Websocket Closed: ID: 281473544437656 Close Code: None, Close Reason: None, Pong Time Elapsed: 9.21
+2024-05-21 10:27:55,886 [job_state.py:_status_update()] - Job Started: Drawer.gcode
+2024-05-21 10:28:55,823 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 60.00 seconds
+2024-05-21 10:28:55,867 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 60.00 seconds
+2024-05-21 10:28:55,909 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 60.00 seconds
+2024-05-21 10:28:55,910 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 60.00 seconds
+2024-05-21 10:29:55,825 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 120.00 seconds
+2024-05-21 10:29:55,870 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 120.01 seconds
+2024-05-21 10:29:55,911 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 120.00 seconds
+2024-05-21 10:29:55,913 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 120.00 seconds
+2024-05-21 10:47:31,047 [application.py:log_request()] - 101 GET /websocket?token=7SOOGXGNJU62YA7NODSLPNSN5HIDJFGW (192.168.0.69) [_TRUSTED_USER_] 4.30ms
+2024-05-21 10:47:31,048 [websockets.py:open()] - Websocket Opened: ID: 281473508330184, Proxied: True, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36, Host Name: 192.168.0.88
+2024-05-21 10:47:31,072 [websockets.py:_handle_identify()] - Websocket 281473508330184 Client Identified - Name: fluidd, Version: 1.28.1-d1ef3a4, Type: web
+2024-05-21 10:47:31,074 [file_manager.py:get_file_list()] - Updating File List <config>...
+2024-05-21 10:47:55,221 [application.py:prepare()] - Upload Request Received from 192.168.0.69
+Content-Type: multipart/form-data; boundary="boundary_.oOo._DsOm+QXdBw/sHS2qyopInRU1M0RQXMAe"
+2024-05-21 10:47:55,277 [application.py:post()] - Processing Uploaded File: /EmptyDrawer.ufp
+2024-05-21 10:47:55,816 [shell_command.py:pipe_data_received()] - INFO:metadata:Object Processing is disabled
+
+2024-05-21 10:47:56,135 [shell_command.py:_check_proc_success()] - Command (/home/mks/moonraker-env/bin/python /home/mks/moonraker/moonraker/components/file_manager/metadata.py -p /home/mks/gcode_files -f "EmptyDrawer.gcode" -u "/tmp/moonraker.upload-45101.mru") successfully finished
+2024-05-21 10:47:56,147 [application.py:log_request()] - 201 POST /server/files/upload (192.168.0.69) [_API_KEY_USER_] 926.63ms
+2024-05-21 10:47:57,126 [websockets.py:on_close()] - Websocket Closed: ID: 281473508330184 Close Code: None, Close Reason: None, Pong Time Elapsed: 6.01
+2024-05-21 10:48:33,173 [application.py:log_request()] - 101 GET /websocket?token=H7AE7AMQPSW2KINN5GO3OFG7TSBVHV7U (192.168.0.69) [_TRUSTED_USER_] 4.30ms
+2024-05-21 10:48:33,174 [websockets.py:open()] - Websocket Opened: ID: 281473567721792, Proxied: True, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36, Host Name: 192.168.0.88
+2024-05-21 10:48:33,362 [websockets.py:_handle_identify()] - Websocket 281473567721792 Client Identified - Name: fluidd, Version: 1.28.1-d1ef3a4, Type: web
+2024-05-21 10:48:33,370 [file_manager.py:get_file_list()] - Updating File List <config>...
+2024-05-21 10:50:45,952 [websockets.py:on_close()] - Websocket Closed: ID: 281473567721792 Close Code: None, Close Reason: None, Pong Time Elapsed: 2.75
+2024-05-21 11:51:43,224 [authorization.py:_prune_conn_handler()] - Trusted Connection Expired, IP: 192.168.0.69
