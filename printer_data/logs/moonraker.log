@@ -646,3 +646,67 @@ Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryaJf0pb2ZOUQ8Ti
 2024-05-22 15:59:59,833 [websockets.py:open()] - Websocket Opened: ID: 281473586308880, Proxied: True, User Agent: Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Mobile Safari/537.36, Host Name: 192.168.0.88
 2024-05-22 15:59:59,845 [websockets.py:_handle_identify()] - Websocket 281473586308880 Client Identified - Name: fluidd, Version: 1.28.1-d1ef3a4, Type: web
 2024-05-22 15:59:59,847 [file_manager.py:get_file_list()] - Updating File List <config>...
+2024-05-22 16:00:07,441 [klippy_connection.py:_on_connection_closed()] - Klippy Connection Removed
+2024-05-22 16:00:07,904 [websockets.py:on_close()] - Websocket Closed: ID: 281473586248504 Close Code: None, Close Reason: None, Pong Time Elapsed: 5.92
+2024-05-22 16:00:08,012 [common.py:build_error()] - JSON-RPC Request Error - Requested Method: printer.info, Code: 503, Message: Klippy Host not connected
+2024-05-22 16:00:08,298 [server.py:_handle_term_signal()] - Exiting with signal SIGTERM
+2024-05-22 16:00:08,408 [websockets.py:on_close()] - Websocket Closed: ID: 281473586308880 Close Code: 1001, Close Reason: Server Shutdown, Pong Time Elapsed: 8.58
+2024-05-22 16:00:08,429 [database.py:close()] - Database statistics:
+
+announcements:
+psize: 4096
+depth: 0
+branch_pages: 0
+leaf_pages: 0
+overflow_pages: 0
+entries: 0
+authorized_users:
+psize: 4096
+depth: 1
+branch_pages: 0
+leaf_pages: 1
+overflow_pages: 0
+entries: 1
+fluidd:
+psize: 4096
+depth: 1
+branch_pages: 0
+leaf_pages: 1
+overflow_pages: 3
+entries: 6
+gcode_metadata:
+psize: 4096
+depth: 2
+branch_pages: 1
+leaf_pages: 9
+overflow_pages: 0
+entries: 34
+history:
+psize: 4096
+depth: 2
+branch_pages: 1
+leaf_pages: 7
+overflow_pages: 0
+entries: 20
+moonraker:
+psize: 4096
+depth: 1
+branch_pages: 0
+leaf_pages: 1
+overflow_pages: 0
+entries: 7
+update_manager:
+psize: 4096
+depth: 1
+branch_pages: 0
+leaf_pages: 1
+overflow_pages: 11
+entries: 4
+webcams:
+psize: 4096
+depth: 1
+branch_pages: 0
+leaf_pages: 1
+overflow_pages: 0
+entries: 1
+2024-05-22 16:00:08,523 [server.py:main()] - Server Shutdown
