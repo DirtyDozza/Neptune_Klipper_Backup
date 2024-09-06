@@ -503,3 +503,35 @@ Is move/copy: False
 2024-09-06 15:43:55,179 [websockets.py:open()] - Websocket Opened: ID: 281473158452448, Proxied: True, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36, Host Name: 192.168.0.88
 2024-09-06 15:43:55,989 [websockets.py:_handle_identify()] - Websocket 281473158452448 Client Identified - Name: fluidd, Version: 1.28.1-d1ef3a4, Type: web
 2024-09-06 15:43:55,991 [file_manager.py:get_file_list()] - Updating File List <config>...
+2024-09-06 16:00:54,870 [application.py:prepare()] - Upload Request Received from 192.168.0.69
+Content-Type: multipart/form-data; boundary="boundary_.oOo._9XfRHEzzbCZtpUn192YdVf3lckraWHTs"
+2024-09-06 16:00:55,231 [application.py:post()] - Processing Uploaded File: Mirror.ufp
+2024-09-06 16:00:55,837 [shell_command.py:pipe_data_received()] - INFO:metadata:Object Processing is enabled
+
+2024-09-06 16:00:56,399 [shell_command.py:pipe_data_received()] - INFO:prepropress_cancellation:Shapely not found, complex hulls disabled
+
+2024-09-06 16:00:56,429 [shell_command.py:pipe_data_received()] - INFO:metadata:Performing Object Processing on file: Mirror.gcode, sliced by Cura
+
+2024-09-06 16:01:09,343 [shell_command.py:_check_proc_success()] - Command (/home/mks/moonraker-env/bin/python /home/mks/moonraker/moonraker/components/file_manager/metadata.py -p /home/mks/gcode_files -f "Mirror.gcode" -u "/tmp/moonraker.upload-18966.mru" --check-objects) successfully finished
+2024-09-06 16:01:09,394 [application.py:log_request()] - 201 POST /server/files/upload (192.168.0.69) [_API_KEY_USER_] 14525.95ms
+2024-09-06 16:01:09,577 [job_state.py:_status_update()] - Job Started: Mirror.gcode
+2024-09-06 16:02:09,618 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 60.00 seconds
+2024-09-06 16:02:10,015 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 60.00 seconds
+2024-09-06 16:02:10,563 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 60.00 seconds
+2024-09-06 16:02:10,625 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 60.00 seconds
+2024-09-06 16:02:10,651 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 60.00 seconds
+2024-09-06 16:02:10,652 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 60.00 seconds
+2024-09-06 16:03:09,620 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 120.00 seconds
+2024-09-06 16:03:10,016 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 120.00 seconds
+2024-09-06 16:03:10,565 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 120.00 seconds
+2024-09-06 16:03:10,627 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 120.00 seconds
+2024-09-06 16:03:10,654 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 120.00 seconds
+2024-09-06 16:03:10,654 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 120.00 seconds
+2024-09-06 16:40:19,002 [authorization.py:_prune_conn_handler()] - Trusted Connection Expired, IP: 192.168.0.26
+2024-09-06 17:07:53,260 [websockets.py:on_close()] - Websocket Closed: ID: 281473158452448 Close Code: None, Close Reason: None, Pong Time Elapsed: 8.02
+2024-09-06 17:09:53,941 [application.py:log_request()] - 101 GET /websocket?token=XQDSATCWCC6BUAELB6T2INLJK3JLVBRY (192.168.0.69) [_TRUSTED_USER_] 5.02ms
+2024-09-06 17:09:53,942 [websockets.py:open()] - Websocket Opened: ID: 281473098406544, Proxied: True, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36, Host Name: 192.168.0.88
+2024-09-06 17:09:53,978 [websockets.py:_handle_identify()] - Websocket 281473098406544 Client Identified - Name: fluidd, Version: 1.28.1-d1ef3a4, Type: web
+2024-09-06 17:09:53,981 [file_manager.py:get_file_list()] - Updating File List <config>...
+2024-09-06 18:10:19,027 [authorization.py:_prune_conn_handler()] - Trusted Connection Expired, IP: 192.168.0.69
+2024-09-06 18:12:14,780 [websockets.py:on_close()] - Websocket Closed: ID: 281473098406544 Close Code: None, Close Reason: None, Pong Time Elapsed: 0.82
