@@ -480,3 +480,26 @@ Is move/copy: False
 2024-09-06 11:11:12,971 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 120.00 seconds
 2024-09-06 11:11:12,972 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 120.00 seconds
 2024-09-06 11:50:18,935 [authorization.py:_prune_conn_handler()] - Trusted Connection Expired, IP: 127.0.0.1
+2024-09-06 12:10:18,939 [authorization.py:_prune_conn_handler()] - Trusted Connection Expired, IP: 192.168.0.69
+2024-09-06 15:35:54,935 [authorization.py:_check_trusted_connection()] - Trusted Connection Detected, IP: 192.168.0.26
+2024-09-06 15:35:54,940 [application.py:log_request()] - 101 GET /websocket (192.168.0.26) [_TRUSTED_USER_] 11.59ms
+2024-09-06 15:35:54,941 [websockets.py:open()] - Websocket Opened: ID: 281473158532848, Proxied: False, User Agent: Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Mobile Safari/537.36, Host Name: 192.168.0.88
+2024-09-06 15:35:54,946 [application.py:log_request()] - 101 GET /websocket (192.168.0.26) [_TRUSTED_USER_] 13.70ms
+2024-09-06 15:35:54,947 [websockets.py:open()] - Websocket Opened: ID: 281472770019680, Proxied: True, User Agent: Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Mobile Safari/537.36, Host Name: 192.168.0.88
+2024-09-06 15:35:54,955 [websockets.py:on_close()] - Websocket Closed: ID: 281473158532848 Close Code: None, Close Reason: None, Pong Time Elapsed: 0.03
+2024-09-06 15:35:54,969 [websockets.py:on_close()] - Websocket Closed: ID: 281472770019680 Close Code: 1001, Close Reason: None, Pong Time Elapsed: 0.04
+2024-09-06 15:35:55,256 [application.py:log_request()] - 101 GET /websocket?token=WFOQGI4WHLMCYOQT4RBKMQ4N3RTBTEO3 (192.168.0.26) [_TRUSTED_USER_] 4.07ms
+2024-09-06 15:35:55,257 [websockets.py:open()] - Websocket Opened: ID: 281473134501056, Proxied: False, User Agent: Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Mobile Safari/537.36, Host Name: 192.168.0.88
+2024-09-06 15:35:55,268 [websockets.py:_handle_identify()] - Websocket 281473134501056 Client Identified - Name: fluidd, Version: 1.28.1-d1ef3a4, Type: web
+2024-09-06 15:35:55,270 [file_manager.py:get_file_list()] - Updating File List <config>...
+2024-09-06 15:36:59,257 [application.py:log_request()] - 101 GET /websocket?token=XYJEKE4LWZWO5VQ6XYPMA6CAIVSBQMQE (192.168.0.26) [_TRUSTED_USER_] 4.00ms
+2024-09-06 15:36:59,258 [websockets.py:open()] - Websocket Opened: ID: 281473098407160, Proxied: False, User Agent: Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Mobile Safari/537.36, Host Name: 192.168.0.88
+2024-09-06 15:36:59,277 [websockets.py:_handle_identify()] - Websocket 281473098407160 Client Identified - Name: fluidd, Version: 1.28.1-d1ef3a4, Type: web
+2024-09-06 15:36:59,279 [file_manager.py:get_file_list()] - Updating File List <config>...
+2024-09-06 15:41:25,830 [websockets.py:on_close()] - Websocket Closed: ID: 281473098407160 Close Code: None, Close Reason: None, Pong Time Elapsed: 6.54
+2024-09-06 15:41:25,834 [websockets.py:on_close()] - Websocket Closed: ID: 281473134501056 Close Code: None, Close Reason: None, Pong Time Elapsed: 0.56
+2024-09-06 15:43:54,851 [authorization.py:_check_trusted_connection()] - Trusted Connection Detected, IP: 192.168.0.69
+2024-09-06 15:43:55,178 [application.py:log_request()] - 101 GET /websocket?token=GLLODTCY6WNN7WYDGUETGVF22HVH24V5 (192.168.0.69) [_TRUSTED_USER_] 4.14ms
+2024-09-06 15:43:55,179 [websockets.py:open()] - Websocket Opened: ID: 281473158452448, Proxied: True, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36, Host Name: 192.168.0.88
+2024-09-06 15:43:55,989 [websockets.py:_handle_identify()] - Websocket 281473158452448 Client Identified - Name: fluidd, Version: 1.28.1-d1ef3a4, Type: web
+2024-09-06 15:43:55,991 [file_manager.py:get_file_list()] - Updating File List <config>...
