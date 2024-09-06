@@ -535,3 +535,68 @@ Content-Type: multipart/form-data; boundary="boundary_.oOo._9XfRHEzzbCZtpUn192Yd
 2024-09-06 17:09:53,981 [file_manager.py:get_file_list()] - Updating File List <config>...
 2024-09-06 18:10:19,027 [authorization.py:_prune_conn_handler()] - Trusted Connection Expired, IP: 192.168.0.69
 2024-09-06 18:12:14,780 [websockets.py:on_close()] - Websocket Closed: ID: 281473098406544 Close Code: None, Close Reason: None, Pong Time Elapsed: 0.82
+2024-09-06 20:49:52,280 [authorization.py:_check_trusted_connection()] - Trusted Connection Detected, IP: 192.168.0.69
+2024-09-06 20:49:54,176 [application.py:log_request()] - 101 GET /websocket?token=FDQCZXSW7IYZRIGEMNPGOB2FXZQI4TCZ (192.168.0.69) [_TRUSTED_USER_] 4.24ms
+2024-09-06 20:49:54,177 [websockets.py:open()] - Websocket Opened: ID: 281473134238856, Proxied: True, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36, Host Name: 192.168.0.88
+2024-09-06 20:49:54,211 [websockets.py:_handle_identify()] - Websocket 281473134238856 Client Identified - Name: fluidd, Version: 1.28.1-d1ef3a4, Type: web
+2024-09-06 20:49:54,213 [file_manager.py:get_file_list()] - Updating File List <config>...
+2024-09-06 21:11:46,805 [application.py:log_request()] - 101 GET /websocket?token=QZZKCCZAD7Q3LB24SVJ4NVO6JVRFDRAK (192.168.0.69) [_TRUSTED_USER_] 5.55ms
+2024-09-06 21:11:46,806 [websockets.py:open()] - Websocket Opened: ID: 281473135168424, Proxied: True, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36, Host Name: 192.168.0.88
+2024-09-06 21:11:46,854 [websockets.py:_handle_identify()] - Websocket 281473135168424 Client Identified - Name: fluidd, Version: 1.28.1-d1ef3a4, Type: web
+2024-09-06 21:11:46,857 [file_manager.py:get_file_list()] - Updating File List <config>...
+2024-09-06 21:12:14,392 [websockets.py:write_to_socket()] - Websocket closed while writing: 281473134238856
+2024-09-06 21:12:19,181 [websockets.py:on_close()] - Websocket Closed: ID: 281473134238856 Close Code: None, Close Reason: None, Pong Time Elapsed: 44.98
+2024-09-06 21:53:26,241 [application.py:prepare()] - Upload Request Received from 192.168.0.69
+Content-Type: multipart/form-data; boundary="boundary_.oOo._SuPoEuGtCtr7MjpfVKLCfkFo1EBEczBF"
+2024-09-06 21:53:26,597 [application.py:post()] - Processing Uploaded File: Mocowanie.ufp
+2024-09-06 21:53:27,236 [shell_command.py:pipe_data_received()] - INFO:metadata:Object Processing is enabled
+
+2024-09-06 21:53:27,609 [shell_command.py:pipe_data_received()] - INFO:prepropress_cancellation:Shapely not found, complex hulls disabled
+
+2024-09-06 21:53:27,630 [shell_command.py:pipe_data_received()] - INFO:metadata:Performing Object Processing on file: Mocowanie.gcode, sliced by Cura
+
+2024-09-06 21:53:34,245 [shell_command.py:_check_proc_success()] - Command (/home/mks/moonraker-env/bin/python /home/mks/moonraker/moonraker/components/file_manager/metadata.py -p /home/mks/gcode_files -f "Mocowanie.gcode" -u "/tmp/moonraker.upload-40117.mru" --check-objects) successfully finished
+2024-09-06 21:53:34,321 [application.py:log_request()] - 201 POST /server/files/upload (192.168.0.69) [_API_KEY_USER_] 8081.86ms
+2024-09-06 21:53:34,500 [job_state.py:_status_update()] - Job Started: Mocowanie.gcode
+2024-09-06 22:05:33,895 [application.py:prepare()] - Upload Request Received from 192.168.0.69
+Content-Type: multipart/form-data; boundary="boundary_.oOo._4EFBaPnblofKrGjMDKJPu78oZGisGLfY"
+2024-09-06 22:05:34,017 [application.py:post()] - Processing Uploaded File: Mocowanie.ufp
+2024-09-06 22:05:34,632 [shell_command.py:pipe_data_received()] - INFO:metadata:Object Processing is enabled
+
+2024-09-06 22:05:34,914 [shell_command.py:pipe_data_received()] - INFO:prepropress_cancellation:Shapely not found, complex hulls disabled
+
+2024-09-06 22:05:34,934 [shell_command.py:pipe_data_received()] - INFO:metadata:Performing Object Processing on file: Mocowanie.gcode, sliced by Cura
+
+2024-09-06 22:05:38,156 [shell_command.py:_check_proc_success()] - Command (/home/mks/moonraker-env/bin/python /home/mks/moonraker/moonraker/components/file_manager/metadata.py -p /home/mks/gcode_files -f "Mocowanie.gcode" -u "/tmp/moonraker.upload-40845.mru" --check-objects) successfully finished
+2024-09-06 22:05:38,162 [file_manager.py:_check_action()] - 
+Inotify action mismatch:
+Expected action: create_file, Inotify action: modify_file
+Requested path: /home/mks/gcode_files/Mocowanie.gcode
+Inotify path: /home/mks/gcode_files/Mocowanie.gcode
+Is move/copy: False
+2024-09-06 22:05:38,217 [application.py:log_request()] - 201 POST /server/files/upload (192.168.0.69) [_API_KEY_USER_] 4322.97ms
+2024-09-06 22:05:38,988 [job_state.py:_status_update()] - Job Started: Mocowanie.gcode
+2024-09-06 22:33:41,354 [websockets.py:on_close()] - Websocket Closed: ID: 281473135168424 Close Code: None, Close Reason: None, Pong Time Elapsed: 4.53
+2024-09-06 22:40:28,655 [application.py:log_request()] - 101 GET /websocket?token=C4OQXNGBPAXUV3LSHVORORG5NQB4WLGG (192.168.0.69) [_TRUSTED_USER_] 4.60ms
+2024-09-06 22:40:28,656 [websockets.py:open()] - Websocket Opened: ID: 281473134548528, Proxied: True, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36, Host Name: 192.168.0.88
+2024-09-06 22:40:28,668 [websockets.py:_handle_identify()] - Websocket 281473134548528 Client Identified - Name: fluidd, Version: 1.28.1-d1ef3a4, Type: web
+2024-09-06 22:40:28,670 [file_manager.py:get_file_list()] - Updating File List <config>...
+2024-09-06 22:59:16,308 [application.py:prepare()] - Upload Request Received from 192.168.0.69
+Content-Type: multipart/form-data; boundary="boundary_.oOo._exHXJgDKrp2D9/dd4L8riKzeG9ppCQog"
+2024-09-06 22:59:16,497 [application.py:post()] - Processing Uploaded File: Spoiler.ufp
+2024-09-06 22:59:17,091 [shell_command.py:pipe_data_received()] - INFO:metadata:Object Processing is enabled
+
+2024-09-06 22:59:17,622 [shell_command.py:pipe_data_received()] - INFO:prepropress_cancellation:Shapely not found, complex hulls disabled
+
+2024-09-06 22:59:17,641 [shell_command.py:pipe_data_received()] - INFO:metadata:Performing Object Processing on file: Spoiler.gcode, sliced by Cura
+
+2024-09-06 22:59:30,390 [shell_command.py:_check_proc_success()] - Command (/home/mks/moonraker-env/bin/python /home/mks/moonraker/moonraker/components/file_manager/metadata.py -p /home/mks/gcode_files -f "Spoiler.gcode" -u "/tmp/moonraker.upload-44068.mru" --check-objects) successfully finished
+2024-09-06 22:59:30,441 [application.py:log_request()] - 201 POST /server/files/upload (192.168.0.69) [_API_KEY_USER_] 14134.66ms
+2024-09-06 22:59:30,450 [job_state.py:_status_update()] - Job Started: Spoiler.gcode
+2024-09-06 23:39:24,445 [websockets.py:on_close()] - Websocket Closed: ID: 281473134548528 Close Code: None, Close Reason: None, Pong Time Elapsed: 5.69
+2024-09-06 23:41:37,887 [application.py:log_request()] - 101 GET /websocket?token=ZLQJBVNQ57QGGEXLPRZFMSNOK6PRIB34 (192.168.0.69) [_TRUSTED_USER_] 4.22ms
+2024-09-06 23:41:37,888 [websockets.py:open()] - Websocket Opened: ID: 281473158468944, Proxied: True, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36, Host Name: 192.168.0.88
+2024-09-06 23:41:38,109 [websockets.py:_handle_identify()] - Websocket 281473158468944 Client Identified - Name: fluidd, Version: 1.28.1-d1ef3a4, Type: web
+2024-09-06 23:41:38,111 [file_manager.py:get_file_list()] - Updating File List <config>...
+2024-09-06 23:48:38,020 [websockets.py:write_to_socket()] - Websocket closed while writing: 281473158468944
+2024-09-06 23:48:42,892 [websockets.py:on_close()] - Websocket Closed: ID: 281473158468944 Close Code: None, Close Reason: None, Pong Time Elapsed: 43.27
