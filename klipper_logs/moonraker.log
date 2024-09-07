@@ -663,3 +663,79 @@ Is move/copy: False
 2024-09-07 11:45:30,446 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 60.00 seconds
 2024-09-07 11:45:30,446 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 60.00 seconds
 2024-09-07 11:59:51,523 [websockets.py:on_close()] - Websocket Closed: ID: 281473398550656 Close Code: None, Close Reason: None, Pong Time Elapsed: 6.01
+2024-09-07 12:28:43,431 [authorization.py:_prune_conn_handler()] - Trusted Connection Expired, IP: 127.0.0.1
+2024-09-07 12:48:43,454 [authorization.py:_prune_conn_handler()] - Trusted Connection Expired, IP: 192.168.0.69
+2024-09-07 13:14:48,382 [authorization.py:_check_trusted_connection()] - Trusted Connection Detected, IP: 192.168.0.69
+2024-09-07 13:14:48,762 [application.py:log_request()] - 101 GET /websocket?token=WPQKYWBQJEWYJIKF3I6H5H4EJ473MTTO (192.168.0.69) [_TRUSTED_USER_] 4.50ms
+2024-09-07 13:14:48,763 [websockets.py:open()] - Websocket Opened: ID: 281473398532976, Proxied: True, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36, Host Name: 192.168.0.88
+2024-09-07 13:14:48,791 [websockets.py:_handle_identify()] - Websocket 281473398532976 Client Identified - Name: fluidd, Version: 1.28.1-d1ef3a4, Type: web
+2024-09-07 13:14:48,793 [file_manager.py:get_file_list()] - Updating File List <config>...
+2024-09-07 13:14:50,357 [websockets.py:on_close()] - Websocket Closed: ID: 281473398532976 Close Code: None, Close Reason: None, Pong Time Elapsed: 1.60
+2024-09-07 13:17:04,060 [application.py:log_request()] - 101 GET /websocket?token=MYEL35EZLCLXAUZSUXG52KD5G7UJDW4O (192.168.0.69) [_TRUSTED_USER_] 4.63ms
+2024-09-07 13:17:04,061 [websockets.py:open()] - Websocket Opened: ID: 281473398350344, Proxied: True, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36, Host Name: 192.168.0.88
+2024-09-07 13:17:04,304 [websockets.py:_handle_identify()] - Websocket 281473398350344 Client Identified - Name: fluidd, Version: 1.28.1-d1ef3a4, Type: web
+2024-09-07 13:17:04,306 [file_manager.py:get_file_list()] - Updating File List <config>...
+2024-09-07 13:17:34,012 [klippy_connection.py:_on_connection_closed()] - Klippy Connection Removed
+2024-09-07 13:17:34,097 [websockets.py:on_close()] - Websocket Closed: ID: 281473398446008 Close Code: None, Close Reason: None, Pong Time Elapsed: 4.84
+2024-09-07 13:17:34,593 [server.py:_handle_term_signal()] - Exiting with signal SIGTERM
+2024-09-07 13:17:34,953 [websockets.py:write_to_socket()] - Websocket closed while writing: 281473398350344
+2024-09-07 13:17:35,041 [websockets.py:on_close()] - Websocket Closed: ID: 281473398350344 Close Code: 1001, Close Reason: Server Shutdown, Pong Time Elapsed: 0.00
+2024-09-07 13:17:35,062 [database.py:close()] - Database statistics:
+
+announcements:
+psize: 4096
+depth: 0
+branch_pages: 0
+leaf_pages: 0
+overflow_pages: 0
+entries: 0
+authorized_users:
+psize: 4096
+depth: 1
+branch_pages: 0
+leaf_pages: 1
+overflow_pages: 0
+entries: 1
+fluidd:
+psize: 4096
+depth: 1
+branch_pages: 0
+leaf_pages: 1
+overflow_pages: 3
+entries: 6
+gcode_metadata:
+psize: 4096
+depth: 2
+branch_pages: 1
+leaf_pages: 10
+overflow_pages: 0
+entries: 40
+history:
+psize: 4096
+depth: 2
+branch_pages: 1
+leaf_pages: 10
+overflow_pages: 0
+entries: 28
+moonraker:
+psize: 4096
+depth: 1
+branch_pages: 0
+leaf_pages: 1
+overflow_pages: 0
+entries: 7
+update_manager:
+psize: 4096
+depth: 1
+branch_pages: 0
+leaf_pages: 1
+overflow_pages: 7
+entries: 5
+webcams:
+psize: 4096
+depth: 1
+branch_pages: 0
+leaf_pages: 1
+overflow_pages: 0
+entries: 1
+2024-09-07 13:17:35,186 [server.py:main()] - Server Shutdown
