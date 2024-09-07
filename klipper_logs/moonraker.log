@@ -168,3 +168,72 @@ Klipper Version: v0.12.0-113-g28f06a10-dirty
 2024-09-07 00:09:47,211 [file_manager.py:get_file_list()] - Updating File List <config>...
 2024-09-07 01:10:19,241 [authorization.py:_prune_conn_handler()] - Trusted Connection Expired, IP: 192.168.0.69
 2024-09-07 02:26:43,486 [websockets.py:on_close()] - Websocket Closed: ID: 281473134456336 Close Code: None, Close Reason: None, Pong Time Elapsed: 6.29
+2024-09-07 04:07:32,335 [authorization.py:_check_trusted_connection()] - Trusted Connection Detected, IP: 192.168.0.26
+2024-09-07 04:07:32,670 [application.py:log_request()] - 101 GET /websocket?token=P47LVN4X4JHLFN7BNZLPMN5WQJPIYWDH (192.168.0.26) [_TRUSTED_USER_] 4.04ms
+2024-09-07 04:07:32,671 [websockets.py:open()] - Websocket Opened: ID: 281473098187664, Proxied: False, User Agent: Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Mobile Safari/537.36, Host Name: 192.168.0.88
+2024-09-07 04:07:32,691 [websockets.py:_handle_identify()] - Websocket 281473098187664 Client Identified - Name: fluidd, Version: 1.28.1-d1ef3a4, Type: web
+2024-09-07 04:07:32,693 [file_manager.py:get_file_list()] - Updating File List <config>...
+2024-09-07 04:07:39,431 [websockets.py:write_to_socket()] - Websocket closed while writing: 281473098466472
+2024-09-07 04:07:39,436 [websockets.py:on_close()] - Websocket Closed: ID: 281473098466472 Close Code: None, Close Reason: None, Pong Time Elapsed: 4.36
+2024-09-07 04:07:39,451 [klippy_connection.py:_on_connection_closed()] - Klippy Connection Removed
+2024-09-07 04:07:39,543 [server.py:_handle_term_signal()] - Exiting with signal SIGTERM
+2024-09-07 04:07:39,668 [websockets.py:on_close()] - Websocket Closed: ID: 281473098187664 Close Code: 1001, Close Reason: Server Shutdown, Pong Time Elapsed: 7.00
+2024-09-07 04:07:39,681 [database.py:close()] - Database statistics:
+
+announcements:
+psize: 4096
+depth: 0
+branch_pages: 0
+leaf_pages: 0
+overflow_pages: 0
+entries: 0
+authorized_users:
+psize: 4096
+depth: 1
+branch_pages: 0
+leaf_pages: 1
+overflow_pages: 0
+entries: 1
+fluidd:
+psize: 4096
+depth: 1
+branch_pages: 0
+leaf_pages: 1
+overflow_pages: 3
+entries: 6
+gcode_metadata:
+psize: 4096
+depth: 2
+branch_pages: 1
+leaf_pages: 10
+overflow_pages: 0
+entries: 39
+history:
+psize: 4096
+depth: 2
+branch_pages: 1
+leaf_pages: 9
+overflow_pages: 0
+entries: 26
+moonraker:
+psize: 4096
+depth: 1
+branch_pages: 0
+leaf_pages: 1
+overflow_pages: 0
+entries: 7
+update_manager:
+psize: 4096
+depth: 1
+branch_pages: 0
+leaf_pages: 1
+overflow_pages: 7
+entries: 5
+webcams:
+psize: 4096
+depth: 1
+branch_pages: 0
+leaf_pages: 1
+overflow_pages: 0
+entries: 1
+2024-09-07 04:07:39,818 [server.py:main()] - Server Shutdown
